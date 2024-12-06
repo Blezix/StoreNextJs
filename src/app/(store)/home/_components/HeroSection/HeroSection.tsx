@@ -12,7 +12,7 @@ export default function HeroSection() {
         alignItems: "center",
         flexDirection: "column",
         width: "100%",
-        height: "100%",
+        height: "100vh",
         backgroundImage: "url(/Assets/Banner.png)",
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
