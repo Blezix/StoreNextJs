@@ -5,25 +5,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="20446913-f035-4fc6-ab03-68fef2ce708a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/app/(store)/_components/Footer/_components/MiddleSection/_components/FooterLIst/FooterList.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/(store)/_components/Footer/_components/MiddleSection/_components/MiddleSectionListGroup/MiddleSectionListGroup.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/(store)/_components/Footer/_components/RightSection/_components/BottomRightSection/BottomRightSection.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/(store)/home/_components/HeroSection/HeroSection.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/(store)/home/_components/HeroSection/_components/HeroSectionButton/HeroSectionButton.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/(store)/home/_components/HeroSection/_components/HeroSectionText/HeroSectionText.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/fonts/GeistMonoVF.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/fonts/GeistVF.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/globals.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/(store)/home/_components/NewArrivals/_components/NewArrivalsButton/NewArrivalsButton.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/(store)/home/_components/NewArrivals/_components/NewArrivalsText/NewArrivalsText.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/(store)/home/_components/NewArrivals/_components/ProductsGroupBox/ProductGroupBox.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/(store)/home/_components/NewArrivals/_components/ProductsGroupBox/_components/ProductCard/ProductCard.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/(store)/home/_components/NewArrivals/_components/ProductsGroupBox/_components/ProductCard/_components/ProductCardBottom/ProductCardBottom.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/(store)/home/_components/NewArrivals/_components/ProductsGroupBox/_components/ProductCard/_components/ProductCardBottom/_components/AddToCartButton/AddToCartButton.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/(store)/home/_components/NewArrivals/_components/ProductsGroupBox/_components/ProductCard/_components/ProductCardBottom/_components/ProductAttributes/ProductAttributes.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/(store)/home/_components/NewArrivals/_components/ProductsGroupBox/_components/ProductCard/_components/ProductCardTop/ProductCardTop.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(store)/home/_components/HeroSection/HeroSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(store)/home/_components/HeroSection/HeroSection.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(store)/home/_components/HeroSection/_components/HeroSectionButton/HeroSectionButton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(store)/home/_components/HeroSection/_components/HeroSectionButton/HeroSectionButton.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(store)/home/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(store)/home/page.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -48,25 +53,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Jacob/Documents/GitHub/StoreNextJs/src/app/(store)/_components/Footer/_components/MiddleSection/_components&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\Users\\Jacob\\Documents\\GitHub\\StoreNextJs\\node_modules\\prettier&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.prettier&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\Jacob\\Documents\\GitHub\\StoreNextJs\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/Jacob/Documents/GitHub/StoreNextJs/src/app/(store)/home/_components/NewArrivals/_components/ProductsGroupBox/_components/ProductCard/_components",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "npm.dev.executor": "Run",
+    "prettierjs.PrettierConfiguration.Package": "C:\\Users\\Jacob\\Documents\\GitHub\\StoreNextJs\\node_modules\\prettier",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "ts.external.directory.path": "C:\\Users\\Jacob\\Documents\\GitHub\\StoreNextJs\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="ReactDesignerToolWindowState">
     <option name="myId2Visible">
       <map>
@@ -78,6 +83,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Jacob\Documents\GitHub\StoreNextJs\src\app\(store)\home\_components\NewArrivals\_components\ProductsGroupBox\_components\ProductCard\_components" />
       <recent name="C:\Users\Jacob\Documents\GitHub\StoreNextJs\src\app\(store)\_components\Footer\_components\MiddleSection\_components" />
       <recent name="C:\Users\Jacob\Documents\GitHub\StoreNextJs\src\app" />
     </key>
@@ -121,7 +127,10 @@
       <updated>1733382939540</updated>
       <workItem from="1733382940913" duration="1191000" />
       <workItem from="1733384544236" duration="2450000" />
-      <workItem from="1733423430308" duration="8621000" />
+      <workItem from="1733423430308" duration="9193000" />
+      <workItem from="1733477387568" duration="2126000" />
+      <workItem from="1733490333636" duration="1164000" />
+      <workItem from="1733492165197" duration="1777000" />
     </task>
     <servers />
   </component>
