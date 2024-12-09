@@ -2,8 +2,12 @@ import React from "react";
 import { Box } from "@mui/material";
 import ProductCardTop from "./_components/ProductCardTop/ProductCardTop";
 import ProductCardBottom from "./_components/ProductCardBottom/ProductCardBottom";
-
-export default function ProductCard() {
+interface Props {
+    ProductName: string;
+    ProductPrice: number;
+    imgSrc: string;
+}
+const ProductCard: React.FC<Props> = ({ ProductName,ProductPrice,imgSrc })=> {
   return (
     <Box
       sx={{
@@ -15,8 +19,10 @@ export default function ProductCard() {
         height: "50%",
       }}
     >
-      <ProductCardTop />
-      <ProductCardBottom />
+      <ProductCardTop imgSrc={imgSrc} />
+      <ProductCardBottom ProductName={ProductName} ProductPrice={ProductPrice}/>
     </Box>
   );
 }
+
+export default ProductCard

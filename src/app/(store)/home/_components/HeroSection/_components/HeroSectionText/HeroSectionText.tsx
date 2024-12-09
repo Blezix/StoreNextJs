@@ -15,7 +15,7 @@ export default function HeroSectionButton() {
     >
       <Typography variant={"h1"}>Nigger Sport Project</Typography>
       <Typography
-        variant={"h7"}
+        variant={"h6"}
         sx={{
           textAlign: "center",
         }}

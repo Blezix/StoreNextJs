@@ -11,9 +11,10 @@ export default function Header() {
         justifyContent: "center",
         alignItems: "center",
         fontSize: "1.5rem",
+        fontWeight:'bold'
       }}
     >
-      Logo
+      Nigger
     </Box>
   );
 }
