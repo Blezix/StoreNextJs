@@ -1,7 +1,11 @@
 import React from "react";
 import { Box, Typography } from "@mui/material";
 
-export default function ProductCardBottom() {
+interface Props {
+    ProductName: string;
+    ProductPrice: number;
+}
+const ProductAttributes: React.FC<Props> = ({ ProductName,ProductPrice })=> {
   return (
     <Box>
       <Typography
@@ -10,7 +14,7 @@ export default function ProductCardBottom() {
           color: "black",
         }}
       >
-        Name
+          {ProductName}
       </Typography>
       <Typography
         variant={"h6"}
@@ -19,8 +23,10 @@ export default function ProductCardBottom() {
           fontWeight: "500",
         }}
       >
-        $19.55
+        ${ProductPrice}
       </Typography>
     </Box>
   );
 }
+
+export default ProductAttributes;

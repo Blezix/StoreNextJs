@@ -12,9 +12,9 @@ export default function MenuLeft() {
         height: "100%",
       }}
     >
-      <Item value="Home" />
-      <Item value="About" />
-      <Item value="Contact" />
+      <Item value="Categories" />
+      <Item value="Store" />
+      <Item value="Blog" />
     </Box>
   );
 }
