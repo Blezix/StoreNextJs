@@ -4,9 +4,27 @@ import ShortCard from "./_components/ShortCard/ShortCard";
 import LongCard from "./_components/LongCard/LongCard";
 
 const categories = [
-  { CategoryName: "Headwear", imgSrc: "/Assets/HeadWearCategory.png" },
-  { CategoryName: "Jacket", imgSrc: "/Assets/JacketCategoryImage.png" },
-  { CategoryName: "Accesories", imgSrc: "/Assets/AccesoriesCategory.png" },
+  {
+    CategoryName: "Headwear",
+    imgSrc: "/Assets/HeadWearCategory.png",
+    CategoryDesc: "Stylish and protective headwear for all seasons.",
+    shortCardImgSrc: "/Assets/FootwearCategory.png",
+    shortCardTitle: "Footwear",
+  },
+  {
+    CategoryName: "Jacket",
+    imgSrc: "/Assets/JacketCategoryImage.png",
+    CategoryDesc: "Warm and durable jackets for outdoor adventures.",
+    shortCardImgSrc: "/Assets/BagsCategory.png",
+    shortCardTitle: "Bags",
+  },
+  {
+    CategoryName: "Bottoms",
+    imgSrc: "/Assets/BottomsCategory.png",
+    CategoryDesc: "Essential accessories to complement your outfit.",
+    shortCardImgSrc: "/Assets/AccesoriesCategory.png",
+    shortCardTitle: "Accesories",
+  },
 ];
 
 const CategoryCardGroup: React.FC = () => {
@@ -17,7 +35,8 @@ const CategoryCardGroup: React.FC = () => {
         justifyContent: "center",
         alignItems: "center",
         flexDirection: "row",
-        width: "100%",
+        flexWrap: "wrap",
+        width: "90%",
         height: "80%",
       }}
     >
@@ -36,15 +55,25 @@ const CategoryCardGroup: React.FC = () => {
               <LongCard
                 imgSrc={category.imgSrc}
                 CategoryName={category.CategoryName}
+                CategoryDesc={category.CategoryDesc}
               />
-              <ShortCard />
+              <ShortCard
+                imgSrc={category.shortCardImgSrc}
+                CategoryName={category.shortCardTitle}
+                CategoryDesc={category.CategoryDesc}
+              />
             </>
           ) : (
             <>
-              <ShortCard />
+              <ShortCard
+                imgSrc={category.shortCardImgSrc}
+                CategoryName={category.shortCardTitle}
+                CategoryDesc={category.CategoryDesc}
+              />
               <LongCard
                 imgSrc={category.imgSrc}
                 CategoryName={category.CategoryName}
+                CategoryDesc={category.CategoryDesc}
               />
             </>
           )}
