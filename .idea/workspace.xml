@@ -5,21 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="20446913-f035-4fc6-ab03-68fef2ce708a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/app/(store)/home/_components/FeaturedCollections/FeaturedCollections.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/(store)/home/_components/FeaturedCollections/_components/CategoryCardGroup/CategoryCardGroup.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/(store)/home/_components/FeaturedCollections/_components/CategoryCardGroup/_components/LongCard/LongCard.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/(store)/home/_components/FeaturedCollections/_components/CategoryCardGroup/_components/ShortCard/ShortCard.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/(store)/home/_components/FeaturedCollections/_components/FCText/FCText.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(store)/_components/Header/_components/Logo/Logo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(store)/_components/Header/_components/Logo/Logo.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(store)/_components/Header/_components/MenuLeft/MenuLeft.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(store)/_components/Header/_components/MenuLeft/MenuLeft.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(store)/home/_components/HeroSection/_components/HeroSectionText/HeroSectionText.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(store)/home/_components/HeroSection/_components/HeroSectionText/HeroSectionText.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(store)/home/_components/NewArrivals/_components/ProductsGroupBox/ProductGroupBox.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(store)/home/_components/NewArrivals/_components/ProductsGroupBox/ProductGroupBox.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(store)/home/_components/NewArrivals/_components/ProductsGroupBox/_components/ProductCard/ProductCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(store)/home/_components/NewArrivals/_components/ProductsGroupBox/_components/ProductCard/ProductCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(store)/home/_components/NewArrivals/_components/ProductsGroupBox/_components/ProductCard/_components/ProductCardBottom/ProductCardBottom.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(store)/home/_components/NewArrivals/_components/ProductsGroupBox/_components/ProductCard/_components/ProductCardBottom/ProductCardBottom.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(store)/home/_components/NewArrivals/_components/ProductsGroupBox/_components/ProductCard/_components/ProductCardBottom/_components/ProductAttributes/ProductAttributes.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(store)/home/_components/NewArrivals/_components/ProductsGroupBox/_components/ProductCard/_components/ProductCardBottom/_components/ProductAttributes/ProductAttributes.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(store)/home/_components/NewArrivals/_components/ProductsGroupBox/_components/ProductCard/_components/ProductCardTop/ProductCardTop.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(store)/home/_components/NewArrivals/_components/ProductsGroupBox/_components/ProductCard/_components/ProductCardTop/ProductCardTop.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(store)/home/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(store)/home/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(store)/_components/Footer/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(store)/_components/Footer/Footer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(store)/home/_components/FeaturedCollections/FeaturedCollections.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(store)/home/_components/FeaturedCollections/FeaturedCollections.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(store)/home/_components/FeaturedCollections/_components/CategoryCardGroup/CategoryCardGroup.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(store)/home/_components/FeaturedCollections/_components/CategoryCardGroup/CategoryCardGroup.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(store)/home/_components/FeaturedCollections/_components/CategoryCardGroup/_components/LongCard/LongCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(store)/home/_components/FeaturedCollections/_components/CategoryCardGroup/_components/LongCard/LongCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(store)/home/_components/FeaturedCollections/_components/CategoryCardGroup/_components/ShortCard/ShortCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(store)/home/_components/FeaturedCollections/_components/CategoryCardGroup/_components/ShortCard/ShortCard.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,25 +47,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/HARDPC/Music/StoreNextJs/src/app/(store)/home/_components/FeaturedCollections",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "npm.dev.executor": "Run",
-    "prettierjs.PrettierConfiguration.Package": "C:\\Users\\Jacob\\Documents\\GitHub\\StoreNextJs\\node_modules\\prettier",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "ts.external.directory.path": "C:\\Users\\HARDPC\\Music\\StoreNextJs\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/HARDPC/Music/StoreNextJs/src/app/(store)/home/_components/FeaturedCollections&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\Users\\Jacob\\Documents\\GitHub\\StoreNextJs\\node_modules\\prettier&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\HARDPC\\Music\\StoreNextJs\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="ReactDesignerToolWindowState">
     <option name="myId2Visible">
       <map>
@@ -118,7 +109,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-e768b9ed790e-JavaScript-WS-243.21565.180" />
+        <option value="bundled-js-predefined-d6986cc7102b-deb605915726-JavaScript-WS-243.22562.112" />
       </set>
     </attachedChunks>
   </component>
@@ -136,7 +127,10 @@
       <workItem from="1733477387568" duration="2126000" />
       <workItem from="1733490333636" duration="1164000" />
       <workItem from="1733492165197" duration="1777000" />
-      <workItem from="1733784732142" duration="1609000" />
+      <workItem from="1733784732142" duration="1766000" />
+      <workItem from="1733820189894" duration="65000" />
+      <workItem from="1733820306953" duration="1701000" />
+      <workItem from="1733830408172" duration="2255000" />
     </task>
     <servers />
   </component>
