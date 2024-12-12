@@ -1,7 +1,7 @@
 import React from "react";
 import { Box } from "@mui/material";
-import ShortCard from "./_components/ShortCard/ShortCard";
-import LongCard from "./_components/LongCard/LongCard";
+import ShortCard from "./_components/ShortCard";
+import LongCard from "./_components/LongCard";
 
 const categories = [
   {
