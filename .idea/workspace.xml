@@ -5,12 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="20446913-f035-4fc6-ab03-68fef2ce708a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/app/(store)/lib/filterProducts.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/(store)/products/[...slug].tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/(store)/products/_components/FilterSidebar.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/(store)/products/_components/ProductsFilterDropdown.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/(store)/products/_components/ProductsGrid.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/(store)/products/data.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/(store)/products/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(store)/_components/Footer/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(store)/_components/Footer/Footer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(store)/home/_components/FeaturedCollections/FeaturedCollections.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(store)/home/_components/FeaturedCollections/FeaturedCollections.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/(store)/home/_components/FeaturedCollections/_components/CategoryCardGroup/CategoryCardGroup.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(store)/home/_components/FeaturedCollections/_components/CategoryCardGroup/CategoryCardGroup.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(store)/home/_components/FeaturedCollections/_components/CategoryCardGroup/_components/LongCard/LongCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(store)/home/_components/FeaturedCollections/_components/CategoryCardGroup/_components/LongCard/LongCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(store)/home/_components/FeaturedCollections/_components/CategoryCardGroup/_components/ShortCard/ShortCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(store)/home/_components/FeaturedCollections/_components/CategoryCardGroup/_components/ShortCard/ShortCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(store)/home/_components/FeaturedCollections/_components/CategoryCardGroup/_components/LongCard/LongCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(store)/home/_components/FeaturedCollections/_components/CategoryCardGroup/_components/LongCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(store)/home/_components/FeaturedCollections/_components/CategoryCardGroup/_components/ShortCard/ShortCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(store)/home/_components/FeaturedCollections/_components/CategoryCardGroup/_components/ShortCard.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,25 +52,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/HARDPC/Music/StoreNextJs/src/app/(store)/home/_components/FeaturedCollections&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\Users\\Jacob\\Documents\\GitHub\\StoreNextJs\\node_modules\\prettier&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\HARDPC\\Music\\StoreNextJs\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/HARDPC/Music/StoreNextJs/src/app/(store)/home/_components/FeaturedCollections",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "npm.dev.executor": "Run",
+    "prettierjs.PrettierConfiguration.Package": "C:\\Users\\HARDPC\\Music\\StoreNextJs\\node_modules\\prettier",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "ts.external.directory.path": "C:\\Users\\HARDPC\\Music\\StoreNextJs\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="ReactDesignerToolWindowState">
     <option name="myId2Visible">
       <map>
@@ -84,6 +89,7 @@
       <recent name="C:\Users\Jacob\Documents\GitHub\StoreNextJs\src\app" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\HARDPC\Music\StoreNextJs\src\app\(store)\home\_components\FeaturedCollections\_components\CategoryCardGroup\_components" />
       <recent name="C:\Users\Jacob\Documents\GitHub\StoreNextJs\public" />
       <recent name="C:\Users\Jacob\Documents\GitHub\StoreNextJs\src\app\(store)\home\_components\HeroSection\_components\Banner" />
       <recent name="C:\Users\Jacob\Documents\GitHub\StoreNextJs\src" />
@@ -131,6 +137,7 @@
       <workItem from="1733820189894" duration="65000" />
       <workItem from="1733820306953" duration="1701000" />
       <workItem from="1733830408172" duration="2255000" />
+      <workItem from="1734024242297" duration="3925000" />
     </task>
     <servers />
   </component>
