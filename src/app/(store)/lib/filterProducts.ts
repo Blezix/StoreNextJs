@@ -9,9 +9,9 @@ export const filterProducts = (
   }
 
   if (filters.price) {
-    if (filters.price === "low-high") {
+    if (filters.price === "tohigh") {
       result = result.sort((a, b) => a.price - b.price);
-    } else if (filters.price === "high-low") {
+    } else if (filters.price === "tolow") {
       result = result.sort((a, b) => b.price - a.price);
     }
   }
