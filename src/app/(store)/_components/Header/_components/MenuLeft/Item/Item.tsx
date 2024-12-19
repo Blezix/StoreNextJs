@@ -3,9 +3,10 @@ import { Button } from "@mui/material";
 
 interface ItemProps {
   value: string;
+  onClick: void;
 }
 
-const Item: React.FC<ItemProps> = ({ value }) => {
+const Item: React.FC<ItemProps> = ({ value, onClick }) => {
   return (
     <Button
       variant="text"
@@ -19,6 +20,7 @@ const Item: React.FC<ItemProps> = ({ value }) => {
           opacity: "0.7",
         },
       }}
+      onClick={onClick}
     >
       {value}
     </Button>

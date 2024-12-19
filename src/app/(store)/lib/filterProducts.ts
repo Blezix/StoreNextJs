@@ -9,10 +9,10 @@ export const filterProducts = (
   }
 
   if (filters.price) {
-    if (filters.price === "tohigh") {
-      result = result.sort((a, b) => a.price - b.price);
-    } else if (filters.price === "tolow") {
-      result = result.sort((a, b) => b.price - a.price);
+    if (filters.price === "low-high") {
+      result = result.sort((a, b) => a.ProductPrice - b.ProductPrice);
+    } else if (filters.price === "high-low") {
+      result = result.sort((a, b) => b.ProductPrice - a.ProductPrice);
     }
   }
 

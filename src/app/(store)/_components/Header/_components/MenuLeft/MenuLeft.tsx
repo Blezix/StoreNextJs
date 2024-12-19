@@ -1,7 +1,17 @@
+"use client";
+
 import React from "react";
 import { Box } from "@mui/material";
+import { useRouter } from "next/navigation";
 import Item from "./Item/Item";
+
 export default function MenuLeft() {
+  const router = useRouter();
+
+  function HandlePageRedirect(value: string) {
+    router.push(`/${value}`);
+  }
+
   return (
     <Box
       sx={{
@@ -12,9 +22,9 @@ export default function MenuLeft() {
         height: "100%",
       }}
     >
-      <Item value="Categories" />
-      <Item value="Store" />
-      <Item value="Blog" />
+      <Item value="Products" onClick={() => HandlePageRedirect("products")} />
+      <Item value="Store" onClick={() => HandlePageRedirect("store")} />
+      <Item value="Blog" onClick={() => HandlePageRedirect("blog")} />
     </Box>
   );
 }

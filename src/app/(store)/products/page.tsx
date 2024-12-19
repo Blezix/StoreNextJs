@@ -6,8 +6,9 @@ export default function ProductsSite() {
     <Box
       sx={{
         width: "100%",
-        height: "100vh",
+        minHeight: "100vh",
         backgroundColor: "white",
+        paddingTop: "100px",
       }}
     >
       <ProductFiltersPage />
