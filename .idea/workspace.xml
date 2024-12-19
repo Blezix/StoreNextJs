@@ -6,8 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="20446913-f035-4fc6-ab03-68fef2ce708a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(store)/_components/Header/_components/MenuLeft/Item/Item.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(store)/_components/Header/_components/MenuLeft/Item/Item.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(store)/_components/Header/_components/MenuLeft/MenuLeft.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(store)/_components/Header/_components/MenuLeft/MenuLeft.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/(store)/lib/filterProducts.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(store)/lib/filterProducts.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/(store)/products/[...slug].tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(store)/products/[...slug].tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(store)/products/_components/ProductsGrid.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(store)/products/_components/ProductsGrid.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(store)/products/data.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(store)/products/data.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/(store)/products/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(store)/products/page.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -132,6 +136,7 @@
       <workItem from="1733830408172" duration="2255000" />
       <workItem from="1734024242297" duration="4396000" />
       <workItem from="1734355536822" duration="6133000" />
+      <workItem from="1734637275312" duration="2893000" />
     </task>
     <servers />
   </component>
@@ -142,5 +147,17 @@
         <option value="$PROJECT_DIR$/next.config.mjs" />
       </list>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/app/(store)/products/page.tsx</url>
+          <line>9</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
