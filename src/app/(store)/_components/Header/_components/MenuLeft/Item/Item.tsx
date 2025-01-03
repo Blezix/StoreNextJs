@@ -12,7 +12,7 @@ const Item: React.FC<ItemProps> = ({ value, onClick }) => {
       variant="text"
       sx={{
         height: "20%",
-        color: "white",
+        color: "inherit",
         borderRadius: "0",
         textTransform: "none",
         fontSize: "1rem",
