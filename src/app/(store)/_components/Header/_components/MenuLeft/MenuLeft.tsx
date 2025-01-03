@@ -20,6 +20,7 @@ export default function MenuLeft() {
         alignItems: "center",
         width: "30%",
         height: "100%",
+        color: "inherit",
       }}
     >
       <Item value="Products" onClick={() => HandlePageRedirect("products")} />

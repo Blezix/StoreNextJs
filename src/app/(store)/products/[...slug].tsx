@@ -23,33 +23,32 @@ const ProductFiltersPage = () => {
   }, []);
 
   return (
-    <div>
-      <h1>Filtered Products</h1>
-      <Box
-        sx={{
-          display: "flex",
-          justifyContent: "start",
-          alignItems: "center",
-          width: "100%",
-          height: "85%",
-          flexWrap: "wrap",
-          gap: "8px",
-        }}
-      >
-        {filteredProducts.length > 0 ? (
-          filteredProducts.map((product) => (
-            <ProductCard
-              key={product.id}
-              imgSrc={product.imgSrc}
-              ProductName={product.ProductName}
-              ProductPrice={product.ProductPrice}
-            />
-          ))
-        ) : (
-          <p>No products found</p>
-        )}
-      </Box>
-    </div>
+    <Box
+      sx={{
+        display: "flex",
+        justifyContent: "center ",
+        alignItems: "center",
+        width: "95%",
+        mr: "auto",
+        ml: "auto",
+        height: "80%",
+        flexWrap: "wrap",
+        gap: "8px",
+      }}
+    >
+      {filteredProducts.length > 0 ? (
+        filteredProducts.map((product) => (
+          <ProductCard
+            key={product.id}
+            imgSrc={product.imgSrc}
+            ProductName={product.ProductName}
+            ProductPrice={product.ProductPrice}
+          />
+        ))
+      ) : (
+        <p>No products found</p>
+      )}
+    </Box>
   );
 };
 
