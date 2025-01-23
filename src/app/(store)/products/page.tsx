@@ -1,7 +1,7 @@
 import React from "react";
 import { Box } from "@mui/material";
 import ProductFiltersPage from "@/app/(store)/products/[...slug]";
-import FilterSidebar from "./_components/FilterSidebar";
+import FilterTopbar from "./_components/FilterTopbar";
 export default function ProductsSite() {
   return (
     <Box
@@ -13,7 +13,7 @@ export default function ProductsSite() {
         flexDirection: "column",
       }}
     >
-      <FilterSidebar />
+      <FilterTopbar />
       <ProductFiltersPage />
     </Box>
   );

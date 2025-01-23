@@ -1,6 +1,6 @@
 import { Box, Typography } from "@mui/material";
 import CategoryBar from "./CategoryBar";
-export default function FilterSidebar() {
+export default function FilterTopbar() {
   return (
     <Box
       sx={{

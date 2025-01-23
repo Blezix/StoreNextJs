@@ -14,15 +14,24 @@ const FilterOptions: React.FC<Props> = ({
 
   const handleCategoryChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const category = e.target.value;
-    const priceRange = currentPriceRange || "undefined";
-    const slug = [category || "undefined", priceRange];
-    router.push(`/products/${slug.join("/")}`);
+    const params = new URLSearchParams(window.location.search);
+    if (category) {
+      params.set("category", category);
+    } else {
+      params.delete("category");
+    }
+    router.push(`/products?${params.toString()}`);
   };
+
   const handlePriceRangeChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const priceRange = e.target.value;
-    const category = currentCategory || "undefined";
-    const slug = [category, priceRange || "undefined"];
-    router.push(`/store/${slug.join("/")}`);
+    const params = new URLSearchParams(window.location.search);
+    if (priceRange) {
+      params.set("priceRange", priceRange);
+    } else {
+      params.delete("priceRange");
+    }
+    router.push(`/products?${params.toString()}`);
   };
 
   return (

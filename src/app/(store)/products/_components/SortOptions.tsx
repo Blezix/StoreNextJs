@@ -1,27 +1,32 @@
-import React from "react";
-import { useRouter } from "next/router";
-interface Props {
-  currentSort: (option: string) => void;
+"use client";
+import { useRouter } from "next/navigation";
+
+interface SortOptionsProps {
+  currentSort: string;
 }
 
-const SortOptions: React.FC<Props> = ({ currentSort }) => {
+const SortOptions: React.FC<SortOptionsProps> = ({ currentSort }) => {
   const router = useRouter();
 
   const handleSortChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const sort = e.target.value;
-    const slug = [...(router.query.slug || [])];
-    slug[2] = sort || "undefined";
-    router.push(`/products/${slug.join("/")}`);
+    const params = new URLSearchParams(window.location.search);
+    if (sort) {
+      params.set("sort", sort);
+    } else {
+      params.delete("sort");
+    }
+    router.push(`/products?${params.toString()}`);
   };
 
   return (
     <div>
-      <select onChange={handleSortChange}>
+      <select value={currentSort} onChange={handleSortChange}>
         <option value="">Default</option>
         <option value="price-asc">Price: Low to High</option>
         <option value="price-desc">Price: High to Low</option>
-        <option value="name-asc">Name: A-Z</option>
-        <option value="name-desc">Name: Z-A</option>
+        <option value="name-asc">Name: A to Z</option>
+        <option value="name-desc">Name: Z to A</option>
       </select>
     </div>
   );
