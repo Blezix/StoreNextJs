@@ -2,53 +2,54 @@
 
 import { useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
-import { products } from "./data"; // Assuming data is in the same folder
-import { filterProducts } from "../lib/filterProducts";
-import ProductCard from "@/app/(store)/home/_components/NewArrivals/_components/ProductsGroupBox/_components/ProductCard/ProductCard";
-import { Box } from "@mui/material";
+
+import { products as productsData, Product } from "./data/products";
+import Filters from "./_components/FilterOptions";
+import SortOptions from "@/app/(store)/products/_components/SortOptions";
+import ProductList from "./_components/ProductList";
+
 const ProductFiltersPage = () => {
   const searchParams = useSearchParams();
-  const slug = searchParams.get("slug")?.split("&"); // e.g., "electronics,low-high,popularity"
 
-  const [filteredProducts, setFilteredProducts] = useState(products);
+  const [products, setProducts] = useState<Product[]>(productsData);
+
+  const category = searchParams.get("category") || "";
+  const priceRange = searchParams.get("priceRange") || "";
+  const sort = searchParams.get("sort") || "";
 
   useEffect(() => {
-    if (slug) {
-      const [category, price, sort] = slug;
-      const filters = { category, price, sort };
-      const result = filterProducts(products, filters);
-      setFilteredProducts(result);
-      console.log(result);
+    let filteredProducts = productsData;
+
+    if (category) {
+      filteredProducts = filteredProducts.filter(
+        (product) => product.category === category,
+      );
     }
-  }, []);
+    if (priceRange) {
+      const [min, max] = priceRange.split("-").map(Number);
+      filteredProducts = filteredProducts.filter(
+        (product) => product.price >= min && product.price <= max,
+      );
+    }
+    if (sort === "price-asc") {
+      filteredProducts.sort((a, b) => a.price - b.price);
+    } else if (sort === "price-desc") {
+      filteredProducts.sort((a, b) => b.price - a.price);
+    } else if (sort === "name-asc") {
+      filteredProducts.sort((a, b) => a.name.localeCompare(b.name));
+    } else if (sort === "name-desc") {
+      filteredProducts.sort((a, b) => b.name.localeCompare(a.name));
+    }
+
+    setProducts(filteredProducts);
+  }, [category, priceRange, sort]);
 
   return (
-    <Box
-      sx={{
-        display: "flex",
-        justifyContent: "center ",
-        alignItems: "center",
-        width: "95%",
-        mr: "auto",
-        ml: "auto",
-        height: "80%",
-        flexWrap: "wrap",
-        gap: "8px",
-      }}
-    >
-      {filteredProducts.length > 0 ? (
-        filteredProducts.map((product) => (
-          <ProductCard
-            key={product.id}
-            imgSrc={product.imgSrc}
-            ProductName={product.ProductName}
-            ProductPrice={product.ProductPrice}
-          />
-        ))
-      ) : (
-        <p>No products found</p>
-      )}
-    </Box>
+    <div>
+      <Filters currentCategory={category} currentPriceRange={priceRange} />
+      <SortOptions currentSort={sort} />
+      <ProductList products={products} />
+    </div>
   );
 };
 

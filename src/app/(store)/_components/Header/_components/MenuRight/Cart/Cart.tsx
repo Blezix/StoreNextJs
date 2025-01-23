@@ -33,15 +33,16 @@ export default function Cart({ onClick }: CartProps) {
         sx={{
           color: "black",
           position: "absolute",
-          width: "300px",
-          height: "300px",
+          width: "400px",
+          height: "400px",
           backgroundColor: "white",
-          border: "1px solid black",
+          border: "2px solid black",
           display: active ? "block" : "none",
           textAlign: "center",
           top: "100%",
           right: "200%",
           transform: "translateX(50%)",
+          p: 1,
         }}
       >
         <Typography variant={"h6"}>My Cart</Typography>
@@ -61,11 +62,12 @@ export default function Cart({ onClick }: CartProps) {
             display: "flex",
             flexDirection: "column",
             borderTop: "1px solid black",
-            minHeight: "10%",
+            minHeight: "40%",
             gap: "10px",
             textAlign: "start",
-            justifyContent: "center",
+            justifyContent: "space-between",
             alignItems: "center",
+            p: 2,
           }}
         >
           <Box
