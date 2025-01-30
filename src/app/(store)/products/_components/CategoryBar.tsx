@@ -1,8 +1,13 @@
+"use client";
+
 import { Box } from "@mui/material";
 import CategoryButton from "./CategoryButton";
-import React from "react";
+import React, { useState } from "react";
 import FilterButton from "./FilterButton";
+
 export default function FilterSidebar() {
+  const [clickedCategory, setClickedCategory] = useState<string | null>(null);
+
   return (
     <Box
       sx={{
@@ -19,12 +24,23 @@ export default function FilterSidebar() {
         mr: "auto",
       }}
     >
-      <CategoryButton value={"Footwear"} />
-      <CategoryButton value={"Headwear"} />
-      <CategoryButton value={"Jackets"} />
-      <CategoryButton value={"Bags"} />
-      <CategoryButton value={"Accesories"} />
-      <CategoryButton value={"Bottoms"} />
+      {[
+        "Footwear",
+        "Headwear",
+        "Jackets",
+        "Bags",
+        "Accessories",
+        "Bottoms",
+      ].map((category) => (
+        <CategoryButton
+          key={category}
+          value={category}
+          isClicked={clickedCategory === category}
+          setIsClicked={(isClicked) =>
+            isClicked ? setClickedCategory(category) : setClickedCategory(null)
+          }
+        />
+      ))}
       <FilterButton />
     </Box>
   );

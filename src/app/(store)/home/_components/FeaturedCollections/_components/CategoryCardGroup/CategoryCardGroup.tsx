@@ -9,21 +9,21 @@ const categories = [
     imgSrc: "/Assets/HeadWearCategory.png",
     CategoryDesc: "Stylish and protective headwear for all seasons.",
     shortCardImgSrc: "/Assets/FootwearCategory.png",
-    shortCardTitle: "Footwear",
+    shortCardName: "Footwear",
   },
   {
-    CategoryName: "Jacket",
+    CategoryName: "Jackets",
     imgSrc: "/Assets/JacketCategoryImage.png",
     CategoryDesc: "Warm and durable jackets for outdoor adventures.",
     shortCardImgSrc: "/Assets/BagsCategory.png",
-    shortCardTitle: "Bags",
+    shortCardName: "Bags",
   },
   {
     CategoryName: "Bottoms",
     imgSrc: "/Assets/BottomsCategory.png",
     CategoryDesc: "Essential accessories to complement your outfit.",
     shortCardImgSrc: "/Assets/AccesoriesCategory.png",
-    shortCardTitle: "Accesories",
+    shortCardName: "Accessories",
   },
 ];
 
@@ -59,7 +59,7 @@ const CategoryCardGroup: React.FC = () => {
               />
               <ShortCard
                 imgSrc={category.shortCardImgSrc}
-                CategoryName={category.shortCardTitle}
+                CategoryName={category.shortCardName}
                 CategoryDesc={category.CategoryDesc}
               />
             </>
@@ -67,7 +67,7 @@ const CategoryCardGroup: React.FC = () => {
             <>
               <ShortCard
                 imgSrc={category.shortCardImgSrc}
-                CategoryName={category.shortCardTitle}
+                CategoryName={category.shortCardName}
                 CategoryDesc={category.CategoryDesc}
               />
               <LongCard

@@ -1,5 +1,7 @@
-import ProductCard from "./ProductCard";
+import React from "react";
+import { Box } from "@mui/material";
 import { Product } from "../data/products";
+import ProductCard from "./ProductCard/ProductCard";
 
 interface ProductListProps {
   products: Product[];
@@ -7,11 +9,16 @@ interface ProductListProps {
 
 const ProductList: React.FC<ProductListProps> = ({ products }) => {
   return (
-    <div>
+    <Box sx={{ display: "flex", flexWrap: "wrap" }}>
       {products.map((product) => (
-        <ProductCard key={product.id} product={product} />
+        <ProductCard
+          key={product.id}
+          ProductName={product.name}
+          ProductPrice={product.price}
+          imgSrc={product.imgSrc}
+        />
       ))}
-    </div>
+    </Box>
   );
 };
 

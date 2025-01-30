@@ -4,8 +4,6 @@ import { useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 
 import { products as productsData, Product } from "./data/products";
-import Filters from "./_components/FilterOptions";
-import SortOptions from "@/app/(store)/products/_components/SortOptions";
 import ProductList from "./_components/ProductList";
 
 const ProductFiltersPage = () => {
@@ -14,7 +12,8 @@ const ProductFiltersPage = () => {
   const [products, setProducts] = useState<Product[]>(productsData);
 
   const category = searchParams.get("category") || "";
-  const priceRange = searchParams.get("priceRange") || "";
+  const minPrice = searchParams.get("minPrice") || "";
+  const maxPrice = searchParams.get("maxPrice") || "";
   const sort = searchParams.get("sort") || "";
 
   useEffect(() => {
@@ -25,8 +24,9 @@ const ProductFiltersPage = () => {
         (product) => product.category === category,
       );
     }
-    if (priceRange) {
-      const [min, max] = priceRange.split("-").map(Number);
+    if (minPrice && maxPrice) {
+      const min = Number(minPrice);
+      const max = Number(maxPrice);
       filteredProducts = filteredProducts.filter(
         (product) => product.price >= min && product.price <= max,
       );
@@ -42,12 +42,10 @@ const ProductFiltersPage = () => {
     }
 
     setProducts(filteredProducts);
-  }, [category, priceRange, sort]);
+  }, [category, minPrice, maxPrice, sort]);
 
   return (
     <div>
-      <Filters currentCategory={category} currentPriceRange={priceRange} />
-      <SortOptions currentSort={sort} />
       <ProductList products={products} />
     </div>
   );

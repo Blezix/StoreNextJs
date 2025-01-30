@@ -1,6 +1,15 @@
+"use client";
+
 import React from "react";
 import { Button } from "@mui/material";
+import { useRouter } from "next/navigation";
 export default function HeroSectionButton() {
+  const router = useRouter();
+
+  const handleClick = () => {
+    router.push("/products");
+  };
+
   return (
     <Button
       sx={{
@@ -17,6 +26,7 @@ export default function HeroSectionButton() {
           color: "white",
         },
       }}
+      onClick={handleClick}
     >
       Shop Now
     </Button>
