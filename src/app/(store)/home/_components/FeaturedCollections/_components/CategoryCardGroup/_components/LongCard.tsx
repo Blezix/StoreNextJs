@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { Box, Typography, Button } from "@mui/material";
+import { useRouter } from "next/navigation";
 
 interface Props {
   CategoryName: string;
@@ -10,6 +11,11 @@ interface Props {
 
 const LongCard: React.FC<Props> = ({ CategoryName, imgSrc, CategoryDesc }) => {
   const [active, setActive] = React.useState(false);
+  const router = useRouter();
+
+  const handleRedirect = () => {
+    router.push(`/products?category=${CategoryName}`);
+  };
 
   return (
     <Box
@@ -90,6 +96,7 @@ const LongCard: React.FC<Props> = ({ CategoryName, imgSrc, CategoryDesc }) => {
               color: "white",
             },
           }}
+          onClick={handleRedirect}
         >
           Discover
         </Button>

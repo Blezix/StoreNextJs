@@ -5,16 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="20446913-f035-4fc6-ab03-68fef2ce708a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/app/(store)/products/_components/ProductCard.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/(store)/products/data/products.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/(store)/products/_components/ProductCard/ProductCard.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/(store)/products/_components/ProductCard/_components/ProductCardBottom/ProductCardBottom.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/(store)/products/_components/ProductCard/_components/ProductCardBottom/_components/AddToCartButton/AddToCartButton.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/(store)/products/_components/ProductCard/_components/ProductCardBottom/_components/ProductAttributes/ProductAttributes.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/(store)/products/_components/ProductCard/_components/ProductCardTop/ProductCardTop.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(store)/_components/Header/_components/MenuRight/Cart/Cart.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(store)/_components/Header/_components/MenuRight/Cart/Cart.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(store)/cart/_components/CartList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(store)/cart/_components/CartList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(store)/home/_components/FeaturedCollections/_components/CategoryCardGroup/CategoryCardGroup.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(store)/home/_components/FeaturedCollections/_components/CategoryCardGroup/CategoryCardGroup.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(store)/home/_components/FeaturedCollections/_components/CategoryCardGroup/_components/LongCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(store)/home/_components/FeaturedCollections/_components/CategoryCardGroup/_components/LongCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(store)/home/_components/FeaturedCollections/_components/CategoryCardGroup/_components/ShortCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(store)/home/_components/FeaturedCollections/_components/CategoryCardGroup/_components/ShortCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(store)/home/_components/HeroSection/_components/HeroSectionButton/HeroSectionButton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(store)/home/_components/HeroSection/_components/HeroSectionButton/HeroSectionButton.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/(store)/products/[...slug].tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(store)/products/[...slug].tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(store)/products/_components/CategoryBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(store)/products/_components/CategoryBar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(store)/products/_components/CategoryButton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(store)/products/_components/CategoryButton.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/(store)/products/_components/FilterButton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(store)/products/_components/FilterButton.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/(store)/products/_components/FilterOptions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(store)/products/_components/FilterOptions.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(store)/products/_components/FilterSidebar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(store)/products/_components/FilterTopbar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(store)/products/_components/SortOptions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(store)/products/_components/SortOptions.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(store)/products/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(store)/products/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(store)/products/_components/ProductCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(store)/products/_components/ProductCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(store)/products/_components/ProductList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(store)/products/_components/ProductList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(store)/products/data/products.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(store)/products/data/products.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +49,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/Blezix/StoreNextJs.git&quot;,
-    &quot;accountId&quot;: &quot;53b3dcb2-6967-47a5-acc1-fb7e9ab694b0&quot;
+    &quot;accountId&quot;: &quot;0d8921cf-9166-429a-8315-0df5735e1bc6&quot;
   }
 }</component>
   <component name="ProjectColorInfo">{
@@ -51,25 +60,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/HARDPC/Music/StoreNextJs/src/app/(store)/products/_components&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\Users\\HARDPC\\Music\\StoreNextJs\\node_modules\\prettier&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\HARDPC\\Music\\StoreNextJs\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/jakub/Documents/GitHub/StoreNextJs/src/app/(store)/products/_components",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "npm.dev.executor": "Run",
+    "prettierjs.PrettierConfiguration.Package": "C:\\Users\\HARDPC\\Music\\StoreNextJs\\node_modules\\prettier",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "ts.external.directory.path": "C:\\Users\\jakub\\Documents\\GitHub\\StoreNextJs\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="ReactDesignerToolWindowState">
     <option name="myId2Visible">
       <map>
@@ -81,11 +90,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\jakub\Documents\GitHub\StoreNextJs\src\app\(store)\products\_components" />
       <recent name="C:\Users\HARDPC\Music\StoreNextJs\src\app\(store)\products\_components" />
       <recent name="C:\Users\HARDPC\Music\StoreNextJs\src\app\(store)\home\_components\FeaturedCollections" />
       <recent name="C:\Users\HARDPC\Music\StoreNextJs\public\Assets" />
       <recent name="C:\Users\Jacob\Documents\GitHub\StoreNextJs\src\app\(store)\home\_components\NewArrivals\_components\ProductsGroupBox\_components\ProductCard\_components" />
-      <recent name="C:\Users\Jacob\Documents\GitHub\StoreNextJs\src\app\(store)\_components\Footer\_components\MiddleSection\_components" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\HARDPC\Music\StoreNextJs\src\app\(store)\products" />
@@ -102,7 +111,8 @@
       <scripts>
         <script value="dev" />
       </scripts>
-      <node-interpreter value="project" />
+      <node-interpreter value="node" />
+      <package-manager value="npm" />
       <envs />
       <method v="2" />
     </configuration>
@@ -115,7 +125,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-deb605915726-JavaScript-WS-243.22562.112" />
+        <option value="bundled-js-predefined-d6986cc7102b-822845ee3bb5-JavaScript-WS-243.23654.157" />
       </set>
     </attachedChunks>
   </component>
@@ -144,6 +154,11 @@
       <workItem from="1735393195653" duration="5351000" />
       <workItem from="1735479197490" duration="2867000" />
       <workItem from="1735942320200" duration="3606000" />
+      <workItem from="1738086614807" duration="154000" />
+      <workItem from="1738086800330" duration="501000" />
+      <workItem from="1738167894359" duration="2005000" />
+      <workItem from="1738254459960" duration="69000" />
+      <workItem from="1738254558081" duration="6766000" />
     </task>
     <servers />
   </component>
@@ -164,9 +179,10 @@
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/app/(store)/cart/_components/CartList.tsx</url>
-          <line>56</line>
-          <option name="timeStamp" value="2" />
+          <url>file://$PROJECT_DIR$/src/app/(store)/products/_components/ProductCard/_components/ProductCardBottom/_components/AddToCartButton/AddToCartButton.tsx</url>
+          <line>14</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

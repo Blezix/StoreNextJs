@@ -1,19 +1,39 @@
 "use client";
 
 import { Button } from "@mui/material";
-import React from "react";
+import React, { useEffect } from "react";
+import { useRouter } from "next/navigation";
 
 interface Props {
   value: string;
+  isClicked: boolean;
+  setIsClicked: (value: boolean) => void;
 }
 
-const CategoryButton: React.FC<Props> = ({ value }) => {
-  const [isClicked] = React.useState(false);
+const CategoryButton: React.FC<Props> = ({
+  value,
+  isClicked,
+  setIsClicked,
+}) => {
+  const router = useRouter();
 
-  /*useEffect(() => {
-    console.log("Button clicked");
-  }[])
-*/
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    if (params.get("category") === value) {
+      setIsClicked(true);
+    }
+  }, [value, setIsClicked]);
+
+  const handleCategoryChange = () => {
+    const params = new URLSearchParams(window.location.search);
+    if (value) {
+      params.set("category", value);
+    } else {
+      params.delete("category");
+    }
+    router.push(`/products?${params.toString()}`);
+  };
+
   return (
     <Button
       sx={{
@@ -28,6 +48,7 @@ const CategoryButton: React.FC<Props> = ({ value }) => {
           color: "white",
         },
       }}
+      onClick={handleCategoryChange}
     >
       {value}
     </Button>

@@ -4,9 +4,14 @@ import { Button, Drawer, Box, Typography } from "@mui/material";
 import React from "react";
 import TuneIcon from "@mui/icons-material/Tune";
 import FilterOptions from "./FilterOptions";
+
 const FilterButton: React.FC = ({}) => {
-  const [isClicked, setIsClicked] = React.useState(false);
+  const [isClicked] = React.useState(false);
   const [isDrawerOpen, setIsDrawerOpen] = React.useState(false);
+  const [currentPriceRange, setCurrentPriceRange] = React.useState<
+    [number, number]
+  >([0, 1000]);
+  const [currentSort, setCurrentSort] = React.useState<string>("");
 
   const toggleDrawer = (open: boolean) => () => {
     setIsDrawerOpen(open);
@@ -39,7 +44,12 @@ const FilterButton: React.FC = ({}) => {
           }}
         >
           <Typography variant="h5">Filters</Typography>
-          <FilterOptions />
+          <FilterOptions
+            currentPriceRange={currentPriceRange}
+            setCurrentPriceRange={setCurrentPriceRange}
+            currentSort={currentSort}
+            setCurrentSort={setCurrentSort}
+          />
         </Box>
       </Drawer>
     </>
