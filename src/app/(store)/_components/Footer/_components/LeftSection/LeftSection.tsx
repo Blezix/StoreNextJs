@@ -1,5 +1,6 @@
 import React from "react";
-import { Box, Typography } from "@mui/material";
+import { Box } from "@mui/material";
+import Text from "@/app/_components/Text";
 export default function LeftSection() {
   return (
     <Box
@@ -10,7 +11,7 @@ export default function LeftSection() {
         flexDirection: "column",
       }}
     >
-      <Typography
+      <Text
         variant={"h4"}
         sx={{
           marginBottom: 2,
@@ -18,11 +19,11 @@ export default function LeftSection() {
         }}
       >
         Nigger
-      </Typography>
-      <Typography>
+      </Text>
+      <Text variant={"body2"}>
         Skibidi toilet goni mnie śpiewając te piosenke scooby dooo where is you
         nigger as dog{" "}
-      </Typography>
+      </Text>
     </Box>
   );
 }

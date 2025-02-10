@@ -2,7 +2,7 @@
 
 import { useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
-
+import { Box } from "@mui/material";
 import { products as productsData, Product } from "./data/products";
 import ProductList from "./_components/ProductList";
 
@@ -45,9 +45,9 @@ const ProductFiltersPage = () => {
   }, [category, minPrice, maxPrice, sort]);
 
   return (
-    <div>
+    <Box>
       <ProductList products={products} />
-    </div>
+    </Box>
   );
 };
 

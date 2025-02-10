@@ -1,6 +1,8 @@
+'use client'
+
 import React from "react";
 import { Box } from "@mui/material";
-import ProductCard from "./_components/ProductCard/ProductCard";
+import ProductCard from "@/app/_components/ProductCard/ProductCard";
 
 const products = [
     { ProductName: "Hiking Jacket", ProductPrice: 79.99, imgSrc: "/Assets/BaigePuffer.png" },
@@ -20,10 +22,23 @@ export default function ProductGroupBox() {
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
-                width: "100%",
+                width:{
+                    xs: "70%",
+                    sm: "90%",
+                    md: "90%",
+                    lg: "85%",
+                    xl: "85%",
+                },
                 height: "85%",
                 flexWrap: "wrap",
                 gap: "8px",
+                overflow: {
+                    xs:"scroll",
+                    sm:"scroll",
+                    md:"scroll",
+                    lg: "scroll",
+                    xl: "hidden",
+                },
             }}
         >
             {products.map((product, index) => (

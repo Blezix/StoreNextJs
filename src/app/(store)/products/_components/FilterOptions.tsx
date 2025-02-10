@@ -47,7 +47,7 @@ const FilterOptions: React.FC<Props> = ({
         Min Price:
         <input
           type="number"
-          value={currentPriceRange[0]}
+          value={minPrice}
           onChange={handleMinPriceChange}
           min={10}
           max={maxPrice - 1}
@@ -57,7 +57,7 @@ const FilterOptions: React.FC<Props> = ({
         Max Price:
         <input
           type="number"
-          value={currentPriceRange[1]}
+          value={maxPrice}
           onChange={handleMaxPriceChange}
           min={minPrice + 1}
         />

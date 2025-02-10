@@ -1,10 +1,20 @@
+'use client'
+
 import React from "react";
 import { Box } from "@mui/material";
 import HeroSectionText from "./_components/HeroSectionText/HeroSectionText";
 import HeroSectionButton from "./_components/HeroSectionButton/HeroSectionButton";
-
+import UniversalButton from "@/app/_components/UniversalButton";
+import { useRouter } from "next/navigation";
 export default function HeroSection() {
-  return (
+
+    const router = useRouter()
+
+    const handleClick = () => {
+        router.push("/products");
+    };
+    return (
+
     <Box
       sx={{
         display: "flex",

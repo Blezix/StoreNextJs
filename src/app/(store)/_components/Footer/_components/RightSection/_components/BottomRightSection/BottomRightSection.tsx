@@ -1,5 +1,6 @@
 import React from "react";
-import { Box, Typography } from "@mui/material";
+import { Box } from "@mui/material";
+import Text from "@/app/_components/Text";
 export default function RightSection() {
   return (
     <Box
@@ -11,8 +12,8 @@ export default function RightSection() {
         justifyContent: "space-around",
       }}
     >
-      <Typography>Call us on +12 332476</Typography>
-      <Typography>USD$|English</Typography>
+      <Text variant={""}>Call us on +12 332476</Text>
+      <Text variant={""}>USD$|English</Text>
     </Box>
   );
 }

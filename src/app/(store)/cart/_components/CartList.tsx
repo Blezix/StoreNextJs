@@ -1,8 +1,9 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { Box, Typography, IconButton } from "@mui/material";
-import DeleteIcon from "@mui/icons-material/Delete";
+import { Box } from "@mui/material";
+import CartListItem from "./CartListItem";
+import Text from "@/app/_components/Text";
 
 interface Product {
   ProductName: string;
@@ -43,6 +44,7 @@ export default function CartList() {
   const handleDelete = (index: number) => {
     const updatedCartItems = cartItems.filter((_, i) => i !== index);
     setCartItems(updatedCartItems);
+
     localStorage.setItem("cart", JSON.stringify(updatedCartItems));
   };
 
@@ -56,7 +58,7 @@ export default function CartList() {
         gap: "10px",
       }}
     >
-      <Typography variant={"h4"}>Your Cart</Typography>
+      <Text variant={"h4"}>Your Cart</Text>
       <Box
         sx={{
           gap: "10px",
@@ -64,42 +66,16 @@ export default function CartList() {
         }}
       >
         {cartItems.length === 0 ? (
-          <Typography variant="body1">Your cart is empty</Typography>
+          <Text variant="body1">Your cart is empty</Text>
         ) : (
           cartItems.map((item, index) => (
-            <Box
+            <CartListItem
               key={index}
-              sx={{
-                height: "300px",
-                width: "90%",
-                borderBottom: "solid lightgrey 1px",
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "center",
-                p: 2,
-              }}
-            >
-              <img
-                src={item.imgSrc}
-                alt={item.ProductName}
-                style={{ height: "100px" }}
-              />
-              <Typography variant="body1">{item.ProductName}</Typography>
-              <Typography variant="body1">
-                ${item.ProductPrice.toFixed(2)}
-              </Typography>
-              <input
-                type="number"
-                value={item.quantity.toString()}
-                onChange={(e) =>
-                  handleQuantityChange(index, parseInt(e.target.value, 10) || 0)
-                }
-                min="1"
-              />
-              <IconButton onClick={() => handleDelete(index)}>
-                <DeleteIcon />
-              </IconButton>
-            </Box>
+              item={item}
+              index={index}
+              handleQuantityChange={handleQuantityChange}
+              handleDelete={handleDelete}
+            />
           ))
         )}
       </Box>

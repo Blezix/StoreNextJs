@@ -22,20 +22,21 @@ const ProductCard: React.FC<Props> = ({
                 alignItems: "center",
                 flexDirection: "column",
                 flexBasis: {
-                    xs: "100%", // For extra small devices
-                    sm: "50%",  // For small devices
-                    md: "33.33%", // For medium devices
-                    lg: "25%", // For large devices
-                    xl: "20%", // For extra large devices
+                    xs: "100%",
+                    sm: "50%",
+                    md: "33.33%",
+                    lg: "25%",
+                    xl: "20%",
                 },
                 height: {
-                    xs: "auto", // For extra small devices
-                    sm: "auto", // For small devices
-                    md: "auto", // For medium devices
-                    lg: "auto", // For large devices
-                    xl: "500px", // For extra large devices
+                    xs: "auto",
+                    sm: "auto",
+                    md: "auto",
+                    lg: "450px",
+                    xl: "500px",
                 },
                 p: 2,
+                maxHeight:"50%",
             }}
         >
             <ProductCardTop imgSrc={imgSrc} />

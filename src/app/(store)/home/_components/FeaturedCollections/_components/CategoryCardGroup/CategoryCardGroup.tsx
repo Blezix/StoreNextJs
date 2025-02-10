@@ -32,12 +32,16 @@ const CategoryCardGroup: React.FC = () => {
     <Box
       sx={{
         display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
+        justifyContent: {
+            md:"start",
+            xl:"center"
+        },
+        alignItems:"center",
         flexDirection: "row",
         flexWrap: "wrap",
         width: "90%",
         height: "80%",
+          overflow:"auto"
       }}
     >
       {categories.map((category, index) => (
@@ -45,9 +49,16 @@ const CategoryCardGroup: React.FC = () => {
           key={index}
           sx={{
             display: "flex",
-            flexBasis: "30%",
+            flexBasis: {
+                xs: "100%",
+                sm: "50%",
+                md: "33.33%",
+                lg: "33%",
+                xl: "30%",
+                  },
             flexDirection: "column",
             height: "100%",
+
           }}
         >
           {index === 1 ? (

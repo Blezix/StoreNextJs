@@ -1,6 +1,6 @@
 import React from "react";
 import { Button } from "@mui/material";
-
+import Text from "@/app/_components/Text";
 interface ItemProps {
   value: string;
   onClick: void;
@@ -22,7 +22,7 @@ const Item: React.FC<ItemProps> = ({ value, onClick }) => {
       }}
       onClick={onClick}
     >
-      {value}
+      <Text variant={""}>{value}</Text>
     </Button>
   );
 };

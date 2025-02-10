@@ -1,6 +1,6 @@
 import React from "react";
-import { List, ListItem, Typography } from "@mui/material";
-
+import { List, ListItem } from "@mui/material";
+import Text from "@/app/_components/Text";
 interface FooterListProps {
   header: string;
   items: string[];
@@ -14,7 +14,7 @@ export default function FooterList({ header, items }: FooterListProps) {
         width: "30%",
       }}
     >
-      <Typography variant={"h6"}>{header}</Typography>
+      <Text variant={"h6"}>{header}</Text>
       {items.map((item, index) => (
         <ListItem
           key={index}
@@ -22,13 +22,14 @@ export default function FooterList({ header, items }: FooterListProps) {
             pl: 0,
           }}
         >
-          <Typography
+          <Text
+            variant={""}
             sx={{
               color: "#6b6b6b",
             }}
           >
             {item}
-          </Typography>
+          </Text>
         </ListItem>
       ))}
     </List>

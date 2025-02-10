@@ -1,6 +1,6 @@
 import React from "react";
 import Box from "@mui/material/Box";
-import router from "next/router";
+import Text from "@/app/_components/Text";
 import { useRouter } from "next/navigation";
 export default function Header() {
   const router = useRouter();
@@ -27,7 +27,9 @@ export default function Header() {
       }}
       onClick={() => HandlePageRedirect("home")}
     >
-      Nigger
+      <Text variant={"body1"} sx={{
+          fontWeight: "bold",
+      }}>Nigger</Text>
     </Box>
   );
 }

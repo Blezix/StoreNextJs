@@ -1,8 +1,10 @@
 "use client";
 import React from "react";
-import { Box, Typography, Button } from "@mui/material";
+import { Box, Button } from "@mui/material";
 import { useRouter } from "next/navigation";
+import Text from "@/app/_components/Text";
 
+import UniversalButton from "@/app/_components/UniversalButton";
 interface Props {
   CategoryName: string;
   CategoryDesc: string;
@@ -55,17 +57,17 @@ const ShordCard: React.FC<Props> = ({ CategoryName, imgSrc, CategoryDesc }) => {
           },
         }}
       >
-        <Typography
+        <Text
           variant={"h3"}
           sx={{
             transition: "opacity 0.5s",
           }}
         >
           {CategoryName}
-        </Typography>
+        </Text>
 
-        <Typography
-          variant={"h5"}
+        <Text
+          variant={"h6"}
           sx={{
             color: "white",
             textShadow: "2px 2px 4px rgba(0,0,0,0.5)",
@@ -77,28 +79,20 @@ const ShordCard: React.FC<Props> = ({ CategoryName, imgSrc, CategoryDesc }) => {
           }}
         >
           {CategoryDesc}
-        </Typography>
+        </Text>
 
-        <Button
-          sx={{
-            backgroundColor: "white",
-            color: "black",
-            padding: "10px 0",
-            width: active ? "200px" : "0",
-            borderRadius: "30px",
-            fontSize: active ? "1.2rem" : "0",
-            textTransform: "none",
-            opacity: active ? 1 : 0,
-            mb: 7,
-            "&:hover": {
-              backgroundColor: "black",
-              color: "white",
-            },
-          }}
-          onClick={handleRedirect}
-        >
-          Discover
-        </Button>
+          <UniversalButton
+              variant={"white"}
+              onClick={handleRedirect}
+              sx={{
+                  width: active ? "200px" : "0",
+                  fontSize: active ? "inherit" : "0",
+                  opacity: active ? 1 : 0,
+
+              }}
+          >
+              Discover
+          </UniversalButton>
       </Box>
     </Box>
   );

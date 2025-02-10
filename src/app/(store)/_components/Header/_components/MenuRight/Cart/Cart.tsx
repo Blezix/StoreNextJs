@@ -1,15 +1,35 @@
 "use client";
 
-import React from "react";
+import React, { useEffect } from "react";
 import ShoppingBagOutlinedIcon from "@mui/icons-material/ShoppingBagOutlined";
-import { Box, Button, Typography } from "@mui/material";
-
+import { Box, Button } from "@mui/material";
+import Text from "@/app/_components/Text";
 interface CartProps {
   onClick: () => void;
 }
 
 export default function Cart({ onClick }: CartProps) {
   const [active, setActive] = React.useState(false);
+  const [items, setItems] = React.useState([]);
+
+  const updateCartItems = () => {
+    const cart = JSON.parse(localStorage.getItem("cart") || "[]");
+    setItems(cart);
+  };
+
+  useEffect(() => {
+    updateCartItems();
+
+    const handleCartUpdated = () => {
+      updateCartItems();
+    };
+
+    window.addEventListener("cartUpdated", handleCartUpdated);
+
+    return () => {
+      window.removeEventListener("cartUpdated", handleCartUpdated);
+    };
+  }, []);
 
   return (
     <Box
@@ -27,7 +47,7 @@ export default function Cart({ onClick }: CartProps) {
       onClick={onClick}
     >
       <ShoppingBagOutlinedIcon sx={{}} />
-      <Typography>Cart(0)</Typography>
+      <Text variant={""}>Cart({items.length})</Text>
 
       <Box
         sx={{
@@ -42,10 +62,11 @@ export default function Cart({ onClick }: CartProps) {
           top: "100%",
           right: "200%",
           transform: "translateX(50%)",
+          zIndex: 20000,
           p: 1,
         }}
       >
-        <Typography variant={"h6"}>My Cart</Typography>
+        <Text variant={"h6"}>My Cart</Text>
         <Box
           sx={{
             width: "100%",
@@ -77,8 +98,8 @@ export default function Cart({ onClick }: CartProps) {
               width: "79%",
             }}
           >
-            <Typography variant={"h6"}>Value:</Typography>
-            <Typography variant={"h6"}>$0</Typography>
+            <Text variant={"h6"}>Value:</Text>
+            <Text variant={"h6"}>$0</Text>
           </Box>
           <Button
             sx={{

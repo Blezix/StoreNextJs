@@ -1,4 +1,5 @@
-import { Box, Typography } from "@mui/material";
+import { Box } from "@mui/material";
+import Text from "@/app/_components/Text";
 import CategoryBar from "./CategoryBar";
 export default function FilterTopbar() {
   return (
@@ -17,8 +18,8 @@ export default function FilterTopbar() {
         mr: "auto",
       }}
     >
-      <Typography variant={"h3"}>UNISEX CLOTHING COLLECTION</Typography>
-      <Typography
+      <Text variant={"h3"}>UNISEX CLOTHING COLLECTION</Text>
+      <Text
         variant={"h6"}
         sx={{
           textAlign: "center",
@@ -30,7 +31,7 @@ export default function FilterTopbar() {
       >
         Find everything you need to look and feel your best and shop the latest
         unisex outdoor products
-      </Typography>
+      </Text>
       <CategoryBar />
     </Box>
   );

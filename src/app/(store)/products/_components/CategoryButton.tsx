@@ -3,7 +3,7 @@
 import { Button } from "@mui/material";
 import React, { useEffect } from "react";
 import { useRouter } from "next/navigation";
-
+import Text from "../../../_components/Text";
 interface Props {
   value: string;
   isClicked: boolean;
@@ -47,10 +47,11 @@ const CategoryButton: React.FC<Props> = ({
           backgroundColor: "black",
           color: "white",
         },
+        minWidth: `${value.length + 2}ch`,
       }}
       onClick={handleCategoryChange}
     >
-      {value}
+      <Text variant={"body2"}>{value}</Text>
     </Button>
   );
 };

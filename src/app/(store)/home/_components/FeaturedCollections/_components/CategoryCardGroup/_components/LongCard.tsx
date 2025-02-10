@@ -1,8 +1,9 @@
 "use client";
 import React from "react";
-import { Box, Typography, Button } from "@mui/material";
+import { Box } from "@mui/material";
 import { useRouter } from "next/navigation";
-
+import Text from "@/app/_components/Text";
+import UniversalButton from "@/app/_components/UniversalButton";
 interface Props {
   CategoryName: string;
   CategoryDesc: string;
@@ -56,16 +57,16 @@ const LongCard: React.FC<Props> = ({ CategoryName, imgSrc, CategoryDesc }) => {
           },
         }}
       >
-        <Typography
+        <Text
           variant={"h3"}
           sx={{
             transition: "opacity 0.5s",
           }}
         >
           {CategoryName}
-        </Typography>
+        </Text>
 
-        <Typography
+        <Text
           variant={"h5"}
           sx={{
             color: "white",
@@ -78,28 +79,20 @@ const LongCard: React.FC<Props> = ({ CategoryName, imgSrc, CategoryDesc }) => {
           }}
         >
           {CategoryDesc}
-        </Typography>
+        </Text>
 
-        <Button
-          sx={{
-            backgroundColor: "white",
-            color: "black",
-            padding: "10px 0",
-            width: active ? "200px" : "0",
-            borderRadius: "30px",
-            fontSize: active ? "1.2rem" : "0",
-            textTransform: "none",
-            opacity: active ? 1 : 0,
-            mb: 7,
-            "&:hover": {
-              backgroundColor: "black",
-              color: "white",
-            },
-          }}
-          onClick={handleRedirect}
-        >
-          Discover
-        </Button>
+          <UniversalButton
+              variant={"white"}
+              onClick={handleRedirect}
+              sx={{
+                  width: active ? "200px" : "0",
+                  fontSize: active ? "inherit" : "0",
+                    opacity: active ? 1 : 0,
+
+              }}
+          >
+              Discover
+          </UniversalButton>
       </Box>
     </Box>
   );

@@ -1,6 +1,6 @@
 import React from "react";
-import { Box, Typography } from "@mui/material";
-
+import { Box } from "@mui/material";
+import Text from "@/app/_components/Text";
 export default function NewArrivalsText() {
   return (
     <Box
@@ -13,15 +13,15 @@ export default function NewArrivalsText() {
         height: "15%",
       }}
     >
-      <Typography
+      <Text
         variant={"h4"}
         sx={{
           color: "#060606",
         }}
       >
         New Arrivals
-      </Typography>
-      <Typography
+      </Text>
+      <Text
         variant={"body1"}
         sx={{
           color: "#818181",
@@ -29,7 +29,7 @@ export default function NewArrivalsText() {
       >
         Our new arrivals are built to withstand your activities while keeping
         you looking your best!
-      </Typography>
+      </Text>
     </Box>
   );
 }
