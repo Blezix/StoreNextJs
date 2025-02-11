@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from './_components/Header/Header';
 import Footer from './_components/Footer/Footer';
-
+import { CartProvider } from "@/app/CartContext";
 export default function StoreLayout({
                                        children,
                                    }: Readonly<{
@@ -9,10 +9,12 @@ export default function StoreLayout({
 }>) {
     return (
         <>
+            <CartProvider>
         <Header/>
     <div> {children}</div>
         <Footer/>
-        </>
+            </CartProvider>
+            </>
 
     );
 }

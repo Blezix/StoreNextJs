@@ -1,8 +1,19 @@
+'use client'
+
 import React from "react";
 import { Box, Button } from "@mui/material";
 import Text from "@/app/_components/Text";
+import { useCart } from "@/app/CartContext";
+
+
 const CheckoutButtons: React.FC = () => {
-  return (
+    const { totalPrice } = useCart();
+
+    const formatPrice = (price: number) => {
+        return price.toFixed(2) + "$";
+    }
+
+    return (
     <Box
       sx={{
         display: "flex",
@@ -21,7 +32,7 @@ const CheckoutButtons: React.FC = () => {
         }}
       >
         <Text variant={"h5"}>Total</Text>
-        <Text variant={"h5"}>0$</Text>
+        <Text variant={"h5"}>{formatPrice(totalPrice)}</Text>
       </Box>
       <Button
         sx={{
