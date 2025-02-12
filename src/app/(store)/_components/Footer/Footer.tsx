@@ -8,7 +8,7 @@ export default function Footer() {
     <Box
       sx={{
         display: "flex",
-        height: "400px",
+        minHeight: "400px",
         width: "100%",
         backgroundColor: "#121212",
         flexWrap: "wrap",

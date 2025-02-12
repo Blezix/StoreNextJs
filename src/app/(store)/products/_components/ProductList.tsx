@@ -13,7 +13,7 @@ const ProductList: React.FC<ProductListProps> = ({ products }) => {
       sx={{
         display: "flex",
         flexWrap: "wrap",
-        width: "90%",
+        width: "85%",
         m: `auto`,
         justifyContent: "center",
       }}

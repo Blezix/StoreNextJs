@@ -59,7 +59,7 @@ export const products: Product[] = [
     id: 5,
     name: "Camping Hat",
     price: 24.99,
-    imgSrc: ["/Assets/beany.png", "/Assets/beany.png", "/Assets/beany.png"],
+    imgSrc: ["/Assets/beany.png", "/Assets/beany.png", "/Assets/Bluzaichuj.png"],
     category: "Headwear",
     slug: "camping-hat",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",

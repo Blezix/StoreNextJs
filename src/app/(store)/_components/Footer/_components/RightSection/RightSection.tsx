@@ -9,6 +9,7 @@ export default function RightSection() {
         display: "flex",
         height: "100%",
         width: "25%",
+          minWidth:"220px",
         flexDirection: "column",
       }}
     >

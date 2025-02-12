@@ -15,14 +15,14 @@ const Item: React.FC<ItemProps> = ({ value, onClick }) => {
         color: "inherit",
         borderRadius: "0",
         textTransform: "none",
-        fontSize: "1rem",
+          fontSize: "1.1rem",
         "&:hover": {
           opacity: "0.7",
         },
       }}
       onClick={onClick}
     >
-      <Text variant={""}>{value}</Text>
+      <Text variant={"body2"}>{value}</Text>
     </Button>
   );
 };

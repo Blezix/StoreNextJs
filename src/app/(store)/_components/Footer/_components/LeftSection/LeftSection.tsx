@@ -7,7 +7,14 @@ export default function LeftSection() {
       sx={{
         display: "flex",
         height: "100%",
-        width: "25%",
+        width: {
+            xs: "100%",
+            sm: "100%",
+            md: "33.33%",
+            lg: "25%",
+            xl: "25%",
+        },
+          minWidth:"220px",
         flexDirection: "column",
       }}
     >

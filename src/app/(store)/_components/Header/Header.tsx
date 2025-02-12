@@ -23,6 +23,7 @@ export default function Header() {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
+
         pr: 4,
       }}
     >

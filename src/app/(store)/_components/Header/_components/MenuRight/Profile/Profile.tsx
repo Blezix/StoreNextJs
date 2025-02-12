@@ -1,7 +1,7 @@
 import React from "react";
 import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
-import { Box, Typography } from "@mui/material";
-import ShoppingBagOutlinedIcon from "@mui/icons-material/ShoppingBagOutlined";
+import { Box } from "@mui/material";
+import Text from "@/app/_components/Text";
 export default function Profile() {
   return (
     <Box
@@ -9,10 +9,13 @@ export default function Profile() {
         display: "flex",
         gap: "6px",
         alignItems: "center",
+          fontSize: "1.1rem",
+
+
       }}
     >
       <AccountCircleOutlinedIcon />
-      <Typography>Login</Typography>
+      <Text variant={"body2"}>Login</Text>
     </Box>
   );
 }

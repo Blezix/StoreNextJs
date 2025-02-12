@@ -9,6 +9,7 @@ export default function MiddleSection() {
         justifyContent: "center",
         height: "100%",
         width: "50%",
+          minWidth:"430px",
         pl: 2,
       }}
     >

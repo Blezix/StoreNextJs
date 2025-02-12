@@ -22,6 +22,8 @@ export default function Cart({ onClick }: CartProps) {
                 gap: "6px",
                 alignItems: "center",
                 position: "relative",
+                fontSize: "1.1rem",
+
                 "&:hover": {
                     cursor: "pointer",
                 },
@@ -31,7 +33,7 @@ export default function Cart({ onClick }: CartProps) {
             onClick={onClick}
         >
             <ShoppingBagOutlinedIcon sx={{}} />
-            <Text variant={""}>Cart({totalItems})</Text>
+            <Text variant={"body2"}>Cart({totalItems})</Text>
             <CartPopUp active={active} />
 
         </Box>

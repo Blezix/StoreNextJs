@@ -27,7 +27,6 @@ export default function ProductPage() {
                 p: 2,
                 bgcolor: "white",
                 color: "black",
-                height: "100vh"
             }}
         >
             <Box sx={{

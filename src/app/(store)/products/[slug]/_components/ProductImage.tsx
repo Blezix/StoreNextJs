@@ -30,7 +30,7 @@ const ProductImage: React.FC<Props> = ({ imgSrc }) => {
                         borderRadius: 2,
                         p:2
                     }} key={index} onClick={() => setSelectedImage(img)}>
-                        <img src={img} alt={`Thumbnail ${index + 1}`} style={{ cursor: 'pointer', width: '100%', height: 'auto' }} />
+                        <Box component={"img"} src={img} alt={`Thumbnail ${index + 1}`} sx={{ cursor: 'pointer', width: '100%', height: 'auto' }} />
                     </ImageListItem>
                 ))}
             </ImageList>
