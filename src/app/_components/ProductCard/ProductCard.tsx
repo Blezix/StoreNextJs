@@ -2,20 +2,24 @@ import React from "react";
 import { Box } from "@mui/material";
 import ProductCardTop from "./_components/ProductCardTop/ProductCardTop";
 import ProductCardBottom from "./_components/ProductCardBottom/ProductCardBottom";
-
 interface Props {
     ProductName: string;
     ProductPrice: number;
-    imgSrc: string;
+    imgSrc: string[];
+    slug: string;
+
 }
 
 const ProductCard: React.FC<Props> = ({
                                           ProductName,
                                           ProductPrice,
                                           imgSrc,
+    slug
                                       }) => {
     return (
         <Box
+            component={"a"}
+            href={`/products/${slug}`}
             sx={{
                 display: "flex",
                 justifyContent: "center",
@@ -39,11 +43,11 @@ const ProductCard: React.FC<Props> = ({
                 maxHeight:"50%",
             }}
         >
-            <ProductCardTop imgSrc={imgSrc} />
+            <ProductCardTop imgSrc={imgSrc[0]} />
             <ProductCardBottom
                 ProductName={ProductName}
                 ProductPrice={ProductPrice}
-                imgSrc={imgSrc}
+                imgSrc={imgSrc[0]}
             />
         </Box>
     );

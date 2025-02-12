@@ -5,16 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="20446913-f035-4fc6-ab03-68fef2ce708a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/app/(store)/_components/Header/_components/MenuRight/Cart/CartPopUp.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/CartContext.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/(store)/products/[slug]/_components/AddToCartButton.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/(store)/products/[slug]/_components/ProductDescription.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/(store)/products/[slug]/_components/ProductImage.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/(store)/products/[slug]/_components/SimilarItems.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/(store)/products/[slug]/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/(store)/_components/Header/_components/MenuRight/Cart/Cart.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(store)/_components/Header/_components/MenuRight/Cart/Cart.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(store)/cart/_components/CartList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(store)/cart/_components/CartList.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(store)/cart/_components/CartSummary.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(store)/cart/_components/CartSummary.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(store)/cart/_components/CheckoutButtons.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(store)/cart/_components/CheckoutButtons.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(store)/cart/_components/SummaryDetails.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(store)/cart/_components/SummaryDetails.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(store)/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(store)/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(store)/home/_components/NewArrivals/_components/ProductsGroupBox/_components/ProductCard/ProductCard.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(store)/home/_components/NewArrivals/_components/ProductsGroupBox/_components/ProductCard/_components/ProductCardBottom/ProductCardBottom.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(store)/home/_components/NewArrivals/_components/ProductsGroupBox/_components/ProductCard/_components/ProductCardBottom/_components/AddToCartButton/AddToCartButton.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(store)/home/_components/NewArrivals/_components/ProductsGroupBox/_components/ProductCard/_components/ProductCardBottom/_components/ProductAttributes/ProductAttributes.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(store)/home/_components/NewArrivals/_components/ProductsGroupBox/_components/ProductCard/_components/ProductCardTop/ProductCardTop.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(store)/lib/filterProducts.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(store)/products/_components/ProductCard/ProductCard.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(store)/products/_components/ProductCard/_components/ProductCardBottom/ProductCardBottom.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(store)/products/_components/ProductCard/_components/ProductCardBottom/_components/AddToCartButton/AddToCartButton.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(store)/products/_components/ProductCard/_components/ProductCardBottom/_components/ProductAttributes/ProductAttributes.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(store)/products/_components/ProductCard/_components/ProductCardTop/ProductCardTop.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(store)/products/_components/ProductList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(store)/products/_components/ProductList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(store)/products/data.ts" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/(store)/products/data/products.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(store)/products/data/products.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/_components/ProductCard/ProductCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/_components/ProductCard/ProductCard.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/_components/ProductCard/_components/ProductCardBottom/_components/AddToCartButton/AddToCartButton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/_components/ProductCard/_components/ProductCardBottom/_components/AddToCartButton/AddToCartButton.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -58,7 +70,7 @@
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/jakub/Documents/GitHub/StoreNextJs/src/app/_components&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/jakub/Documents/GitHub/StoreNextJs/src/app/(store)/products/[slug]&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -82,11 +94,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\jakub\Documents\GitHub\StoreNextJs\src\app\(store)\products\[slug]" />
+      <recent name="C:\Users\jakub\Documents\GitHub\StoreNextJs\src\app\(store)\product" />
+      <recent name="C:\Users\jakub\Documents\GitHub\StoreNextJs\src\app\(store)\products" />
       <recent name="C:\Users\jakub\Documents\GitHub\StoreNextJs\src\app\_components" />
       <recent name="C:\Users\jakub\Documents\GitHub\StoreNextJs\src\app\(store)\products\_components" />
-      <recent name="C:\Users\HARDPC\Music\StoreNextJs\src\app\(store)\products\_components" />
-      <recent name="C:\Users\HARDPC\Music\StoreNextJs\src\app\(store)\home\_components\FeaturedCollections" />
-      <recent name="C:\Users\HARDPC\Music\StoreNextJs\public\Assets" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\HARDPC\Music\StoreNextJs\src\app\(store)\products" />
@@ -164,6 +176,9 @@
       <workItem from="1739258985133" duration="336000" />
       <workItem from="1739259361039" duration="2857000" />
       <workItem from="1739263181313" duration="1971000" />
+      <workItem from="1739349314326" duration="5396000" />
+      <workItem from="1739382202804" duration="1002000" />
+      <workItem from="1739383281000" duration="3429000" />
     </task>
     <servers />
   </component>

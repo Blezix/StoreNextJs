@@ -24,6 +24,7 @@ const AddToCartButton: React.FC<Props> = ({ product }) => {
         setOpen(false);
     };
 
+
     return (
         <>
             <IconButton
@@ -48,6 +49,7 @@ const AddToCartButton: React.FC<Props> = ({ product }) => {
                 onClose={handleClose}
                 message="Item successfully added to cart"
             />
+
         </>
     );
 };

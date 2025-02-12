@@ -1,9 +1,11 @@
 "use client";
 
 import { useParams } from "next/navigation";
-import { products } from "./data/products";
+import { products } from "../data/products";
 import { Box, Typography } from "@mui/material";
-import Image from "next/image";
+import ProductDescription from "@/app/(store)/products/[slug]/_components/ProductDescription";
+import ProductImage from "@/app/(store)/products/[slug]/_components/ProductImage";
+import SimilarItems from "@/app/(store)/products/[slug]/_components/SimilarItems";
 
 export default function ProductPage() {
     const { slug } = useParams();
@@ -15,11 +17,36 @@ export default function ProductPage() {
     }
 
     return (
-        <Box>
-            <Typography variant="h3">{product.name}</Typography>
-            <Image src={product.imgSrc} alt={product.name} width={400} height={400} />
-            <Typography variant="body1"></Typography>
-            <Typography variant="h5">Price: ${product.price}</Typography>
+        <Box
+            sx={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                justifyContent: "center",
+                gap: 2,
+                p: 2,
+                bgcolor: "white",
+                color: "black",
+                height: "100vh"
+            }}
+        >
+            <Box sx={{
+                width: "85%",
+                display: "flex",
+                flexDirection: "row",
+                height: "80%",
+                flexWrap: "wrap",
+            }}>
+                <ProductImage imgSrc={product.imgSrc} />
+                <ProductDescription
+                    name={product.name}
+                    price={product.price}
+                    description={product.description}
+                    sizes={product.sizes}
+                    colors={product.colors}
+                />
+            </Box>
+            <SimilarItems />
         </Box>
     );
 }

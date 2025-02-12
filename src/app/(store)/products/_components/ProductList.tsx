@@ -24,6 +24,7 @@ const ProductList: React.FC<ProductListProps> = ({ products }) => {
           ProductName={product.name}
           ProductPrice={product.price}
           imgSrc={product.imgSrc}
+            slug={product.slug}
         />
       ))}
     </Box>
