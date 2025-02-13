@@ -1,6 +1,6 @@
 import React from "react";
 import Text from "@/app/_components/Text";
-import { Box, FormControl, FormLabel, ToggleButton, ToggleButtonGroup } from "@mui/material";
+import { Box, FormControl, ToggleButton, ToggleButtonGroup } from "@mui/material";
 
 interface Props {
     name: string;
@@ -32,7 +32,7 @@ const ProductDescription: React.FC<Props> = ({ name, price, description, sizes, 
             <Text variant="body2" sx={{ color: "#6e6e6e" }}>{description}</Text>
 
             <FormControl>
-                <FormLabel>Size</FormLabel>
+                <Text variant={'body1'}>Size</Text>
                 <ToggleButtonGroup
                     value={selectedSize}
                     exclusive
@@ -48,7 +48,7 @@ const ProductDescription: React.FC<Props> = ({ name, price, description, sizes, 
             </FormControl>
 
             <FormControl>
-                <FormLabel>Color</FormLabel>
+                <Text variant={'body1'}>Color</Text>
                 <ToggleButtonGroup
                     value={selectedColor}
                     exclusive

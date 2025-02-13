@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="20446913-f035-4fc6-ab03-68fef2ce708a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< Updated upstream
       <change beforePath="$PROJECT_DIR$/src/app/(store)/_components/Footer/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(store)/_components/Footer/Footer.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/(store)/_components/Footer/_components/LeftSection/LeftSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(store)/_components/Footer/_components/LeftSection/LeftSection.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/(store)/_components/Footer/_components/MiddleSection/MiddleSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(store)/_components/Footer/_components/MiddleSection/MiddleSection.tsx" afterDir="false" />
@@ -19,6 +20,8 @@
       <change beforePath="$PROJECT_DIR$/src/app/(store)/products/[slug]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(store)/products/[slug]/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/(store)/products/_components/ProductList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(store)/products/_components/ProductList.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/(store)/products/data/products.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(store)/products/data/products.ts" afterDir="false" />
+=======
+>>>>>>> Stashed changes
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -169,9 +172,13 @@
       <workItem from="1739263181313" duration="1971000" />
       <workItem from="1739349314326" duration="5396000" />
       <workItem from="1739382202804" duration="1002000" />
+<<<<<<< Updated upstream
       <workItem from="1739383281000" duration="3429000" />
       <workItem from="1739387277188" duration="144000" />
       <workItem from="1739387454718" duration="2636000" />
+=======
+      <workItem from="1739383281000" duration="3820000" />
+>>>>>>> Stashed changes
     </task>
     <servers />
   </component>
