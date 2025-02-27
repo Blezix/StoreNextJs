@@ -6,6 +6,7 @@ interface Props {
     ProductName: string;
     ProductPrice: number;
     imgSrc: string[];
+    sizes: string[];
     slug: string;
 
 }
@@ -14,12 +15,11 @@ const ProductCard: React.FC<Props> = ({
                                           ProductName,
                                           ProductPrice,
                                           imgSrc,
-    slug
+    slug, sizes
                                       }) => {
     return (
         <Box
-            component={"a"}
-            href={`/products/${slug}`}
+
             sx={{
                 display: "flex",
                 justifyContent: "center",
@@ -43,11 +43,12 @@ const ProductCard: React.FC<Props> = ({
                 maxHeight:"50%",
             }}
         >
-            <ProductCardTop imgSrc={imgSrc[0]} />
+            <ProductCardTop imgSrc={imgSrc[0]} slug={slug}/>
             <ProductCardBottom
                 ProductName={ProductName}
                 ProductPrice={ProductPrice}
                 imgSrc={imgSrc[0]}
+                sizes={sizes}
             />
         </Box>
     );

@@ -7,14 +7,16 @@ interface Props {
   ProductName: string;
   ProductPrice: number;
   imgSrc: string;
+  sizes: string[];
 }
 
 const ProductCardBottom: React.FC<Props> = ({
   ProductName,
   ProductPrice,
   imgSrc,
+    sizes
 }) => {
-  const product = { ProductName, ProductPrice, imgSrc };
+  const product = { ProductName, ProductPrice, imgSrc, sizes };
 
   return (
     <Box

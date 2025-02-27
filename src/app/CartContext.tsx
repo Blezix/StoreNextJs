@@ -12,7 +12,14 @@ interface CartContextType {
     cartItems: Product[];
     totalItems: number;
     totalPrice: number;
-    addToCart: (product: Product) => void;
+    addToCart: (product: {
+        ProductName: string;
+        ProductPrice: number;
+        imgSrc: string;
+        sizes: string[];
+        size: string;
+        quantity: number
+    }) => void;
     updateQuantity: (productName: string, quantity: number) => void;
     removeFromCart: (productName: string) => void;
 }

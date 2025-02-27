@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
+import {MenuItem, Select, SelectChangeEvent, Slider, Typography} from "@mui/material";
+import UniversalButton from "@/app/_components/UniversalButton";
 
 interface Props {
   currentPriceRange: [number, number];
@@ -9,72 +11,54 @@ interface Props {
 }
 
 const FilterOptions: React.FC<Props> = ({
-  currentPriceRange,
-  currentSort,
-  setCurrentPriceRange,
-  setCurrentSort,
-}) => {
+                                          currentPriceRange,
+                                          currentSort,
+                                          setCurrentPriceRange,
+                                          setCurrentSort,
+                                        }) => {
   const router = useRouter();
-  const [minPrice, setMinPrice] = useState(currentPriceRange[0]);
-  const [maxPrice, setMaxPrice] = useState(currentPriceRange[1]);
+  const [priceRange, setPriceRange] = useState<[number, number]>(currentPriceRange);
   const [sort, setSort] = useState(currentSort);
 
-  const handleMinPriceChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setMinPrice(Number(e.target.value));
+  const handlePriceChange = (event: Event, newValue: number | number[]) => {
+    setPriceRange(newValue as [number, number]);
   };
 
-  const handleMaxPriceChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setMaxPrice(Number(e.target.value));
-  };
-
-  const handleSortChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+  const handleSortChange = (e: SelectChangeEvent<string>) => {
     setSort(e.target.value);
   };
 
   const applyFilters = () => {
-    setCurrentPriceRange([minPrice, maxPrice]);
+    setCurrentPriceRange(priceRange);
     setCurrentSort(sort);
     const params = new URLSearchParams(window.location.search);
-    params.set("minPrice", minPrice.toString());
-    params.set("maxPrice", maxPrice.toString());
+    params.set("minPrice", priceRange[0].toString());
+    params.set("maxPrice", priceRange[1].toString());
     params.set("sort", sort);
     router.push(`/products?${params.toString()}`);
   };
 
   return (
-    <div>
-      <label>
-        Min Price:
-        <input
-          type="number"
-          value={minPrice}
-          onChange={handleMinPriceChange}
-          min={10}
-          max={maxPrice - 1}
+      <div>
+        <Typography gutterBottom>Price Range:</Typography>
+        <Slider
+            value={priceRange}
+            onChange={handlePriceChange}
+            valueLabelDisplay="auto"
+            min={10}
+            max={1000}
         />
-      </label>
-      <label>
-        Max Price:
-        <input
-          type="number"
-          value={maxPrice}
-          onChange={handleMaxPriceChange}
-          min={minPrice + 1}
-        />
-      </label>
-      <label>
-        Sort By:
-        <select value={sort} onChange={handleSortChange}>
-          <option value="">None</option>
-          <option value="price-asc">Price: Low to High</option>
-          <option value="price-desc">Price: High to Low</option>
-          <option value="name-asc">Name: A to Z</option>
-          <option value="name-desc">Name: Z to A</option>
-        </select>
-      </label>
-      <button onClick={applyFilters}>Apply Filters</button>
-    </div>
+          <Typography gutterBottom>Price Range:</Typography>
+
+          <Select value={sort}  onChange={handleSortChange}>
+                <MenuItem value="price-asc">Price: Low to High</MenuItem>
+                <MenuItem value="price-desc">Price: High to Low</MenuItem>
+                <MenuItem value="name-asc">Name: A to Z</MenuItem>
+                <MenuItem value="name-desc">Name: Z to A</MenuItem>
+            </Select>
+        <UniversalButton variant={"black"} onClick={applyFilters}>Apply Filters</UniversalButton>
+      </div>
   );
 };
 
-export default FilterOptions;
+export default FilterOptions

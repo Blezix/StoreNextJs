@@ -1,6 +1,7 @@
 import React from "react";
 import Text from "@/app/_components/Text";
 import { Box, FormControl, ToggleButton, ToggleButtonGroup } from "@mui/material";
+import AddToCartButton from "./AddToCartButton";
 
 interface Props {
     name: string;
@@ -13,6 +14,13 @@ interface Props {
 const ProductDescription: React.FC<Props> = ({ name, price, description, sizes, colors }) => {
     const [selectedSize, setSelectedSize] = React.useState<string>(sizes[0] || "");
     const [selectedColor, setSelectedColor] = React.useState<string>(colors[0] || "");
+
+    const product = {
+        ProductName: name,
+        ProductPrice: price,
+        imgSrc: "", // Add the appropriate image source
+        sizes: sizes,
+    };
 
     return (
         <Box sx={{
@@ -60,14 +68,16 @@ const ProductDescription: React.FC<Props> = ({ name, price, description, sizes, 
                             <Box
                                 bgcolor={color}
                                 sx={{
-                                border:"1px solid black",
-                                minWidth:"20px",
-                                minHeight:"20px"
-                            }}></Box>
+                                    border:"1px solid black",
+                                    minWidth:"20px",
+                                    minHeight:"20px"
+                                }}></Box>
                         </ToggleButton>
                     ))}
                 </ToggleButtonGroup>
             </FormControl>
+
+            <AddToCartButton product={product} selectedSize={selectedSize} selectedColor={selectedColor} />
         </Box>
     );
 }

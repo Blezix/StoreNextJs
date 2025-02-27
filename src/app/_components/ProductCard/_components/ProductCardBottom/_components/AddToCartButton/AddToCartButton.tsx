@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { IconButton, Snackbar } from "@mui/material";
+import { IconButton, Snackbar, Menu, MenuItem } from "@mui/material";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import { useCart } from "@/app/CartContext";
 
@@ -8,22 +8,32 @@ interface Props {
         ProductName: string;
         ProductPrice: number;
         imgSrc: string;
+        sizes: string[];
+        size?: string;
     };
 }
 
 const AddToCartButton: React.FC<Props> = ({ product }) => {
     const { addToCart } = useCart();
     const [open, setOpen] = useState(false);
+    const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
+    const [selectedSize, setSelectedSize] = useState<string | null>(null);
 
-    const handleAddToCart = () => {
-        addToCart({ ...product, quantity: 1 });
+    const handleButtonClick = (event: React.MouseEvent<HTMLElement>) => {
+        setAnchorEl(event.currentTarget);
+        console.log(product.sizes)
+    };
+
+    const handleSizeSelect = (size: string) => {
+        setSelectedSize(size);
+        setAnchorEl(null);
+        addToCart({...product, size: size, quantity: 1});
         setOpen(true);
     };
 
     const handleClose = () => {
         setOpen(false);
     };
-
 
     return (
         <>
@@ -38,18 +48,28 @@ const AddToCartButton: React.FC<Props> = ({ product }) => {
                         color: "white",
                     },
                 }}
-                onClick={handleAddToCart}
+                onClick={handleButtonClick}
             >
                 <AddShoppingCartIcon />
             </IconButton>
+            <Menu
+                anchorEl={anchorEl}
+                open={Boolean(anchorEl)}
+                onClose={() => setAnchorEl(null)}
+            >
+                {product.sizes.map((size) => (
+                    <MenuItem key={size} onClick={() => handleSizeSelect(size)}>
+                        {size}
+                    </MenuItem>
+                ))}
+            </Menu>
             <Snackbar
                 anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
                 open={open}
                 autoHideDuration={2000}
                 onClose={handleClose}
-                message="Item successfully added to cart"
+                message={`Item successfully added to cart${selectedSize ? ` (Size: ${selectedSize})` : ""}`}
             />
-
         </>
     );
 };

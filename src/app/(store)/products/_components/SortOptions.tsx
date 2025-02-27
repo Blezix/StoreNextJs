@@ -1,6 +1,6 @@
 "use client";
 import { useRouter } from "next/navigation";
-
+import {Select, MenuItem, FormControl} from "@mui/material";
 interface SortOptionsProps {
   currentSort: string;
 }
@@ -20,15 +20,17 @@ const SortOptions: React.FC<SortOptionsProps> = ({ currentSort }) => {
   };
 
   return (
-    <div>
-      <select value={currentSort} onChange={handleSortChange}>
-        <option value="">Default</option>
-        <option value="price-asc">Price: Low to High</option>
-        <option value="price-desc">Price: High to Low</option>
-        <option value="name-asc">Name: A to Z</option>
-        <option value="name-desc">Name: Z to A</option>
-      </select>
-    </div>
+
+      <FormControl fullWidth>
+      <Select value={currentSort} onChange={handleSortChange}>
+        <MenuItem value="">Default</MenuItem>
+        <MenuItem value="price-asc">Price: Low to High</MenuItem>
+        <MenuItem value="price-desc">Price: High to Low</MenuItem>
+        <MenuItem value="name-asc">Name: A to Z</MenuItem>
+        <MenuItem value="name-desc">Name: Z to A</MenuItem>
+      </Select>
+      </FormControl>
+
   );
 };
 
