@@ -23,7 +23,7 @@ export default function MenuLeft() {
         color: "inherit",
       }}
     >
-      <Item value="Products" onClick={() => HandlePageRedirect("products")} />
+      <Item value="Products" onClick={() => HandlePageRedirect("products?minPrice=10&maxPrice=1000&sort=name-asc")} />
       <Item value="Store" onClick={() => HandlePageRedirect("store")} />
       <Item value="Blog" onClick={() => HandlePageRedirect("blog")} />
     </Box>

@@ -35,7 +35,7 @@ const ProductList: React.FC<ProductListProps> = ({ products }) => {
                 />
             ))}
             {visibleCount < products.length && (
-                <UniversalButton onClick={showMore} variant="black" sx={{ mt: 2 }}>
+                <UniversalButton onClick={showMore} variant="black" sx={{ mt: 2,ml:"40%",mr:"40%" }}>
                     Show More
                 </UniversalButton>
             )}

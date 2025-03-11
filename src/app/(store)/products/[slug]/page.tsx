@@ -6,7 +6,6 @@ import { Box, Typography } from "@mui/material";
 import ProductDescription from "@/app/(store)/products/[slug]/_components/ProductDescription";
 import ProductImage from "@/app/(store)/products/[slug]/_components/ProductImage";
 import SimilarItems from "@/app/(store)/products/[slug]/_components/SimilarItems";
-
 export default function ProductPage() {
     const { slug } = useParams();
 
@@ -40,6 +39,7 @@ export default function ProductPage() {
                 <ProductDescription
                     name={product.name}
                     price={product.price}
+                    imgSrc={product.imgSrc}
                     description={product.description}
                     sizes={product.sizes}
                     colors={product.colors}

@@ -57,7 +57,7 @@ const AddToCartButton: React.FC<Props> = ({ product }) => {
                 open={Boolean(anchorEl)}
                 onClose={() => setAnchorEl(null)}
             >
-                {product.sizes.map((size) => (
+               {product.sizes.map((size) => (
                     <MenuItem key={size} onClick={() => handleSizeSelect(size)}>
                         {size}
                     </MenuItem>

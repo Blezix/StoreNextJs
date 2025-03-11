@@ -23,7 +23,15 @@ const AddToCartButton: React.FC<Props> = ({ product, selectedSize, selectedColor
     const [open, setOpen] = useState(false);
 
     const handleButtonClick = () => {
-        addToCart({...product, size: selectedSize, color: selectedColor, quantity: 1});
+        addToCart({
+            ProductName: product.ProductName,
+            ProductPrice: product.ProductPrice,
+            imgSrc: product.imgSrc[0],
+            sizes: product.sizes,
+            size: selectedSize,
+            color: selectedColor,
+            quantity: 1
+        });
         setOpen(true);
     };
 
@@ -44,7 +52,7 @@ const AddToCartButton: React.FC<Props> = ({ product, selectedSize, selectedColor
                 open={open}
                 autoHideDuration={2000}
                 onClose={handleClose}
-                message={`Item successfully added to cart (Size: ${selectedSize}, Color: ${selectedColor})`}
+                message={`Item successfully added to cart (Size: ${selectedSize}, Color: ${selectedColor})}`}
             />
         </>
     );

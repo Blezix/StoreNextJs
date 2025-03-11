@@ -11,7 +11,7 @@ export default function HeroSection() {
     const router = useRouter()
 
     const handleClick = () => {
-        router.push("/products");
+        router.push("/http://localhost:3000/products?minPrice=10&maxPrice=1000&sort=name-asc");
     };
     return (
 

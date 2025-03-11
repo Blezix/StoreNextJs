@@ -32,7 +32,7 @@ const ProductCardBottom: React.FC<Props> = ({
         ProductName={ProductName}
         ProductPrice={ProductPrice}
       />
-      <AddToCartButton product={product} />
+
     </Box>
   );
 };

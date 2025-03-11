@@ -25,6 +25,8 @@ const FilterDrawer: React.FC<FilterDrawerProps> = ({
                 sx={{
                     width: 400,
                     padding: 3,
+                    display:"flex",
+                    flexDirection:"column",
                 }}
             >
                 <Typography variant="h5">Filters</Typography>

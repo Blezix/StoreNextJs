@@ -9,6 +9,8 @@ interface CartListItemProps {
         ProductPrice: number;
         imgSrc: string;
         quantity: number;
+        size?: string;
+        color?: string;
     };
     index: number;
     handleQuantityChange: (index: number, quantity: number) => void;
@@ -34,18 +36,37 @@ const CartListItem: React.FC<CartListItemProps> = ({
                 p: 2,
             }}
         >
-            <img
-                src={item.imgSrc}
-                alt={item.ProductName}
-                style={{ height: "100px" }}
-                onError={(e) => console.error("Image failed to load:", e)}
-            />
-            <Text sx={{
-                width: "30%",
-                textAlign: "start",
-            }} variant="body2">{item.ProductName}</Text>
-            <Text variant="body2">${item.ProductPrice.toFixed(2)}</Text>
-            <Text variant="body2">{item.size}</Text>
+            {item.imgSrc && (
+                <img
+                    src={item.imgSrc}
+                    alt={item.ProductName}
+                    style={{ height: "100px" }}
+                    onError={(e) => console.error("Image failed to load:", e)}
+                />
+            )}
+            <Text
+                sx={{
+                    width: "30%",
+                    flex:'2',
+                    textAlign: "center",
+
+                }}
+                variant="body2"
+            >
+                {item.ProductName}
+            </Text>
+            <Text variant="body2" sx={{
+                flex:'1',
+                textAlign: "center",
+            }}>${item.ProductPrice.toFixed(2)}</Text>
+            {item.size && <Text sx={{
+                flex:'1',
+                textAlign: "center",
+            }} variant="body2">{item.size}</Text>}
+            {item.color && <Text sx={{
+                flex:'1',
+                textAlign: "center",
+            }} variant="body2">{item.color}</Text>}
 
             <Select
                 value={item.quantity}

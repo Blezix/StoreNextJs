@@ -9,16 +9,17 @@ interface Props {
     description: string;
     sizes: string[];
     colors: string[];
+    imgSrc: string[];
 }
 
-const ProductDescription: React.FC<Props> = ({ name, price, description, sizes, colors }) => {
+const ProductDescription: React.FC<Props> = ({ name, price, description, sizes, colors,imgSrc }) => {
     const [selectedSize, setSelectedSize] = React.useState<string>(sizes[0] || "");
     const [selectedColor, setSelectedColor] = React.useState<string>(colors[0] || "");
 
     const product = {
         ProductName: name,
         ProductPrice: price,
-        imgSrc: "", // Add the appropriate image source
+        imgSrc: imgSrc,
         sizes: sizes,
     };
 

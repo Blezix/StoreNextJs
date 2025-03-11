@@ -43,6 +43,7 @@ const ProductCard: React.FC<Props> = ({
                 maxHeight:"50%",
             }}
         >
+
             <ProductCardTop imgSrc={imgSrc[0]} slug={slug}/>
             <ProductCardBottom
                 ProductName={ProductName}
