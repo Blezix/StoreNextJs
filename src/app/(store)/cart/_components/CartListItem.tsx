@@ -2,7 +2,7 @@ import React from "react";
 import { Box, IconButton, Select, MenuItem } from "@mui/material";
 import DeleteIcon from "@mui/icons-material/Delete";
 import Text from "@/app/_components/Text";
-
+import Image from 'next/Image'
 interface CartListItemProps {
     item: {
         ProductName: string;
@@ -37,7 +37,7 @@ const CartListItem: React.FC<CartListItemProps> = ({
             }}
         >
             {item.imgSrc && (
-                <img
+                <Image
                     src={item.imgSrc}
                     alt={item.ProductName}
                     style={{ height: "100px" }}

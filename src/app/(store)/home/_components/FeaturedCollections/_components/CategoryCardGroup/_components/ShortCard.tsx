@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { Box, Button } from "@mui/material";
+import { Box } from "@mui/material";
 import { useRouter } from "next/navigation";
 import Text from "@/app/_components/Text";
 

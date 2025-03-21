@@ -4,14 +4,10 @@ import React from "react";
 import { Box } from "@mui/material";
 import HeroSectionText from "./_components/HeroSectionText/HeroSectionText";
 import HeroSectionButton from "./_components/HeroSectionButton/HeroSectionButton";
-import { useRouter } from "next/navigation";
 export default function HeroSection() {
 
-    const router = useRouter()
 
-    const handleClick = () => {
-        router.push("/http://localhost:3000/products?minPrice=10&maxPrice=1000&sort=name-asc");
-    };
+
     return (
 
     <Box

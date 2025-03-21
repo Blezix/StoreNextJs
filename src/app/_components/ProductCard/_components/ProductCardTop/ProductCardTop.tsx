@@ -1,6 +1,6 @@
 import React from "react";
 import { Box } from "@mui/material";
-
+import Image from "next/image";
 interface Props {
   imgSrc: string;
     slug: string;
@@ -28,7 +28,7 @@ const ProductCardTop: React.FC<Props> = ({ imgSrc,slug }) => {
         },
       }}
     >
-      <img
+      <Image
         src={imgSrc}
         alt="product"
         style={{ width: "80%", height: "60%", borderRadius: "10px" }}

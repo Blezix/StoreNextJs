@@ -5,17 +5,13 @@ import ProductAttributes from "./_components/ProductAttributes/ProductAttributes
 interface Props {
   ProductName: string;
   ProductPrice: number;
-  imgSrc: string;
-  sizes: string[];
+
 }
 
 const ProductCardBottom: React.FC<Props> = ({
   ProductName,
-  ProductPrice,
-  imgSrc,
-    sizes
+  ProductPrice
 }) => {
-  const product = { ProductName, ProductPrice, imgSrc, sizes };
 
   return (
     <Box
