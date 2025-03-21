@@ -8,11 +8,10 @@ import Text from "../../../_components/Text";
 
 interface Props {
     isClicked: boolean;
-    setIsClicked: (value: boolean) => void;
 }
 
 const ClearCategoryButton: React.FC<Props> = (
-    { isClicked, setIsClicked }
+    { isClicked }
 ) => {
     const router = useRouter();
 

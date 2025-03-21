@@ -1,6 +1,5 @@
 import React from "react";
 import { Box } from "@mui/material";
-import AddToCartButton from "./_components/AddToCartButton/AddToCartButton";
 import ProductAttributes from "./_components/ProductAttributes/ProductAttributes";
 
 interface Props {
