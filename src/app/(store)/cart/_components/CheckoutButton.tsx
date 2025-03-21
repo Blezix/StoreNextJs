@@ -1,8 +1,8 @@
 import React from "react";
-import { Box, Text } from "@mui/material";
+import { Box } from "@mui/material";
 import CheckoutButton from "./CheckoutButton";
 import PayPalButton from "./PayPalButton";
-
+import Text from "@/app/_components/Text";
 const CheckoutButtons: React.FC = () => {
   return (
     <Box
