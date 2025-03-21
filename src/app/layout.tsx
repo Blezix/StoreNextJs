@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
 import "./globals.css";
-
-
+import Header from './(store)/_components/Header/Header';
+import Footer from './(store)/_components/Footer/Footer';
+import {CartProvider} from "@/app/CartContext";
+import FadeInWrapper from "@/app/_components/FadeInWrapper";
+import React from "react";
 
 export const metadata: Metadata = {
   title: "Nigger Sports",
@@ -16,7 +19,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        {children}
+      <CartProvider>
+      <Header/>
+          <FadeInWrapper> {children}</FadeInWrapper>
+
+          <Footer/>
+      </CartProvider>
       </body>
     </html>
   );

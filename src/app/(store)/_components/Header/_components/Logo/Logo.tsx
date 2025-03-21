@@ -25,7 +25,7 @@ export default function Header() {
           cursor: "pointer",
         },
       }}
-      onClick={() => HandlePageRedirect("home")}
+      onClick={() => HandlePageRedirect("/")}
     >
       <Text variant={"body1"} sx={{
           fontWeight: "bold",

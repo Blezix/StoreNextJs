@@ -10,7 +10,7 @@ import { usePathname } from "next/navigation";
 export default function Header() {
   const pathname = usePathname();
 
-  const isHome = pathname === "/home";
+  const isHome = pathname === "/";
   return (
     <Box
       sx={{
