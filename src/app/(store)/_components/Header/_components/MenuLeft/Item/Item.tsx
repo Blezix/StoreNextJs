@@ -3,7 +3,7 @@ import { Button } from "@mui/material";
 import Text from "@/app/_components/Text";
 interface ItemProps {
   value: string;
-  onClick: void;
+  onClick: () => void;
 }
 
 const Item: React.FC<ItemProps> = ({ value, onClick }) => {
