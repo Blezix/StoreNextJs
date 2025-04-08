@@ -4,7 +4,7 @@ import React, { createContext, useContext, useState, useEffect } from "react";
 interface Product {
     ProductName: string;
     ProductPrice: number;
-    imgSrc: string;
+    imgSrc: string[]; // Array of strings
     quantity: number;
 }
 
@@ -15,10 +15,11 @@ interface CartContextType {
     addToCart: (product: {
         ProductName: string;
         ProductPrice: number;
-        imgSrc: string;
+        imgSrc: string[]; // Match Product interface
         sizes: string[];
         size: string;
-        quantity: number
+        color: string;
+        quantity: number;
     }) => void;
     updateQuantity: (productName: string, quantity: number) => void;
     removeFromCart: (productName: string) => void;

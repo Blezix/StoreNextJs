@@ -6,10 +6,11 @@ import UniversalButton from "@/app/_components/UniversalButton";
 interface Product {
     ProductName: string;
     ProductPrice: number;
-    imgSrc: string;
+    imgSrc: string[];
     sizes: string[];
     size?: string;
     color?: string;
+    quantity?: number;
 }
 
 interface Props {
@@ -26,7 +27,7 @@ const AddToCartButton: React.FC<Props> = ({ product, selectedSize, selectedColor
         addToCart({
             ProductName: product.ProductName,
             ProductPrice: product.ProductPrice,
-            imgSrc: product.imgSrc[0],
+            imgSrc: product.imgSrc,
             sizes: product.sizes,
             size: selectedSize,
             color: selectedColor,

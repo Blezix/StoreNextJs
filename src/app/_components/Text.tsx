@@ -27,7 +27,7 @@ const variantStyles = {
   },
   h3: {
     fontSize: {
-      xs: "1.5rem",
+      xs: "1.4rem",
       sm: "1.75rem",
       md: "2rem",
       lg: "2.5rem",
@@ -55,7 +55,7 @@ const variantStyles = {
   h6: {
     fontSize: {
       xs: "0.8rem",
-      sm: "1rem",
+      sm: "0.8rem",
       md: "1.1rem",
       lg: "1.2rem",
       xl: "1.25rem",

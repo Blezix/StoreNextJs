@@ -5,7 +5,11 @@ import { Box } from "@mui/material";
 import { useRouter } from "next/navigation";
 import Item from "./Item/Item";
 
-export default function MenuLeft() {
+interface MenuLeftProps {
+    isMobile: boolean;
+}
+
+export default function MenuLeft({ isMobile }: MenuLeftProps) {
     const router = useRouter();
 
     function HandlePageRedirect(value: string) {
@@ -16,9 +20,10 @@ export default function MenuLeft() {
         <Box
             sx={{
                 display: "flex",
-                justifyContent: "start",
-                alignItems: "center",
-                width: "30%",
+                flexDirection: isMobile ? "column" : "row", // Adjust layout for mobile
+                justifyContent: isMobile ? "center" : "start",
+                alignItems: isMobile ? "start":"center",
+                width: isMobile ? "100%" : "30%",
                 height: "100%",
                 color: "inherit",
             }}

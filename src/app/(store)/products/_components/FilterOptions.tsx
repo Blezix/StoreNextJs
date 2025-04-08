@@ -56,13 +56,24 @@ const FilterOptions: React.FC<Props> = ({
         <Box sx={{ display: "flex", flexDirection: "column", width: "80%", m: `auto`, gap: "10px" }}>
             <Typography>Price</Typography>
             <Slider
-                color={"black"}
                 value={priceRange}
                 onChange={handlePriceChange}
                 valueLabelDisplay="auto"
                 min={10}
                 max={1000}
                 disableSwap
+                sx={{
+                    color: "black",
+                    '& .MuiSlider-thumb': {
+                        backgroundColor: "black",
+                    },
+                    '& .MuiSlider-track': {
+                        backgroundColor: "black",
+                    },
+                    '& .MuiSlider-rail': {
+                        backgroundColor: "black",
+                    },
+                }}
             />
             <Box sx={{ display: "flex", gap: 2 }}>
                 <TextField

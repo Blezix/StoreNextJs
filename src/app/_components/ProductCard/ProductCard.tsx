@@ -15,7 +15,7 @@ const ProductCard: React.FC<Props> = ({
                                           ProductName,
                                           ProductPrice,
                                           imgSrc,
-    slug, sizes
+    slug
                                       }) => {
     return (
         <Box
@@ -48,8 +48,6 @@ const ProductCard: React.FC<Props> = ({
             <ProductCardBottom
                 ProductName={ProductName}
                 ProductPrice={ProductPrice}
-                imgSrc={imgSrc[0]}
-                sizes={sizes}
             />
         </Box>
     );

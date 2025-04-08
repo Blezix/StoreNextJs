@@ -2,12 +2,11 @@ import React from "react";
 import { Box, IconButton, Select, MenuItem } from "@mui/material";
 import DeleteIcon from "@mui/icons-material/Delete";
 import Text from "@/app/_components/Text";
-import Image from "next/image";
     interface CartListItemProps {
     item: {
         ProductName: string;
         ProductPrice: number;
-        imgSrc: string;
+        imgSrc: string[];
         quantity: number;
         size?: string;
         color?: string;
@@ -37,8 +36,8 @@ const CartListItem: React.FC<CartListItemProps> = ({
             }}
         >
             {item.imgSrc && (
-                <Image
-                    src={item.imgSrc}
+                <Box component={'img'}
+                    src={item.imgSrc[0]}
                     alt={item.ProductName}
                     style={{ height: "100px" }}
                     onError={(e) => console.error("Image failed to load:", e)}

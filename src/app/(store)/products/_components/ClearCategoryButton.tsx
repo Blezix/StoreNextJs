@@ -1,17 +1,17 @@
 "use client";
 
-import { Button } from "@mui/material";
+import {Button} from "@mui/material";
 import React from "react";
-import { useRouter } from "next/navigation";
+import {useRouter} from "next/navigation";
 import Text from "../../../_components/Text";
 
 
 interface Props {
-    isClicked: boolean;
+    isClicked: boolean,
 }
 
 const ClearCategoryButton: React.FC<Props> = (
-    { isClicked }
+    {isClicked}
 ) => {
     const router = useRouter();
 

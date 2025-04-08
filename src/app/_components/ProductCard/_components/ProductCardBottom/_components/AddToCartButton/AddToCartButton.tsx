@@ -7,9 +7,10 @@ interface Props {
     product: {
         ProductName: string;
         ProductPrice: number;
-        imgSrc: string;
+        imgSrc: string[];
         sizes: string[];
         size?: string;
+        color?: string;
     };
 }
 
@@ -21,13 +22,13 @@ const AddToCartButton: React.FC<Props> = ({ product }) => {
 
     const handleButtonClick = (event: React.MouseEvent<HTMLElement>) => {
         setAnchorEl(event.currentTarget);
-        console.log(product.sizes)
+        console.log(product.sizes);
     };
 
     const handleSizeSelect = (size: string) => {
         setSelectedSize(size);
         setAnchorEl(null);
-        addToCart({...product, size: size, quantity: 1});
+        addToCart({ ...product, size: size, color: product.color || "", quantity: 1 });
         setOpen(true);
     };
 
@@ -57,7 +58,7 @@ const AddToCartButton: React.FC<Props> = ({ product }) => {
                 open={Boolean(anchorEl)}
                 onClose={() => setAnchorEl(null)}
             >
-               {product.sizes.map((size) => (
+                {product.sizes.map((size) => (
                     <MenuItem key={size} onClick={() => handleSizeSelect(size)}>
                         {size}
                     </MenuItem>

@@ -45,7 +45,7 @@ export default function ProductPage() {
                     colors={product.colors}
                 />
             </Box>
-            <SimilarItems category={product.category} />
+            <SimilarItems />
         </Box>
     );
 }
