@@ -2,18 +2,22 @@
 
 import React from "react";
 import ShoppingBagOutlinedIcon from "@mui/icons-material/ShoppingBagOutlined";
-import { Box } from "@mui/material";
+import { Box, Drawer } from "@mui/material";
 import Text from "@/app/_components/Text";
-import CartPopUp from "@/app/(store)/_components/Header/_components/MenuRight/Cart/CartPopUp";
 import { useCart } from "@/app/CartContext";
+import CartContent from "@/app/(store)/_components/Header/_components/MenuRight/Cart/CartContent";
 
 interface CartProps {
     onClick: () => void;
 }
 
-const Cart: React.FC<CartProps> = ({ onClick }) => {
-    const [active, setActive] = React.useState(false);
+const Cart: React.FC<CartProps> = ({ }) => {
+    const [open, setOpen] = React.useState(false);
     const { totalItems } = useCart();
+
+    const toggleDrawer = (state: boolean) => {
+        setOpen(state);
+    };
 
     return (
         <Box
@@ -28,13 +32,20 @@ const Cart: React.FC<CartProps> = ({ onClick }) => {
                     cursor: "pointer",
                 },
             }}
-            onMouseEnter={() => setActive(true)}
-            onMouseLeave={() => setActive(false)}
-            onClick={onClick}
+            onClick={() => toggleDrawer(!open)}
         >
-            <ShoppingBagOutlinedIcon sx={{}} />
+            <ShoppingBagOutlinedIcon />
             <Text variant={"body2"}>Cart({totalItems})</Text>
-            <CartPopUp active={active} />
+            <Drawer
+                anchor="right"
+                open={open}
+                onClose={() => toggleDrawer(false)}
+                PaperProps={{
+                    sx: { width: "400px", padding: "16px" },
+                }}
+            >
+                <CartContent />
+            </Drawer>
         </Box>
     );
 };

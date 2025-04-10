@@ -21,20 +21,17 @@ const Item: React.FC<ItemProps> = ({ value, onClick }) => {
                     sm: "1rem",   // Medium screens
                     md: "1.1rem", // Larger screens
                 },
+                transition: "all 0.3s ease-in-out",
                 "&:hover": {
-                    opacity: "0.7",
+                ml:'5px'
                 },
             }}
             onClick={onClick}
         >
             <Text
-                variant={"body2"}
+                variant={"body1"}
                 sx={{
-                    fontSize: {
-                        xs: "2rem", // Small screens
-                        sm: "1.7rem",   // Medium screens
-                        md: "1.1rem", // Larger screens
-                    },
+
                 }}
             >
                 {value}

@@ -3,11 +3,9 @@ import Box from "@mui/material/Box";
 import Text from "@/app/_components/Text";
 import { useRouter } from "next/navigation";
 
-interface LogoProps {
-    isMobile: boolean;
-}
 
-export default function Logo({ isMobile }: LogoProps) {
+
+export default function Logo() {
     const router = useRouter();
 
     function HandlePageRedirect(value: string) {
@@ -17,13 +15,12 @@ export default function Logo({ isMobile }: LogoProps) {
     return (
         <Box
             sx={{
-                width: "10%",
+                width: "70%",
                 height: "100%",
                 color: "inherit",
-                display: isMobile ? "none" : "flex", // Hide on mobile, show on larger screens
+                display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
-                fontSize: "1.5rem",
                 fontWeight: "bold",
                 "&:hover": {
                     opacity: "0.7",
@@ -33,7 +30,7 @@ export default function Logo({ isMobile }: LogoProps) {
             onClick={() => HandlePageRedirect("/")}
         >
             <Text
-                variant={"body1"}
+                variant={"h2"}
                 sx={{
                     fontWeight: "bold",
                 }}

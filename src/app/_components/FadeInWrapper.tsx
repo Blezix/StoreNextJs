@@ -12,7 +12,7 @@ const FadeInWrapper = ({ children }: FadeInWrapperProps) => {
         <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.2, ease: "easeIn" }}
+            transition={{ duration: 0.4, ease: "easeIn" }}
         >
             {children}
         </motion.div>

@@ -10,7 +10,12 @@ export default function HeroSectionButton() {
         flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
-        width: "70%",
+        width: {
+            xs: "90%",
+            sm: "85%",
+            md: "80%",
+            lg: "70%",
+        },
         height: "100%",
         gap: 2,
       }}

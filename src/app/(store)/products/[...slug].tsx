@@ -1,13 +1,15 @@
 "use client";
 
-import { useSearchParams } from "next/navigation";
+import { useSearchParams, usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Box } from "@mui/material";
 import { products as productsData, Product } from "./data/products";
 import ProductList from "./_components/ProductList";
+import FadeInWrapper from "@/app/_components/FadeInWrapper";
 
 const ProductFiltersPage = () => {
   const searchParams = useSearchParams();
+  const pathname = usePathname();
 
   const [products, setProducts] = useState<Product[]>(productsData);
 
@@ -21,14 +23,14 @@ const ProductFiltersPage = () => {
 
     if (category) {
       filteredProducts = filteredProducts.filter(
-        (product) => product.category === category,
+          (product) => product.category === category,
       );
     }
     if (minPrice && maxPrice) {
       const min = Number(minPrice);
       const max = Number(maxPrice);
       filteredProducts = filteredProducts.filter(
-        (product) => product.price >= min && product.price <= max,
+          (product) => product.price >= min && product.price <= max,
       );
     }
     if (sort === "price-asc") {
@@ -45,9 +47,11 @@ const ProductFiltersPage = () => {
   }, [category, minPrice, maxPrice, sort]);
 
   return (
-    <Box>
-      <ProductList products={products} />
-    </Box>
+      <Box>
+        <FadeInWrapper key={`${pathname}-${category}`}>
+          <ProductList products={products} />
+        </FadeInWrapper>
+      </Box>
   );
 };
 

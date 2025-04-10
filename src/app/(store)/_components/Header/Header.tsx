@@ -1,22 +1,16 @@
-"use client";
+    'use client'
 
 import React, { useState } from "react";
 import Box from "@mui/material/Box";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
-import CloseIcon from "@mui/icons-material/Close";
-import Drawer from "@mui/material/Drawer";
-import Logo from "./_components/Logo/Logo";
-import MenuLeft from "./_components/MenuLeft/MenuLeft";
-import MenuRight from "./_components/MenuRight/MenuRight";
 import { usePathname } from "next/navigation";
-import { useMediaQuery } from "@mui/material";
+import DrawerMenu from "./_components/DrawerMenu";
+import MenuRight from "./_components/MenuRight/MenuRight";
 
 export default function Header() {
     const pathname = usePathname();
-    const isHome = pathname === "/";
-    const isMobile = useMediaQuery("(max-width: 768px)");
-
+    const isHome = pathname === "/" || pathname === "/home";
     const [drawerOpen, setDrawerOpen] = useState(false);
 
     const toggleDrawer = (open: boolean) => () => {
@@ -39,58 +33,17 @@ export default function Header() {
                 pl: 4,
             }}
         >
-            <Logo isMobile={isMobile} />
-            {isMobile ? (
-                <>
-                    <IconButton
-                        edge="start"
-                        color="inherit"
-                        aria-label="menu"
-                        onClick={toggleDrawer(true)}
-                    >
-                        <MenuIcon />
-                    </IconButton>
-                    <Drawer
-                        anchor="left"
-                        open={drawerOpen}
-                        onClose={toggleDrawer(false)}
-                    >
-                        <Box
-                            sx={{
-                                width:350,
-                                display: "flex",
-                                flexDirection: "column",
-                                justifyContent: "space-between",
-                                p: 2,
-                            }}
-                        >
-                            <Box sx={{
-                                display: 'flex',
-                                flexDirection: 'row',
-                                justifyContent: 'space-between',
-                                alignItems: 'center',
-                                p: 2,
-
-                            }}>
-                                <Logo isMobile={false}/>
-                                <IconButton
-                                    edge="start"
-                                    color="inherit"
-                                    aria-label="close"
-                                    onClick={toggleDrawer(false)}
-                                    sx={{ alignSelf: "flex-end" }}
-                                >
-                                    <CloseIcon />
-                                </IconButton>
-                            </Box>
-
-                            <MenuLeft isMobile={isMobile} />
-                        </Box>
-                    </Drawer>
-                </>
-            ) : (
-                <MenuLeft isMobile={isMobile} />
-            )}
+            <>
+                <IconButton
+                    edge="start"
+                    color="inherit"
+                    aria-label="menu"
+                    onClick={toggleDrawer(true)}
+                >
+                    <MenuIcon />
+                </IconButton>
+                <DrawerMenu drawerOpen={drawerOpen} toggleDrawer={toggleDrawer} />
+            </>
             <MenuRight />
         </Box>
     );

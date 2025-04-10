@@ -3,6 +3,7 @@ import { Box } from "@mui/material";
 import { Product } from "../data/products";
 import ProductCard from "@/app/_components/ProductCard/ProductCard";
 import UniversalButton from "@/app/_components/UniversalButton";
+import FadeInWrapper from "@/app/_components/FadeInWrapper";
 interface ProductListProps {
     products: Product[];
 }
@@ -15,6 +16,7 @@ const ProductList: React.FC<ProductListProps> = ({ products }) => {
     };
 
     return (
+        <FadeInWrapper>
         <Box
             sx={{
                 display: "flex",
@@ -40,6 +42,7 @@ const ProductList: React.FC<ProductListProps> = ({ products }) => {
                 </UniversalButton>
             )}
         </Box>
+        </FadeInWrapper>
     );
 };
 

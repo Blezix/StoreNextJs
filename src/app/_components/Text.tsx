@@ -2,7 +2,7 @@ import React from "react";
 import Typography, { TypographyProps } from "@mui/material/Typography";
 
 interface TextProps extends TypographyProps {
-  variant: "h1" | "h2" | "body1" | "body2" | "h3" | "h4" | "h5" | "h6" | "";
+  variant: "h1" | "h2" | "body1" | "body2" | "h3" | "h4" | "h5" | "h6";
   children: React.ReactNode;
 }
 
@@ -10,7 +10,7 @@ const variantStyles = {
   h1: {
     fontSize: {
       xs: "3rem",
-      sm: "4rem",
+      sm: "3.5rem",
       md: "4rem",
       lg: "5rem",
       xl: "6rem",
@@ -81,18 +81,20 @@ const variantStyles = {
   },
 };
 
-const Text: React.FC<TextProps> = ({ variant, children, sx, ...props }) => {
+const Text: React.FC<TextProps> = ({ variant = "body1", children, sx, ...props }) => {
+  const validVariant = variantStyles[variant] ? variant : "body1";
+
   return (
-    <Typography
-      variant={variant}
-      sx={{
-        ...variantStyles[variant],
-        ...sx,
-      }}
-      {...props}
-    >
-      {children}
-    </Typography>
+      <Typography
+          variant={validVariant}
+          sx={{
+            ...variantStyles[validVariant],
+            ...sx,
+          }}
+          {...props}
+      >
+        {children}
+      </Typography>
   );
 };
 
