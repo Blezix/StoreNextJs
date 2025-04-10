@@ -2,11 +2,11 @@
 
 import React from "react";
 import { Box } from "@mui/material";
-import { motion } from "framer-motion";
+import * as motion from "motion/react-client";
 import HeroSection from "@/app/(store)/home/_components/HeroSection/HeroSection";
 import NewArrivals from "@/app/(store)/home/_components/NewArrivals/NewArrivals";
 import FeaturedCollections from "@/app/(store)/home/_components/FeaturedCollections/FeaturedCollections";
-
+import LoadingWrapper from "@/app/_components/LoadingWrapper";
 const sectionVariants = {
     hidden: { opacity: 0, y: 50 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
@@ -14,6 +14,7 @@ const sectionVariants = {
 
 export default function Homepage() {
     return (
+        <LoadingWrapper>
         <Box
             sx={{
                 width: "100%",
@@ -23,7 +24,7 @@ export default function Homepage() {
             <motion.div
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ root: document.body, once: false, amount: 0.2 }}
+                viewport={{ once: false, amount: 0.2 }}
                 variants={sectionVariants}
             >
                 <HeroSection />
@@ -32,7 +33,7 @@ export default function Homepage() {
             <motion.div
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ root: document.body, once: false, amount: 0.2 }}
+                viewport={{ once: false, amount: 0.2 }}
                 variants={sectionVariants}
             >
                 <NewArrivals />
@@ -53,13 +54,13 @@ export default function Homepage() {
             <motion.div
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ root: document.body, once: false, amount: 0.2 }}
+                viewport={{ once: false, amount: 0.2 }}
                 variants={sectionVariants}
                 onViewportEnter={() => console.log("Entered viewport")}
-
             >
                 <FeaturedCollections />
             </motion.div>
         </Box>
+        </LoadingWrapper>
     );
 }

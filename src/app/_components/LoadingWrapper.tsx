@@ -9,7 +9,7 @@ const LoadingWrapper: React.FC<{ children: React.ReactNode }> = ({ children }) =
     useEffect(() => {
         const timer = setTimeout(() => {
             setIsLoading(false);
-        }, 2000); // Simulate a 2-second loading time
+        }, 2000);
 
         return () => clearTimeout(timer);
     }, []);
