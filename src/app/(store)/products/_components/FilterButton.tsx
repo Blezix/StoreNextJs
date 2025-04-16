@@ -44,7 +44,10 @@ const FilterButton: React.FC = ({}) => {
                 }}
                 onClick={toggleDrawer(true)}
             >
-                <TuneIcon />
+                <TuneIcon sx={{
+                    height: 28,
+                    width: 28,
+                }} />
             </Button>
             <FilterDrawer
                 isDrawerOpen={isDrawerOpen}

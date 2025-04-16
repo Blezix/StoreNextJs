@@ -20,11 +20,10 @@ export default function RootLayout({
         <html lang="en">
         <body>
         <CartProvider>
-            <LoadingWrapper>
                 <Header />
                 <FadeInWrapper>{children}</FadeInWrapper>
                 <Footer />
-            </LoadingWrapper>
+
         </CartProvider>
         </body>
         </html>

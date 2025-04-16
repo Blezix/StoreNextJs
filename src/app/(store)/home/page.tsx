@@ -6,15 +6,14 @@ import * as motion from "motion/react-client";
 import HeroSection from "@/app/(store)/home/_components/HeroSection/HeroSection";
 import NewArrivals from "@/app/(store)/home/_components/NewArrivals/NewArrivals";
 import FeaturedCollections from "@/app/(store)/home/_components/FeaturedCollections/FeaturedCollections";
-import LoadingWrapper from "@/app/_components/LoadingWrapper";
 const sectionVariants = {
     hidden: { opacity: 0, y: 50 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
 };
 
+
 export default function Homepage() {
     return (
-        <LoadingWrapper>
         <Box
             sx={{
                 width: "100%",
@@ -61,6 +60,6 @@ export default function Homepage() {
                 <FeaturedCollections />
             </motion.div>
         </Box>
-        </LoadingWrapper>
+
     );
 }

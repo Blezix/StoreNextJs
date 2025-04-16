@@ -23,7 +23,7 @@ export default function FooterList({ header, items }: FooterListProps) {
           }}
         >
           <Text
-            variant={""}
+            variant={"body2"}
             sx={{
               color: "#6b6b6b",
             }}

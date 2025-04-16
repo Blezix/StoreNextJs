@@ -1,8 +1,10 @@
+
 import React from "react";
 import { Box, Button } from "@mui/material";
 import Text from "@/app/_components/Text";
 import { useCart } from "@/app/CartContext";
-
+import CartContentListItem from "./CartContentListItem";
+import GoToCartButton from "@/app/(store)/_components/Header/_components/MenuRight/Cart/GoToCartButton";
 const CartContent: React.FC = () => {
     const formatPrice = (price: number) => {
         return price.toFixed(2) + "$";
@@ -18,41 +20,36 @@ const CartContent: React.FC = () => {
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "space-between",
+                textAlign: "center",
             }}
         >
+            <Text variant={'h4'}>Your Cart</Text>
             <Box
                 sx={{
                     width: "100%",
-                    height: "50%",
+                    height: "70%",
                     display: "flex",
                     flexDirection: "column",
                     gap: "10px",
-                    justifyContent: "center",
+                    justifyContent: "start",
                     alignItems: "center",
                     overflow: "auto",
                 }}
             >
-                {cartItems.map((item, index) => (
-                    <Box
-                        key={index}
-                        sx={{
-                            display: "flex",
-                            justifyContent: "space-between",
-                            width: "80%",
-                        }}
-                    >
-                        <Text variant={"body1"}>{item.ProductName}</Text>
-                        <Text variant={"body1"}>x{item.quantity}</Text>
-                    </Box>
-                ))}
+                {cartItems.map((item, index) => {
+                    {console.log(item, "item")}
+
+                    return (
+                        <CartContentListItem product={item} key={index}/>
+                    );
+                })}
             </Box>
             <Box
                 sx={{
                     display: "flex",
                     flexDirection: "column",
                     borderTop: "1px solid black",
-                    minHeight: "40%",
-                    gap: "10px",
+                    gap: "15px",
                     textAlign: "start",
                     justifyContent: "space-between",
                     alignItems: "center",
@@ -69,23 +66,7 @@ const CartContent: React.FC = () => {
                     <Text variant={"h6"}>Value:</Text>
                     <Text variant={"h6"}>{formatPrice(totalPrice)}</Text>
                 </Box>
-                <Button
-                    sx={{
-                        backgroundColor: "black",
-                        color: "white",
-                        padding: "10px 0",
-                        width: "80%",
-                        borderRadius: "30px",
-                        fontSize: "1rem",
-                        textTransform: "none",
-                        "&:hover": {
-                            backgroundColor: "white",
-                            color: "black",
-                        },
-                    }}
-                >
-                    Checkout
-                </Button>
+             <GoToCartButton/>
             </Box>
         </Box>
     );

@@ -2,6 +2,8 @@
 import React, { createContext, useContext, useState, useEffect } from "react";
 
 interface Product {
+    color: string;
+    size: string    ;
     ProductName: string;
     ProductPrice: number;
     imgSrc: string[]; // Array of strings
@@ -12,19 +14,19 @@ interface CartContextType {
     cartItems: Product[];
     totalItems: number;
     totalPrice: number;
-    addToCart: (product: {
-        ProductName: string;
-        ProductPrice: number;
-        imgSrc: string[]; // Match Product interface
-        sizes: string[];
-        size: string;
-        color: string;
-        quantity: number;
-    }) => void;
+    addToCart: (product:Cart ) => void;
     updateQuantity: (productName: string, quantity: number) => void;
     removeFromCart: (productName: string) => void;
 }
 
+export interface Cart {
+    ProductName: string;
+    ProductPrice: number;
+    imgSrc: string[]; // Match Product interface
+    size: string;
+    color: string;
+    quantity: number;
+}
 const CartContext = createContext<CartContextType | undefined>(undefined);
 
 export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
