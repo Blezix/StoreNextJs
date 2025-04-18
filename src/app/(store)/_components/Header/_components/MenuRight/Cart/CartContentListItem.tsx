@@ -13,7 +13,6 @@ const CartContentListItem: React.FC<CartContentListItemProps> = ({ product }) =>
                 display: "flex",
                 justifyContent: "space-between",
                 width: "90%",
-                minHeight: "100px",
                 padding: "10px",
                 border: "1px solid #ccc",
             }}

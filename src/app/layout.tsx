@@ -4,7 +4,6 @@ import Header from './(store)/_components/Header/Header';
 import Footer from './(store)/_components/Footer/Footer';
 import { CartProvider } from '@/app/CartContext';
 import FadeInWrapper from '@/app/_components/FadeInWrapper';
-import LoadingWrapper from '@/app/_components/LoadingWrapper';
 
 export const metadata: Metadata = {
     title: 'Nigger Sport',

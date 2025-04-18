@@ -1,6 +1,6 @@
 
 import React from "react";
-import { Box, Button } from "@mui/material";
+import { Box } from "@mui/material";
 import Text from "@/app/_components/Text";
 import { useCart } from "@/app/CartContext";
 import CartContentListItem from "./CartContentListItem";
