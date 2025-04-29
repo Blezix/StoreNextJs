@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import { Box } from "@mui/material";
 import { products as productsData, Product } from "./data/products";
 import ProductList from "./_components/ProductList";
-import FadeInWrapper from "@/app/_components/FadeInWrapper";
+import FadeIn from '@/app/_components/FadeIn';
 
 const ProductFiltersPage = () => {
   const searchParams = useSearchParams();
@@ -48,9 +48,9 @@ const ProductFiltersPage = () => {
 
   return (
       <Box>
-        <FadeInWrapper key={`${pathname}-${category}`}>
+        <FadeIn blur={true} duration={150} easing="ease-out" initialOpacity={0} key={`${pathname}-${category}`}>
           <ProductList products={products} />
-        </FadeInWrapper>
+        </FadeIn>
       </Box>
   );
 };

@@ -17,9 +17,10 @@ const Item: React.FC<ItemProps> = ({ value, onClick }) => {
                 borderRadius: "0",
                 textTransform: "none",
                 fontSize: {
-                    xs: "0.9rem", // Small screens
-                    sm: "1rem",   // Medium screens
-                    md: "1.1rem", // Larger screens
+                    xs: "2.5rem", // Small screens
+                    sm: "2.5rem",   // Medium screens
+                    md: "2rem", // Larger screens
+
                 },
                 transition: "all 0.3s ease-in-out",
                 "&:hover": {
@@ -28,14 +29,7 @@ const Item: React.FC<ItemProps> = ({ value, onClick }) => {
             }}
             onClick={onClick}
         >
-            <Text
-                variant={"body1"}
-                sx={{
-
-                }}
-            >
-                {value}
-            </Text>
+            {value}
         </Button>
     );
 };

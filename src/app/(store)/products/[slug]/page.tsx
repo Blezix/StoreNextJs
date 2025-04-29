@@ -6,6 +6,7 @@ import { Box, Typography } from "@mui/material";
 import ProductDescription from "@/app/(store)/products/[slug]/_components/ProductDescription";
 import ProductImage from "@/app/(store)/products/[slug]/_components/ProductImage";
 import SimilarItems from "@/app/(store)/products/[slug]/_components/SimilarItems";
+
 export default function ProductPage() {
     const { slug } = useParams();
 
@@ -28,6 +29,9 @@ export default function ProductPage() {
                 color: "black",
             }}
         >
+
+
+            {/* Product Details */}
             <Box sx={{
                 width: "85%",
                 display: "flex",
@@ -43,6 +47,7 @@ export default function ProductPage() {
                     description={product.description}
                     sizes={product.sizes}
                     colors={product.colors}
+                    category={product.category}
                 />
             </Box>
             <SimilarItems />

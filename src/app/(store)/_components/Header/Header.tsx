@@ -29,6 +29,7 @@ export default function Header() {
                 display: "flex",
                 justifyContent: "space-between",
                 alignItems: "center",
+                zIndex:"2",
                 pr: 4,
                 pl: 4,
             }}

@@ -4,6 +4,7 @@ import React from "react";
 import { Box } from "@mui/material";
 import { useRouter } from "next/navigation";
 import Item from "./Item/Item";
+import CollapsibleItem from "@/app/(store)/_components/Header/_components/MenuLeft/CollapsibleItem";
 
 interface MenuLeftProps {
     isMobile: boolean;
@@ -28,9 +29,8 @@ export default function MenuLeft({ isMobile }: MenuLeftProps) {
                 color: "inherit",
             }}
         >
-            <Item value="Products" onClick={() => {
-                HandlePageRedirect("products?minPrice=10&maxPrice=1000&sort=name-asc");
-            }} />
+            <CollapsibleItem/>
+
             <Item value="Store" onClick={() => {
                 HandlePageRedirect("store");
             }} />

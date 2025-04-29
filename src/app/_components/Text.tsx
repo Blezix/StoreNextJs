@@ -2,7 +2,7 @@ import React from "react";
 import Typography, { TypographyProps } from "@mui/material/Typography";
 
 interface TextProps extends TypographyProps {
-  variant: "h1" | "h2" | "body1" | "body2" | "h3" | "h4" | "h5" | "h6";
+  variant: "h1" | "h2" | "body1" | "body2" | "h3" | "h4" | "h5" | "h6" | "body3";
   children: React.ReactNode;
 }
 

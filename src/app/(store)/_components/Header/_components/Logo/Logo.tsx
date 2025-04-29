@@ -33,6 +33,11 @@ export default function Logo() {
                 variant={"h2"}
                 sx={{
                     fontWeight: "bold",
+                    fontSize:{
+                        xs: "4rem",
+                        sm: "3.5rem",
+                        md: "3rem",
+                    }
                 }}
             >
                 Logo

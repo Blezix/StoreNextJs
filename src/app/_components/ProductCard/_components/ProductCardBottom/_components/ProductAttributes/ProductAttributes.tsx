@@ -9,7 +9,7 @@ const ProductAttributes: React.FC<Props> = ({ ProductName, ProductPrice }) => {
   return (
     <Box>
       <Text
-        variant={"body1"}
+        variant={"body2"}
         sx={{
           color: "black",
         }}

@@ -8,7 +8,6 @@ import ClearCategoryButton from "@/app/(store)/products/_components/ClearCategor
 import { useSwipeable } from "react-swipeable";
 
 export default function CategoryBar() {
-    const [clickedCategory, setClickedCategory] = useState<string | null>(null);
 
     const swipeHandlers = useSwipeable({
         onSwipedLeft: () => {
@@ -93,16 +92,9 @@ export default function CategoryBar() {
                     <CategoryButton
                         key={category}
                         value={category}
-                        isClicked={clickedCategory === category}
-                        setIsClicked={(isClicked) =>
-                            isClicked
-                                ? setClickedCategory(category)
-                                : setClickedCategory(null)
-                        }
                     />
                 ))}
                 <ClearCategoryButton
-                    isClicked={clickedCategory === null}
                 />
             </Box>
 
