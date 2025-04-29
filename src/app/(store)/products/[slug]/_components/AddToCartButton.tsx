@@ -28,7 +28,6 @@ const AddToCartButton: React.FC<Props> = ({ product, selectedSize, selectedColor
             ProductName: product.ProductName,
             ProductPrice: product.ProductPrice,
             imgSrc: product.imgSrc,
-            sizes: product.sizes,
             size: selectedSize,
             color: selectedColor,
             quantity: 1
@@ -45,6 +44,7 @@ const AddToCartButton: React.FC<Props> = ({ product, selectedSize, selectedColor
             <UniversalButton
                 variant="black"
                 onClick={handleButtonClick}
+                sx={{marginTop:"auto", marginBottom:"0"}}
             >
                 Add to Cart
             </UniversalButton>

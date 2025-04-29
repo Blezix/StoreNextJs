@@ -52,11 +52,11 @@ const ProductImage: React.FC<Props> = ({ imgSrc }) => {
                 justifyContent: "center",
                 bgcolor: "#f2f2f2",
                 borderRadius: 3,
-                minHeight: { xs: "300px", md: "415px" },
+                height: { xs: "300px", md: "415px",lg:"550px" },
             }}>
                 <Box sx={{
-                    width: "70%",
-                    height: "90%",
+                    maxWidth:"70%",
+                    maxHeight:"90%",
                     m: `auto`,
 
                 }} component={"img"} src={selectedImage} alt="Main product" />
