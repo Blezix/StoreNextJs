@@ -1,19 +1,67 @@
 "use client";
 
 import { useParams } from "next/navigation";
-import { products } from "../data/products";
+import { useEffect, useState } from "react";
 import { Box, Typography } from "@mui/material";
+import { Product } from "../../../../../backend/models/Product";
 import ProductDescription from "@/app/(store)/products/[slug]/_components/ProductDescription";
 import ProductImage from "@/app/(store)/products/[slug]/_components/ProductImage";
 import SimilarItems from "@/app/(store)/products/[slug]/_components/SimilarItems";
-
 export default function ProductPage() {
     const { slug } = useParams();
+    const [product, setProduct] = useState<Product | null>(null);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState<string | null>(null);
 
-    const product = products.find((p) => p.slug === slug);
+    useEffect(() => {
+        const fetchProduct = async () => {
+            try {
+                setLoading(true);
+                const response = await fetch(`http://localhost:5000/api/products`);
+                if (!response.ok) {
+                    throw new Error("Failed to fetch products");
+                }
+                const data: Product[] = await response.json();
+                const foundProduct = data.find((product) => product.slug === slug);
+                if (foundProduct) {
+                    setProduct(foundProduct);
+                } else {
+                    setError("Produkt nie został znaleziony");
+                }
+            } catch (err) {
+                setError("Nie udało się załadować produktu.");
+                console.error(err);
+            } finally {
+                setLoading(false);
+            }
+        };
+        fetchProduct();
+    }, [slug]);
+
+    if (loading) {
+        return (
+            <Box
+                sx={{
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    color:"black",
+                    height: "100vh",
+                    gap: 2,
+                }}
+            >
+                <Typography variant="h6">Ładowanie produktu...</Typography>
+            </Box>
+        );
+    }
+
+    if (error) {
+        return <Typography variant="h4">{error}</Typography>;
+    }
 
     if (!product) {
-        return <Typography variant="h4">Product not found</Typography>;
+        return <Typography variant="h4">Produkt nie został znaleziony</Typography>;
     }
 
     return (
@@ -29,16 +77,16 @@ export default function ProductPage() {
                 color: "black",
             }}
         >
-
-
-            {/* Product Details */}
-            <Box sx={{
-                width: "85%",
-                display: "flex",
-                flexDirection: "row",
-                height: "80%",
-                flexWrap: "wrap",
-            }}>
+            {/* Szczegóły produktu */}
+            <Box
+                sx={{
+                    width: "85%",
+                    display: "flex",
+                    flexDirection: "row",
+                    height: "80%",
+                    flexWrap: "wrap",
+                }}
+            >
                 <ProductImage imgSrc={product.imgSrc} />
                 <ProductDescription
                     name={product.name}

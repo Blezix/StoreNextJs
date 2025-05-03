@@ -31,7 +31,7 @@ const ProductCardTop: React.FC<Props> = ({ imgSrc,slug }) => {
           component={'img'}
         src={imgSrc}
         alt="product"
-        style={{ width: "80%", height: "60%", borderRadius: "10px" }}
+        style={{ maxWidth:"80%", borderRadius: "10px" }}
       />
     </Box>
   );

@@ -6,8 +6,8 @@ interface Props {
 }
 
 const ProductImage: React.FC<Props> = ({ imgSrc }) => {
-    const [selectedImage, setSelectedImage] = useState(imgSrc[0]);
-
+    const [selectedImage, setSelectedImage] = useState(imgSrc[2])
+    console.log(imgSrc[0])
     return (
         <Box sx={{
             display: "flex",

@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Box } from "@mui/material";
-import { Product } from "../data/products";
 import ProductCard from "@/app/_components/ProductCard/ProductCard";
 import UniversalButton from "@/app/_components/UniversalButton";
+import { Product } from "../../../../../backend/models/Product";
 import FadeIn from "@/app/_components/FadeIn"
 interface ProductListProps {
     products: Product[];
