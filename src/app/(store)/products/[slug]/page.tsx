@@ -46,12 +46,12 @@ export default function ProductPage() {
                     flexDirection: "column",
                     alignItems: "center",
                     justifyContent: "center",
-                    color:"black",
                     height: "100vh",
+                    color:'black',
                     gap: 2,
                 }}
             >
-                <Typography variant="h6">Ładowanie produktu...</Typography>
+               Ładowanie produktu...
             </Box>
         );
     }

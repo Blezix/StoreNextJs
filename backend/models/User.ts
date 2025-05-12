@@ -1,14 +1,30 @@
-import mongoose from 'mongoose';
+import mongoose, { Schema, Document } from 'mongoose';
 
-const userSchema = new mongoose.Schema({
-    email: { type: String, required: true, unique: true },
-    passwordHash: { type: String, required: true },
-    cart: [
-        {
-            productId: { type: mongoose.Schema.Types.ObjectId, ref: 'Product' },
-            quantity: Number
-        }
-    ],
-}, { timestamps: true });
+interface CartItem {
+    productId: mongoose.Types.ObjectId;
+    quantity: number;
+}
 
-export default mongoose.models.User || mongoose.model('User', userSchema);
+export interface IUser extends Document {
+    email: string;
+    passwordHash: string;
+    cart: CartItem[];
+    createdAt: Date;
+    updatedAt: Date;
+}
+
+const userSchema = new Schema<IUser>(
+    {
+        email: { type: String, required: true, unique: true },
+        passwordHash: { type: String, required: true },
+        cart: [
+            {
+                productId: { type: Schema.Types.ObjectId, ref: 'Product', required: true },
+                quantity: { type: Number, required: true, min: 1 },
+            },
+        ],
+    },
+    { timestamps: true }
+);
+
+export default mongoose.models.User || mongoose.model<IUser>('User', userSchema);

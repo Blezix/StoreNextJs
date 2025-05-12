@@ -5,8 +5,7 @@ import { useEffect, useState } from "react";
 import { Box } from "@mui/material";
 import ProductList from "./_components/ProductList";
 import FadeIn from '@/app/_components/FadeIn';
-import { Product } from "../../../../../backend/models/Product";
-
+import {Product} from "../../../../backend/models/Product";
 const ProductFiltersPage = () => {
   const searchParams = useSearchParams();
   const pathname = usePathname();
@@ -59,7 +58,17 @@ const ProductFiltersPage = () => {
   }, [category, minPrice, maxPrice, sort]);
 
   if (loading) {
-    return <div>Ładowanie produktów...</div>;
+    return <Box sx={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        height: "20vh",
+        color:'black',
+        gap: 2,
+    }}>
+      Ładowanie produktów...
+    </Box>;
   }
 
   return (
