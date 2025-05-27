@@ -1,0 +1,337 @@
+[{
+  "id": 6,
+  "name": "Fleece Pullover",
+  "price": 49.99,
+  "imgSrc": [
+    "/Assets/Bluzaichuj.png",
+    "/Assets/Bluzaichuj.png",
+    "/Assets/Bluzaichuj.png"
+  ],
+  "category": "Jackets",
+  "slug": "fleece-pullover",
+  "description": "Introducing the Boa Fleece Winter Jacket, designed to keep you warm and comfortable during the coldest winter days. Crafted from high- quality fleece material, this jacket offers superior insulation and softness, making it the perfect choice for outdoor activities or everyday wear..",
+  "sizes": [
+    "S",
+    "M",
+    "L",
+    "XL"
+  ],
+  "colors": [
+    "Blue",
+    "Gray"
+  ]
+},
+  {
+    "id": 13,
+    "name": "Camping Tent",
+    "price": 199.99,
+    "imgSrc": [
+      "/Assets/bombaclat.png",
+      "/Assets/bombaclat.png",
+      "/Assets/bombaclat.png"
+    ],
+    "category": "Accessories",
+    "slug": "camping-tent",
+    "description": "Introducing the Boa Fleece Winter Jacket, designed to keep you warm and comfortable during the coldest winter days. Crafted from high- quality fleece material, this jacket offers superior insulation and softness, making it the perfect choice for outdoor activities or everyday wear..",
+    "sizes": [
+      "2-person",
+      "4-person"
+    ],
+    "colors": [
+      "Green",
+      "Blue"
+    ]
+  },
+  {
+    "id": 15,
+    "name": "Hiking Socks",
+    "price": 14.99,
+    "imgSrc": [
+      "/Assets/Bluzaichuj.png",
+      "/Assets/Bluzaichuj.png",
+      "/Assets/Bluzaichuj.png"
+    ],
+    "category": "Footwear",
+    "slug": "hiking-socks",
+    "description": "Introducing the Boa Fleece Winter Jacket, designed to keep you warm and comfortable during the coldest winter days. Crafted from high- quality fleece material, this jacket offers superior insulation and softness, making it the perfect choice for outdoor activities or everyday wear..",
+    "sizes": [
+      "S",
+      "M",
+      "L"
+    ],
+    "colors": [
+      "Gray",
+      "Black"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Waterproof Pants",
+    "price": 59.99,
+    "imgSrc": [
+      "/Assets/BaigePuffer.png",
+      "/Assets/BaigePuffer.png",
+      "/Assets/BaigePuffer.png"
+    ],
+    "category": "Bottoms",
+    "slug": "waterproof-pants",
+    "description": "Introducing the Boa Fleece Winter Jacket, designed to keep you warm and comfortable during the coldest winter days. Crafted from high- quality fleece material, this jacket offers superior insulation and softness, making it the perfect choice for outdoor activities or everyday wear..",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colors": [
+      "Beige",
+      "Black"
+    ]
+  },
+  {
+
+    "id": 5,
+    "name": "Camping Hat",
+    "price": 24.99,
+    "imgSrc": [
+      "/Assets/beany.png",
+      "/Assets/beany.png",
+      "/Assets/Bluzaichuj.png"
+    ],
+    "category": "Headwear",
+    "slug": "camping-hat",
+    "description": "Introducing the Boa Fleece Winter Jacket, designed to keep you warm and comfortable during the coldest winter days. Crafted from high- quality fleece material, this jacket offers superior insulation and softness, making it the perfect choice for outdoor activities or everyday wear..",
+    "sizes": [
+      "One Size"
+    ],
+    "colors": [
+      "Green",
+      "Brown"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Thermal Gloves",
+    "price": 19.99,
+    "imgSrc": [
+      "/Assets/bombaclat.png",
+      "/Assets/bombaclat.png",
+      "/Assets/bombaclat.png"
+    ],
+    "category": "Accessories",
+    "slug": "thermal-gloves",
+    "description": "Introducing the Boa Fleece Winter Jacket, designed to keep you warm and comfortable during the coldest winter days. Crafted from high- quality fleece material, this jacket offers superior insulation and softness, making it the perfect choice for outdoor activities or everyday wear..",
+    "sizes": [
+      "S",
+      "M",
+      "L"
+    ],
+    "colors": [
+      "Black",
+      "Gray"
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Backpacking Boots",
+    "price": 149.99,
+    "imgSrc": [
+      "/Assets/Boots.png",
+      "/Assets/Boots.png",
+      "/Assets/Boots.png"
+    ],
+    "category": "Footwear",
+    "slug": "backpacking-boots",
+    "description": "Introducing the Boa Fleece Winter Jacket, designed to keep you warm and comfortable during the coldest winter days. Crafted from high- quality fleece material, this jacket offers superior insulation and softness, making it the perfect choice for outdoor activities or everyday wear..",
+    "sizes": [
+      "8",
+      "9",
+      "10",
+      "11"
+    ],
+    "colors": [
+      "Brown",
+      "Black"
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Climbing Rope",
+    "price": 89.99,
+    "imgSrc": [
+      "/Assets/bombaclat.png",
+      "/Assets/bombaclat.png",
+      "/Assets/bombaclat.png"
+    ],
+    "category": "Accessories",
+    "slug": "climbing-rope",
+    "description": "Introducing the Boa Fleece Winter Jacket, designed to keep you warm and comfortable during the coldest winter days. Crafted from high- quality fleece material, this jacket offers superior insulation and softness, making it the perfect choice for outdoor activities or everyday wear..",
+    "sizes": [
+      "30m",
+      "50m"
+    ],
+    "colors": [
+      "Green",
+      "Yellow"
+    ]
+  },
+  {
+
+    "id": 12,
+    "name": "Hiking Boots",
+    "price": 139.99,
+    "imgSrc": [
+      "/Assets/Boots.png",
+      "/Assets/Boots.png",
+      "/Assets/Boots.png"
+    ],
+    "category": "Footwear",
+    "slug": "hiking-boots",
+    "description": "Introducing the Boa Fleece Winter Jacket, designed to keep you warm and comfortable during the coldest winter days. Crafted from high- quality fleece material, this jacket offers superior insulation and softness, making it the perfect choice for outdoor activities or everyday wear..",
+    "sizes": [
+      "8",
+      "9",
+      "10",
+      "11"
+    ],
+    "colors": [
+      "Brown",
+      "Gray"
+    ]
+  },
+  {
+
+    "id": 1,
+    "name": "Hiking Jacket",
+    "price": 79.99,
+    "imgSrc": [
+      "/Assets/jacketRed.png",
+      "/Assets/jacketRed.png",
+      "/Assets/jacketRed.png"
+    ],
+    "category": "Jackets",
+    "slug": "hiking-jacket",
+    "description": "Introducing the Boa Fleece Winter Jacket, designed to keep you warm and comfortable during the coldest winter days. Crafted from high- quality fleece material, this jacket offers superior insulation and softness, making it the perfect choice for outdoor activities or everyday wear..",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colors": [
+      "Red",
+      "Blue",
+      "Green"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Trail Running Shoes",
+    "price": 129.99,
+    "imgSrc": [
+      "/Assets/Boots.png",
+      "/Assets/Boots.png",
+      "/Assets/Boots.png"
+    ],
+    "category": "Footwear",
+    "slug": "trail-running-shoes",
+    "description": "Introducing the Boa Fleece Winter Jacket, designed to keep you warm and comfortable during the coldest winter days. Crafted from high- quality fleece material, this jacket offers superior insulation and softness, making it the perfect choice for outdoor activities or everyday wear..",
+    "sizes": [
+      "8",
+      "9",
+      "10",
+      "11"
+    ],
+    "colors": [
+      "Black",
+      "White"
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Windbreaker",
+    "price": 89.99,
+    "imgSrc": [
+      "/Assets/jacketBlack.png",
+      "/Assets/jacketBlack.png",
+      "/Assets/jacketBlack.png"
+    ],
+    "category": "Jackets",
+    "slug": "windbreaker",
+    "description": "Introducing the Boa Fleece Winter Jacket, designed to keep you warm and comfortable during the coldest winter days. Crafted from high- quality fleece material, this jacket offers superior insulation and softness, making it the perfect choice for outdoor activities or everyday wear..",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colors": [
+      "Black",
+      "White"
+    ]
+  },
+  {
+
+    "id": 9,
+    "name": "Mountain Bike Helmet",
+    "price": 59.99,
+    "imgSrc": [
+      "/Assets/bombaclat.png",
+      "/Assets/bombaclat.png",
+      "/Assets/bombaclat.png"
+    ],
+    "category": "Accessories",
+    "slug": "mountain-bike-helmet",
+    "description": "Introducing the Boa Fleece Winter Jacket, designed to keep you warm and comfortable during the coldest winter days. Crafted from high- quality fleece material, this jacket offers superior insulation and softness, making it the perfect choice for outdoor activities or everyday wear..",
+    "sizes": [
+      "M",
+      "L"
+    ],
+    "colors": [
+      "Red",
+      "Blue"
+    ]
+  },
+  {
+    "id": 11,
+    "name": "Insulated Jacket",
+    "price": 99.99,
+    "imgSrc": [
+      "/Assets/jacketRed.png",
+      "/Assets/jacketRed.png",
+      "/Assets/jacketRed.png"
+    ],
+    "category": "Jackets",
+    "slug": "insulated-jacket",
+    "description": "Introducing the Boa Fleece Winter Jacket, designed to keep you warm and comfortable during the coldest winter days. Crafted from high- quality fleece material, this jacket offers superior insulation and softness, making it the perfect choice for outdoor activities or everyday wear..",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colors": [
+      "Red",
+      "Black"
+    ]},
+  {
+
+    "id": 14,
+    "name": "Sleeping Bag",
+    "price": 79.99,
+    "imgSrc": [
+      "/Assets/bombaclat.png",
+      "/Assets/bombaclat.png",
+      "/Assets/bombaclat.png"
+    ],
+    "category": "Accessories",
+    "slug": "sleeping-bag",
+    "description": "Introducing the Boa Fleece Winter Jacket, designed to keep you warm and comfortable during the coldest winter days. Crafted from high- quality fleece material, this jacket offers superior insulation and softness, making it the perfect choice for outdoor activities or everyday wear..",
+    "sizes": [
+      "Regular",
+      "Long"
+    ],
+    "colors": [
+      "Blue",
+      "Gray"
+    ]
+  }]

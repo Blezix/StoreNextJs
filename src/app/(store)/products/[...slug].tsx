@@ -3,9 +3,9 @@
 import { useSearchParams, usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Box } from "@mui/material";
+import { Product } from "@/app/types";
 import ProductList from "./_components/ProductList";
 import FadeIn from '@/app/_components/FadeIn';
-import {Product} from "../../../../backend/models/Product";
 const ProductFiltersPage = () => {
   const searchParams = useSearchParams();
   const pathname = usePathname();
@@ -22,7 +22,7 @@ const ProductFiltersPage = () => {
     const fetchFilteredProducts = async () => {
       setLoading(true);
       try {
-        const response = await fetch('http://localhost:5000/api/products');
+        const response = await fetch('api/products');
         if (!response.ok) {
           throw new Error('Failed to fetch products');
         }
