@@ -1,12 +1,14 @@
 import React from "react";
 import { Box } from "@mui/material";
 import Text from "@/app/_components/Text";
-import {Cart} from "@/app/CartContext";
-interface CartContentListItemProps {
-    product: Cart
+import {Product,CartItem } from '@/app/types'
+
+interface Props {
+    product: Product;
+    cartItems:CartItem
 }
 
-const CartContentListItem: React.FC<CartContentListItemProps> = ({ product }) => {
+const CartContentListItem: React.FC<Props> = ({ product,cartItems}) => {
     return (
         <Box
             sx={{
@@ -31,7 +33,7 @@ const CartContentListItem: React.FC<CartContentListItemProps> = ({ product }) =>
                 paddingLeft: "10px",
             }}>
                 <Box>
-                    <Text variant="body1">{product.ProductName}</Text>
+                    <Text variant="body1">{product.name}</Text>
                 </Box>
                 <Box sx={{
                     display: "flex",
@@ -39,12 +41,12 @@ const CartContentListItem: React.FC<CartContentListItemProps> = ({ product }) =>
                     fontSize: "14px !important" ,
                 }}>
                     <Box>
-                        <Text variant="body2" sx={{fontSize:"0.8rem"}}>Price: {product.ProductPrice}$</Text>
-                        <Text variant="body2"  sx={{fontSize:"0.8rem"}}>Color: {product.color}</Text>
+                        <Text variant="body2" sx={{fontSize:"0.8rem"}}>Price: {product.price}$</Text>
+                        <Text variant="body2"  sx={{fontSize:"0.8rem"}}>Color: {cartItems.color}</Text>
                     </Box>
                     <Box>
-                        <Text variant="body2"  sx={{fontSize:"0.8rem"}}>Size: {product.size}</Text>
-                        <Text variant="body2"  sx={{fontSize:"0.8rem"}}>Quantity: {product.quantity}</Text>
+                        <Text variant="body2"  sx={{fontSize:"0.8rem"}}>Size: {cartItems.size}</Text>
+                        <Text variant="body2"  sx={{fontSize:"0.8rem"}}>Quantity: {cartItems.quantity}</Text>
                     </Box>
 
                 </Box>

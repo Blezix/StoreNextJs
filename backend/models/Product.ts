@@ -2,7 +2,6 @@ import mongoose, { Schema, Document } from 'mongoose';
 
 // Define the Product interface
 export interface Product extends Document {
-        id: number;
         name: string;
         price: number;
         imgSrc: string[];
@@ -13,9 +12,7 @@ export interface Product extends Document {
         colors: string[];
 }
 
-// Define the schema for the product
 const productSchema = new Schema<Product>({
-        id: { type: Number, required: true },
         name: { type: String, required: true },
         price: { type: Number, required: true },
         imgSrc: { type: [String], required: true },

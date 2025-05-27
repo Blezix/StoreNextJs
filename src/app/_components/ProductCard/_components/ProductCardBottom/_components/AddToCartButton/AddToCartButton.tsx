@@ -2,19 +2,10 @@ import React, { useState } from "react";
 import { IconButton, Snackbar, Menu, MenuItem } from "@mui/material";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import { useCart } from "@/app/CartContext";
+import {Product} from "@/app/types";
 
-interface Props {
-    product: {
-        ProductName: string;
-        ProductPrice: number;
-        imgSrc: string[];
-        sizes: string[];
-        size?: string;
-        color?: string;
-    };
-}
 
-const AddToCartButton: React.FC<Props> = ({ product }) => {
+const AddToCartButton: React.FC<Product> = ({  }) => {
     const { addToCart } = useCart();
     const [open, setOpen] = useState(false);
     const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);

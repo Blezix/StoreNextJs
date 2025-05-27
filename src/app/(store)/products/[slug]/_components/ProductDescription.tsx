@@ -2,32 +2,19 @@ import React, { useEffect } from "react";
 import Text from "@/app/_components/Text";
 import { Box, FormControl, ToggleButton, ToggleButtonGroup, Link, Typography, Rating } from "@mui/material";
 import AddToCartButton from "./AddToCartButton";
-
+import { Product } from "@/app/types";
 interface Props {
-    name: string;
-    price: number;
-    description: string;
-    sizes: string[];
-    colors: string[];
-    imgSrc: string[];
-    category: string;
+    product: Product;
 }
 
-const ProductDescription: React.FC<Props> = ({ name, price, description, sizes, colors, imgSrc, category }) => {
-    const [selectedSize, setSelectedSize] = React.useState<string>(sizes[0] || "");
-    const [selectedColor, setSelectedColor] = React.useState<string>(colors[0] || "");
+const ProductDescription: React.FC<Props> = ({ product }) => {
+    const [selectedSize, setSelectedSize] = React.useState<string>(product.sizes[0] || "");
+    const [selectedColor, setSelectedColor] = React.useState<string>(product.colors[0] || "");
     const [rating, setRating] = React.useState<number | null>(4); // Domyślna ocena
 
-    const product = {
-        ProductName: name,
-        ProductPrice: price,
-        imgSrc: imgSrc,
-        sizes: sizes,
-        category: category,
-    };
 
     useEffect(() => {
-        console.log(product.ProductName);
+        console.log(product.id);
     }, []);
 
     return (
@@ -64,16 +51,16 @@ const ProductDescription: React.FC<Props> = ({ name, price, description, sizes, 
                     Home
                 </Link>
                 {" / "}
-                <Link href={`/products?category=${category}`} underline="hover" color="inherit">
+                <Link href={`/products?category=${product.category}`} underline="hover" color="inherit">
                     {product.category}
                 </Link>
                 {" / "}
                 <Typography component="span" color="inherit" fontSize={'inherit'}>
-                    {product.ProductName}
+                    {product.name}
                 </Typography>
             </Box>
-            <Text variant="h5">{name}</Text>
-            <Text variant="h4">${price}</Text>
+            <Text variant="h5">${product.name}</Text>
+            <Text variant="h4">${product.price}</Text>
 
             <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
                 <Rating
@@ -97,7 +84,7 @@ const ProductDescription: React.FC<Props> = ({ name, price, description, sizes, 
                     lg: "0.8rem",
                     xl: "0.9rem",
                 },
-            }}>{description}</Text>
+            }}>{product.description}</Text>
 
             <FormControl>
                 <Text variant={'body2'}>Size</Text>
@@ -107,7 +94,7 @@ const ProductDescription: React.FC<Props> = ({ name, price, description, sizes, 
                     onChange={(_, newSize) => newSize && setSelectedSize(newSize)}
                     sx={{ flexWrap: "wrap" }}
                 >
-                    {sizes.map((size) => (
+                    {product.sizes.map((size) => (
                         <ToggleButton key={size} value={size}>
                             {size}
                         </ToggleButton>
@@ -123,7 +110,7 @@ const ProductDescription: React.FC<Props> = ({ name, price, description, sizes, 
                     onChange={(_, newColor) => newColor && setSelectedColor(newColor)}
                     sx={{ flexWrap: "wrap" }}
                 >
-                    {colors.map((color) => (
+                    {product.colors.map((color) => (
                         <ToggleButton key={color} value={color}>
                             <Box
                                 bgcolor={color}
