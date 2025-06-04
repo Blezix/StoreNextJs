@@ -1,0 +1,47 @@
+[
+  {
+    "email": "mail@local.com",
+    "items": [
+      {
+        "slug": "hiking-socks",
+        "size": "S",
+        "color": "Gray",
+        "quantity": 1
+      },
+      {
+        "slug": "camping-hat",
+        "size": "One Size",
+        "color": "Green",
+        "quantity": 1
+      },
+      {
+        "slug": "waterproof-pants",
+        "size": "S",
+        "color": "Beige",
+        "quantity": 3
+      }
+    ]
+  },
+  {
+    "email": "mail2@local.com",
+    "items": [
+      {
+        "slug": "camping-hat",
+        "size": "One Size",
+        "color": "Green",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "email": "test2@local.com",
+    "items": [
+      {
+        "slug": "waterproof-pants",
+        "size": "S",
+        "color": "Beige",
+        "quantity": 1
+      }
+    ]
+  }
+]

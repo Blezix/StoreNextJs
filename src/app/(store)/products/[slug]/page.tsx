@@ -3,7 +3,7 @@
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Box, Typography } from "@mui/material";
-import { Product } from "../../../../../backend/models/Product";
+import { Product } from "@/app/types";
 import ProductDescription from "@/app/(store)/products/[slug]/_components/ProductDescription";
 import ProductImage from "@/app/(store)/products/[slug]/_components/ProductImage";
 import SimilarItems from "@/app/(store)/products/[slug]/_components/SimilarItems";
@@ -17,12 +17,12 @@ export default function ProductPage() {
         const fetchProduct = async () => {
             try {
                 setLoading(true);
-                const response = await fetch(`http://localhost:5000/api/products`);
-                if (!response.ok) {
+                const response = await fetch(`http://localhost:3000/api/products`);                if (!response.ok) {
                     throw new Error("Failed to fetch products");
                 }
                 const data: Product[] = await response.json();
                 const foundProduct = data.find((product) => product.slug === slug);
+                console.log(data)
                 if (foundProduct) {
                     setProduct(foundProduct);
                 } else {
@@ -89,13 +89,7 @@ export default function ProductPage() {
             >
                 <ProductImage imgSrc={product.imgSrc} />
                 <ProductDescription
-                    name={product.name}
-                    price={product.price}
-                    imgSrc={product.imgSrc}
-                    description={product.description}
-                    sizes={product.sizes}
-                    colors={product.colors}
-                    category={product.category}
+                    product={product}
                 />
             </Box>
             <SimilarItems />

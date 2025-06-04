@@ -2,16 +2,8 @@ import React, { useState } from "react";
 import { Snackbar } from "@mui/material";
 import { useCart } from "@/app/CartContext";
 import UniversalButton from "@/app/_components/UniversalButton";
+import { Product } from "@/app/types"; // Adjust the import path as necessary
 
-interface Product {
-    ProductName: string;
-    ProductPrice: number;
-    imgSrc: string[];
-    sizes: string[];
-    size?: string;
-    color?: string;
-    quantity?: number;
-}
 
 interface Props {
     product: Product;
@@ -25,12 +17,10 @@ const AddToCartButton: React.FC<Props> = ({ product, selectedSize, selectedColor
 
     const handleButtonClick = () => {
         addToCart({
-            ProductName: product.ProductName,
-            ProductPrice: product.ProductPrice,
-            imgSrc: product.imgSrc,
+            slug: product.slug,
             size: selectedSize,
             color: selectedColor,
-            quantity: 1
+            quantity: -1
         });
         setOpen(true);
     };
