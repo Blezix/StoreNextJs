@@ -15,7 +15,6 @@ export default function Profile() {
       }}
     >
       <AccountCircleOutlinedIcon />
-      <Text variant={"body2"}>Login</Text>
     </Box>
   );
 }

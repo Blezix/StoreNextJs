@@ -73,6 +73,7 @@ const CartContentListItem: React.FC<CartContentListItemProps> = ({ cartItem }) =
                     flexDirection: "column",
                     justifyContent: "space-between",
                     paddingLeft: "10px",
+                    width: "60%"
                 }}
             >
                 <Box>
@@ -85,7 +86,9 @@ const CartContentListItem: React.FC<CartContentListItemProps> = ({ cartItem }) =
                         fontSize: "14px !important",
                     }}
                 >
-                    <Box>
+                    <Box sx={{
+                        textAlign:"start"
+                    }}>
                         <Text variant="body2" sx={{ fontSize: "0.8rem" }}>
                             Price: {product.price}$
                         </Text>
@@ -93,7 +96,9 @@ const CartContentListItem: React.FC<CartContentListItemProps> = ({ cartItem }) =
                             Color: {cartItem.color}
                         </Text>
                     </Box>
-                    <Box>
+                    <Box sx={{
+                        textAlign: "start",
+                    }}>
                         <Text variant="body2" sx={{ fontSize: "0.8rem" }}>
                             Size: {cartItem.size}
                         </Text>

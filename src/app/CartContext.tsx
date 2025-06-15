@@ -41,6 +41,7 @@ export const CartProvider = ({ children }: { children: React.ReactNode }) => {
     };
 
     const syncCartWithServer = async (email: string, items: CartItem[]) => {
+        console.log("syncCartWithServer called with:", { email, items });
         try {
             const response = await fetch("/api/cart", {
                 method: "POST",
@@ -59,7 +60,6 @@ export const CartProvider = ({ children }: { children: React.ReactNode }) => {
             console.error("Error syncing cart with server:", error);
         }
     };
-
     const loadCart = () => {
         const email = getUserEmail();
         const stored = localStorage.getItem(`cart-${email}`);
@@ -70,19 +70,27 @@ export const CartProvider = ({ children }: { children: React.ReactNode }) => {
 
     const saveCart = (updatedCart: CartItem[]) => {
         const email = getUserEmail();
-        if (email) {
+        if (!email) {
+            console.warn("Brak e-maila, nie można zapisać koszyka.");
+            return;
+        }
+        try {
             localStorage.setItem(`cart-${email}`, JSON.stringify(updatedCart));
+            console.log("Koszyk zapisany w localStorage:", updatedCart);
+        } catch (error) {
+            console.error("Błąd podczas zapisywania koszyka w localStorage:", error);
         }
     };
 
     useEffect(() => {
         loadCart();
     }, []);
-
-    const addToCart = (newItem: CartItem) => {
+    const addToCart = async (newItem: CartItem) => {
         console.log("addToCart called with:", newItem);
+
+        let updatedCart: CartItem[] = [];
         setCartItems((prev) => {
-            const updatedCart = prev.map((item) =>
+            updatedCart = prev.map((item) =>
                 item.slug === newItem.slug &&
                 item.size === newItem.size &&
                 item.color === newItem.color
@@ -102,13 +110,17 @@ export const CartProvider = ({ children }: { children: React.ReactNode }) => {
             }
 
             saveCart(updatedCart);
-            const email = getUserEmail();
-            if (email) {
-                syncCartWithServer(email, updatedCart);
-            }
-
             return updatedCart;
         });
+
+        const email = getUserEmail();
+        if (email) {
+            try {
+                await syncCartWithServer(email, updatedCart);
+            } catch (error) {
+                console.error("Error syncing cart with server:", error);
+            }
+        }
     };
 
     const removeFromCart = (slug: string, size?: string, color?: string) => {
@@ -140,6 +152,10 @@ export const CartProvider = ({ children }: { children: React.ReactNode }) => {
                     : item
             );
             saveCart(updatedCart);
+            const email = getUserEmail();
+            if (email) {
+                syncCartWithServer(email, updatedCart);
+            }
             return updatedCart;
         });
     };

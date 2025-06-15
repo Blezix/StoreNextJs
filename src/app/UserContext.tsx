@@ -32,15 +32,15 @@ export const UserProvider = ({ children }: { children: ReactNode }) => {
         setUserState(newUser);
     };
 
-    const logout = () => setUser(null);
 
+    const logout = () => setUser(null);
     return (
         <UserContext.Provider value={{ user, setUser, logout }}>
             {children}
         </UserContext.Provider>
     );
-};
 
+};
 export const useUser = () => {
     const context = useContext(UserContext);
     if (!context) {

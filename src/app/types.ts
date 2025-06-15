@@ -17,7 +17,7 @@ export interface Product {
 export interface User {
     email: string;
     password: string;
-
+    role: string
 }
 
 export interface CartItem {
@@ -31,6 +31,4 @@ export interface CartListItemProps {
     item: CartItem;
     product: Product | undefined;
     index: number;
-    handleQuantityChange: (index: number, quantity: number) => void;
-    handleDelete: (index: number) => void;
 }

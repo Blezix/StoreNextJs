@@ -5,23 +5,14 @@ import { Box, Snackbar } from "@mui/material";
 import CartListItem from "./CartListItem";
 import Text from "@/app/_components/Text";
 import { useCart } from "@/app/CartContext";
-import allProducts from "@/data/products.json"; // update the path to your actual products.json
+import allProducts from "@/data/products.json";
 
 export default function CartList() {
-    const { cartItems, updateQuantity, removeFromCart } = useCart();
+    const { cartItems } = useCart();
     const [open, setOpen] = useState(false);
 
 
-    const handleQuantityChange = (index: number, quantity: number) => {
-        const item = cartItems[index];
-        updateQuantity(item.slug, quantity, item.size, item.color);
-    };
 
-    const handleDelete = (index: number) => {
-        const item = cartItems[index];
-        removeFromCart(item.slug, item.size, item.color);
-        setOpen(true);
-    };
 
     const handleClose = () => setOpen(false);
 
@@ -58,8 +49,6 @@ export default function CartList() {
                                 item={item}
                                 product={productWithDefaults}
                                 index={index}
-                                handleQuantityChange={handleQuantityChange}
-                                handleDelete={handleDelete}
                             />
                         );
                     })

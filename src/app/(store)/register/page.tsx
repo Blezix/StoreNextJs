@@ -6,7 +6,9 @@ import { useState } from 'react';
 const RegisterForm = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [role] = useState('user')
     const [error, setError] = useState('');
+
     const [success, setSuccess] = useState('');
 
     const handleSubmit = async (e: React.FormEvent) => {
@@ -23,7 +25,7 @@ const RegisterForm = () => {
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({ email, password }),
+                body: JSON.stringify({ email, password,role }),
             });
 
             const data = await response.json();

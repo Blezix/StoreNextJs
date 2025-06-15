@@ -40,6 +40,35 @@
         "slug": "waterproof-pants",
         "size": "S",
         "color": "Beige",
+        "quantity": 2
+      },
+      {
+        "slug": "waterproof-pants",
+        "size": "M",
+        "color": "Beige",
+        "quantity": 1
+      },
+      {
+        "slug": "waterproof-pants",
+        "size": "L",
+        "color": "Beige",
+        "quantity": 1
+      },
+      {
+        "slug": "hiking-jacket",
+        "size": "S",
+        "color": "Red",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "email": "admin@local.pl",
+    "items": [
+      {
+        "slug": "camping-hat",
+        "size": "One Size",
+        "color": "Green",
         "quantity": 1
       }
     ]

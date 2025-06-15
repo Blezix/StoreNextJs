@@ -3,7 +3,7 @@ import { readData, writeData } from "@/utils/dataHandler";
 import { User } from "@/app/types";
 
 export async function POST(req: NextRequest) {
-    const { email, password } = await req.json();
+    const { email, password,role } = await req.json();
 
     const users = await readData<User[]>("users.json");
 
@@ -12,7 +12,7 @@ export async function POST(req: NextRequest) {
         return NextResponse.json({ error: "User already exists" }, { status: 400 });
     }
 
-    const newUser: User = { email, password };
+    const newUser: User = { email, password,role };
     users.push(newUser);
 
     await writeData("users.json", users);

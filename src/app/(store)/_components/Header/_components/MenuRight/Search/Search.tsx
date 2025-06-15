@@ -13,7 +13,6 @@ export default function Search() {
       }}
     >
       <SearchIcon />
-      <Text variant={"body2"}>Search</Text>
     </Box>
   );
 }

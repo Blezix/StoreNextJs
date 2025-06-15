@@ -1,14 +1,24 @@
 [
   {
     "email": "mail@local.com",
-    "password": "password123"
+    "password": "password123",
+    "role": "user"
   },
   {
     "email": "mail2@local.com",
-    "password": "password123"
+    "password": "password123",
+    "role": "user"
+
   },
   {
     "email": "test2@local.com",
-    "password": "test"
+    "password": "test",
+    "role": "user"
+
+  },
+  {
+    "email" : "admin@local.pl",
+    "password": "1234",
+    "role": "admin"
   }
 ]
