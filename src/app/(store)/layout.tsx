@@ -1,9 +1,9 @@
 import type { Metadata } from 'next';
-import './globals.css';
-import Header from './(store)/_components/Header/Header';
-import Footer from './(store)/_components/Footer/Footer';
+import '../globals.css';
+import Header from './_components/Header/Header';
+import Footer from './_components/Footer/Footer';
 import { CartProvider } from '@/app/CartContext';
-import FadeIn from './_components/FadeIn';
+import FadeIn from '@/app/_components/FadeIn';
 import {UserProvider} from "@/app/UserContext";
 export const metadata: Metadata = {
     title: 'Nigger Sport',
