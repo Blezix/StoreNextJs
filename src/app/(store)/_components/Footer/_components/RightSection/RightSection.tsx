@@ -7,7 +7,12 @@ export default function RightSection() {
     <Box
       sx={{
         display: "flex",
-        width: "25%",
+          width: {
+              xs: "100%",
+              sm: "50%",
+              md: "33%",
+              lg: "25%",
+          },
         minWidth: "220px",
         flexDirection: "column",
       }}

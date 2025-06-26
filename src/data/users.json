@@ -18,5 +18,10 @@
     "email": "admin@local.pl",
     "password": "1234",
     "role": "admin"
+  },
+  {
+    "email": "admin2@local.pl",
+    "password": "1234",
+    "role": "user"
   }
 ]

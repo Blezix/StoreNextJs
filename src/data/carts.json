@@ -54,9 +54,33 @@
     "email": "admin@local.pl",
     "items": [
       {
-        "slug": "camping-hat",
-        "size": "One Size",
-        "color": "Green",
+        "slug": "waterproof-pants",
+        "size": "S",
+        "color": "Beige",
+        "quantity": 7
+      },
+      {
+        "slug": "fleece-pullover",
+        "size": "S",
+        "color": "Blue",
+        "quantity": 2
+      },
+      {
+        "slug": "fleece-pullover",
+        "size": "L",
+        "color": "Blue",
+        "quantity": 1
+      },
+      {
+        "slug": "fleece-pullover",
+        "size": "XL",
+        "color": "Blue",
+        "quantity": 1
+      },
+      {
+        "slug": "fleece-pullover",
+        "size": "M",
+        "color": "Blue",
         "quantity": 1
       }
     ]

@@ -90,7 +90,7 @@ export default function ProductPage() {
         <ProductImage imgSrc={product.imgSrc} />
         <ProductDescription product={product} />
       </Box>
-      <SimilarItems />
+      <SimilarItems currentSlug={product.slug}/>
     </Box>
   );
 }

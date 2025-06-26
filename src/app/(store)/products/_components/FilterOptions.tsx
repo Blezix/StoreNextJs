@@ -10,7 +10,7 @@ import {
   TextField,
 } from "@mui/material";
 import UniversalButton from "@/app/_components/UniversalButton";
-
+import CustomSnackbar from "@/app/_components/CustomSnackbar";
 interface Props {
   currentPriceRange: [number, number];
   currentSort: string;
@@ -28,7 +28,7 @@ const FilterOptions: React.FC<Props> = ({
   const [priceRange, setPriceRange] =
     useState<[number, number]>(currentPriceRange);
   const [sort, setSort] = useState(currentSort);
-
+  const [open, setOpen] = useState(false);
   const handlePriceChange = (event: Event, newValue: number | number[]) => {
     setPriceRange(newValue as [number, number]);
   };
@@ -59,6 +59,7 @@ const FilterOptions: React.FC<Props> = ({
     params.set("maxPrice", priceRange[1].toString());
     params.set("sort", sort);
     router.push(`/products?${params.toString()}`);
+    setOpen(true)
   };
 
   return (
@@ -117,10 +118,18 @@ const FilterOptions: React.FC<Props> = ({
         <MenuItem value="name-asc">A to Z</MenuItem>
         <MenuItem value="name-desc">Z to A</MenuItem>
       </Select>
-      <UniversalButton variant={"black"} onClick={applyFilters} sx={{margin:'auto'}}>
+      <UniversalButton
+        variant={"black"}
+        onClick={applyFilters}
+        sx={{ margin: "auto" }}
+      >
         Apply Filters
       </UniversalButton>
+      <CustomSnackbar open={open} onClose={()=>{setOpen(false)}} variant={"normal"} message={"Filters Applied"}/>
+
+
     </Box>
+
   );
 };
 

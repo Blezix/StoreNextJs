@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import { Snackbar } from "@mui/material";
 import { useCart } from "@/app/CartContext";
 import UniversalButton from "@/app/_components/UniversalButton";
-import { Product } from "@/app/types"; // Adjust the import path as necessary
-
+import { Product } from "@/app/types";
 interface Props {
   product: Product;
   selectedSize: string;
@@ -47,6 +46,7 @@ const AddToCartButton: React.FC<Props> = ({
         autoHideDuration={2000}
         onClose={handleClose}
         message={`Item successfully added to cart (Size: ${selectedSize}, Color: ${selectedColor})}`}
+
       />
     </>
   );

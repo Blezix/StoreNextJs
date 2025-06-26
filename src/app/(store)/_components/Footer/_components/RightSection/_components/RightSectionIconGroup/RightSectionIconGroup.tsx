@@ -10,7 +10,12 @@ export default function RightSectionIconGroup() {
         ml: "auto",
         display: "flex",
         height: "80%",
-        width: "80%",
+          width: {
+              xs: "100%", // dla małych ekranów
+              sm: "90%",  // dla średnich ekranów
+              md: "85%",  // dla większych ekranów
+              lg: "80%",  // dla dużych ekranów
+          },
         flexDirection: "row",
         justifyContent: "space-around",
       }}

@@ -8,16 +8,31 @@ export default function RightSection() {
         display: "flex",
         height: "20%",
         ml: "auto",
-        width: "80%",
+          width: {
+              xs: "100%", // dla małych ekranów
+              sm: "90%",  // dla średnich ekranów
+              md: "85%",  // dla większych ekranów
+              lg: "80%",  // dla dużych ekranów
+          },
         justifyContent: "space-around",
       }}
     >
-      <Text variant={"body2"} sx={{
-          fontSize:"1rem"
-      }}>Call us on +12 332476</Text>
-      <Text variant={"body2"} sx={{
-          fontSize:"1rem"
-      }}>USD$|English</Text>
+      <Text
+        variant={"body2"}
+        sx={{
+          fontSize: "1rem",
+        }}
+      >
+        Call us on +12 332476
+      </Text>
+      <Text
+        variant={"body2"}
+        sx={{
+          fontSize: "1rem",
+        }}
+      >
+        USD$|English
+      </Text>
     </Box>
   );
 }

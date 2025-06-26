@@ -8,8 +8,12 @@ export default function MiddleSection() {
         display: "flex",
         justifyContent: "center",
         height: "100%",
-        width: "50%",
-        minWidth: "430px",
+          width: {
+            xs: "100%",
+              sm: "100%",
+              md: "80%",
+              lg: "50%",
+          },
         pl: 2,
       }}
     >

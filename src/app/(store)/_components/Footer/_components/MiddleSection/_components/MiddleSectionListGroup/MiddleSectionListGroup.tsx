@@ -24,7 +24,11 @@ export default function MiddleSection() {
         display: "flex",
         justifyContent: "center",
         height: "80%",
-        width: "90%",
+          width: {
+              sm: "100%",
+              md: "95%",
+              lg: "90%",
+          },
         pl: 2,
       }}
     >

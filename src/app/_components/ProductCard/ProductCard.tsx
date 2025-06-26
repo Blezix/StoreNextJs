@@ -6,7 +6,6 @@ interface Props {
   ProductName: string;
   ProductPrice: number;
   imgSrc: string[];
-  sizes: string[];
   slug: string;
 }
 
