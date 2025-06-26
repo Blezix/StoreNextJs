@@ -6,7 +6,6 @@ export default function LeftSection() {
     <Box
       sx={{
         display: "flex",
-        height: "100%",
         width: {
           xs: "100%",
           sm: "100%",

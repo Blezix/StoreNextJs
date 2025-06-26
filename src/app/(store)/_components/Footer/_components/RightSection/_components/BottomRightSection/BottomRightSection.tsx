@@ -12,8 +12,12 @@ export default function RightSection() {
         justifyContent: "space-around",
       }}
     >
-      <Text variant={"body2"}>Call us on +12 332476</Text>
-      <Text variant={"body2"}>USD$|English</Text>
+      <Text variant={"body2"} sx={{
+          fontSize:"1rem"
+      }}>Call us on +12 332476</Text>
+      <Text variant={"body2"} sx={{
+          fontSize:"1rem"
+      }}>USD$|English</Text>
     </Box>
   );
 }

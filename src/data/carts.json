@@ -1,7 +1,14 @@
 [
   {
     "email": "mail@local.com",
-    "items": []
+    "items": [
+      {
+        "slug": "waterproof-pants",
+        "size": "S",
+        "color": "Beige",
+        "quantity": 8
+      }
+    ]
   },
   {
     "email": "mail2@local.com",

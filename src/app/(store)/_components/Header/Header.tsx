@@ -10,7 +10,7 @@ import MenuRight from "./_components/MenuRight/MenuRight";
 
 export default function Header() {
   const pathname = usePathname();
-  const isHome = pathname === "/" || pathname === "/home";
+  const isHome = pathname === "/" || pathname === "/home" || pathname === "/login" || pathname === "/register"
   const [drawerOpen, setDrawerOpen] = useState(false);
 
   const toggleDrawer = (open: boolean) => () => {

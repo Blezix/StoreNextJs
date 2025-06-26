@@ -37,8 +37,10 @@ export const UserProvider = ({ children }: { children: ReactNode }) => {
     setUserState(newUser);
   };
 
-  const logout = () => setUser(null);
-  return (
+  const logout = () => {
+    setUser(null);
+    window.location.reload();
+  };  return (
     <UserContext.Provider value={{ user, setUser, logout }}>
       {children}
     </UserContext.Provider>

@@ -117,7 +117,7 @@ const FilterOptions: React.FC<Props> = ({
         <MenuItem value="name-asc">A to Z</MenuItem>
         <MenuItem value="name-desc">Z to A</MenuItem>
       </Select>
-      <UniversalButton variant={"black"} onClick={applyFilters}>
+      <UniversalButton variant={"black"} onClick={applyFilters} sx={{margin:'auto'}}>
         Apply Filters
       </UniversalButton>
     </Box>
