@@ -12,13 +12,13 @@ export default function FeaturedCollections() {
         alignItems: "center",
         flexDirection: "column",
         width: "100%",
-          height: {
-              xs: "auto",
-              sm: "160vh",
-              md: "150vh",
-              lg: "130vh",
-              xl: "130vh",
-          },
+        height: {
+          xs: "auto",
+          sm: "160vh",
+          md: "150vh",
+          lg: "130vh",
+          xl: "130vh",
+        },
         p: 3,
       }}
     >

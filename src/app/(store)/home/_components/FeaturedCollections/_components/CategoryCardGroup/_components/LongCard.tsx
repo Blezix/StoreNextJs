@@ -81,18 +81,17 @@ const LongCard: React.FC<Props> = ({ CategoryName, imgSrc, CategoryDesc }) => {
           {CategoryDesc}
         </Text>
 
-          <UniversalButton
-              variant={"white"}
-              onClick={handleRedirect}
-              sx={{
-                  width: active ? "200px" : "0",
-                  fontSize: active ? "inherit" : "0",
-                    opacity: active ? 1 : 0,
-
-              }}
-          >
-              Discover
-          </UniversalButton>
+        <UniversalButton
+          variant={"white"}
+          onClick={handleRedirect}
+          sx={{
+            width: active ? "200px" : "0",
+            fontSize: active ? "inherit" : "0",
+            opacity: active ? 1 : 0,
+          }}
+        >
+          Discover
+        </UniversalButton>
       </Box>
     </Box>
   );

@@ -3,48 +3,92 @@
 import React, { createContext, useContext, useState } from "react";
 
 interface AdminContextType {
-    users: any[];
-    products: any[];
-    loggedInUser: any | null;
-    setLoggedInUser: (user: any) => void;
-    addUser: (user: any) => void;
-    deleteUser: (id: number) => void;
-    addProduct: (product: any) => void;
-    deleteProduct: (id: number) => void;
+  users: any[];
+  products: any[];
+  loggedInUser: any | null;
+  setLoggedInUser: (user: any) => void;
+  addUser: (user: any) => void;
+  deleteUser: (id: number) => void;
+  addProduct: (product: any) => void;
+  deleteProduct: (id: number) => void;
 }
 
 const AdminContext = createContext<AdminContextType | undefined>(undefined);
 
 export const AdminProvider = ({ children }: { children: React.ReactNode }) => {
-    const [users, setUsers] = useState<any[]>([]);
-    const [products, setProducts] = useState<any[]>([]);
-    const [loggedInUser, setLoggedInUser] = useState<any | null>(null);
+  const [users, setUsers] = useState<any[]>([]);
+  const [products, setProducts] = useState<any[]>([]);
+  const [loggedInUser, setLoggedInUser] = useState<any | null>(null);
 
-    const addUser = (user: any) => {
-        setUsers((prev) => [...prev, user]);
-    };
+  const addUser = (user: any) => {
+    setUsers((prev) => [...prev, user]);
+  };
 
-    const deleteUser = (id: number) => {
-        setUsers((prev) => prev.filter((user) => user.id !== id));
-    };
+  const deleteUser = (id: number) => {
+    setUsers((prev) => prev.filter((user) => user.id !== id));
+  };
 
-    const addProduct = (product: any) => {
-        setProducts((prev) => [...prev, product]);
-    };
+  const addProduct = async (product: any) => {
+    try {
+      const response = await fetch("/api/products", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(product),
+      });
 
-    const deleteProduct = (id: number) => {
-        setProducts((prev) => prev.filter((product) => product.id !== id));
-    };
+      if (!response.ok) {
+        throw new Error("Failed to add product");
+      }
 
-    return (
-        <AdminContext.Provider value={{ users, products, loggedInUser, setLoggedInUser, addUser, deleteUser, addProduct, deleteProduct }}>
-            {children}
-        </AdminContext.Provider>
-    );
+      const newProduct = await response.json();
+      setProducts((prev) => [...prev, newProduct]);
+    } catch (error) {
+      console.error("Error adding product:", error);
+    }
+  };
+
+  const deleteProduct = async (id: number) => {
+    try {
+      const response = await fetch("/api/products", {
+        method: "DELETE",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ id }),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to delete product");
+      }
+
+      setProducts((prev) => prev.filter((product) => product.id !== id));
+    } catch (error) {
+      console.error("Error deleting product:", error);
+    }
+  };
+
+  return (
+    <AdminContext.Provider
+      value={{
+        users,
+        products,
+        loggedInUser,
+        setLoggedInUser,
+        addUser,
+        deleteUser,
+        addProduct,
+        deleteProduct,
+      }}
+    >
+      {children}
+    </AdminContext.Provider>
+  );
 };
 
 export const useAdmin = (): AdminContextType => {
-    const context = useContext(AdminContext);
-    if (!context) throw new Error("useAdmin must be used within AdminProvider");
-    return context;
+  const context = useContext(AdminContext);
+  if (!context) throw new Error("useAdmin must be used within AdminProvider");
+  return context;
 };

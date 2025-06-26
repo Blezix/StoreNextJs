@@ -4,49 +4,52 @@ import { useCart } from "@/app/CartContext";
 import UniversalButton from "@/app/_components/UniversalButton";
 import { Product } from "@/app/types"; // Adjust the import path as necessary
 
-
 interface Props {
-    product: Product;
-    selectedSize: string;
-    selectedColor: string;
+  product: Product;
+  selectedSize: string;
+  selectedColor: string;
 }
 
-const AddToCartButton: React.FC<Props> = ({ product, selectedSize, selectedColor }) => {
-    const { addToCart } = useCart();
-    const [open, setOpen] = useState(false);
+const AddToCartButton: React.FC<Props> = ({
+  product,
+  selectedSize,
+  selectedColor,
+}) => {
+  const { addToCart } = useCart();
+  const [open, setOpen] = useState(false);
 
-    const handleButtonClick = () => {
-        addToCart({
-            slug: product.slug,
-            size: selectedSize,
-            color: selectedColor,
-            quantity: -1
-        });
-        setOpen(true);
-    };
+  const handleButtonClick = () => {
+    addToCart({
+      slug: product.slug,
+      size: selectedSize,
+      color: selectedColor,
+      quantity: -1,
+    });
+    setOpen(true);
+  };
 
-    const handleClose = () => {
-        setOpen(false);
-    };
+  const handleClose = () => {
+    setOpen(false);
+  };
 
-    return (
-        <>
-            <UniversalButton
-                variant="black"
-                onClick={handleButtonClick}
-                sx={{marginTop:"auto", marginBottom:"0"}}
-            >
-                Add to Cart
-            </UniversalButton>
-            <Snackbar
-                anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
-                open={open}
-                autoHideDuration={2000}
-                onClose={handleClose}
-                message={`Item successfully added to cart (Size: ${selectedSize}, Color: ${selectedColor})}`}
-            />
-        </>
-    );
+  return (
+    <>
+      <UniversalButton
+        variant="black"
+        onClick={handleButtonClick}
+        sx={{ marginTop: "auto", marginBottom: "0" }}
+      >
+        Add to Cart
+      </UniversalButton>
+      <Snackbar
+        anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
+        open={open}
+        autoHideDuration={2000}
+        onClose={handleClose}
+        message={`Item successfully added to cart (Size: ${selectedSize}, Color: ${selectedColor})}`}
+      />
+    </>
+  );
 };
 
 export default AddToCartButton;

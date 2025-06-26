@@ -8,13 +8,13 @@ export default function LeftSection() {
         display: "flex",
         height: "100%",
         width: {
-            xs: "100%",
-            sm: "100%",
-            md: "33.33%",
-            lg: "25%",
-            xl: "25%",
+          xs: "100%",
+          sm: "100%",
+          md: "33.33%",
+          lg: "25%",
+          xl: "25%",
         },
-          minWidth:"220px",
+        minWidth: "220px",
         flexDirection: "column",
       }}
     >
@@ -25,11 +25,11 @@ export default function LeftSection() {
           fontWeight: "bold",
         }}
       >
-        Nigger
+        Next
       </Text>
       <Text variant={"body2"}>
         Skibidi toilet goni mnie śpiewając te piosenke scooby dooo where is you
-        nigger as dog{" "}
+        Next as dog{" "}
       </Text>
     </Box>
   );

@@ -1,15 +1,11 @@
-'use client'
+"use client";
 
 import React from "react";
 import { Box } from "@mui/material";
 import HeroSectionText from "./_components/HeroSectionText/HeroSectionText";
 import HeroSectionButton from "./_components/HeroSectionButton/HeroSectionButton";
 export default function HeroSection() {
-
-
-
-    return (
-
+  return (
     <Box
       sx={{
         display: "flex",

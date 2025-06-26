@@ -8,16 +8,14 @@
     "email": "mail2@local.com",
     "password": "password123",
     "role": "user"
-
   },
   {
     "email": "test2@local.com",
     "password": "test",
     "role": "user"
-
   },
   {
-    "email" : "admin@local.pl",
+    "email": "admin@local.pl",
     "password": "1234",
     "role": "admin"
   }

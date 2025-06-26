@@ -11,16 +11,16 @@ export default function HeroSectionButton() {
         justifyContent: "center",
         alignItems: "center",
         width: {
-            xs: "90%",
-            sm: "85%",
-            md: "80%",
-            lg: "70%",
+          xs: "90%",
+          sm: "85%",
+          md: "80%",
+          lg: "70%",
         },
         height: "100%",
         gap: 2,
       }}
     >
-      <Text variant={"h1"}>Nigger Sport Project</Text>
+      <Text variant={"h1"}>Next Sport Project</Text>
       <Text
         variant={"h6"}
         sx={{

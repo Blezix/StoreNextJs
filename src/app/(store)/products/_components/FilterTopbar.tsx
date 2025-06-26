@@ -13,31 +13,36 @@ export default function FilterTopbar() {
         justifyContent: "center",
         alignItems: "center",
         p: {
-            xs: 2, // For extra-small screens
-            sm: 3, // For small screens
-            md: 4, // For medium screens
-            lg: 5, // For large screens
+          xs: 2, // For extra-small screens
+          sm: 3, // For small screens
+          md: 4, // For medium screens
+          lg: 5, // For large screens
         },
         color: "black",
         ml: "auto",
         mr: "auto",
       }}
     >
-      <Text variant={"h3"} sx={{
-          textAlign:"center"
-      }}>UNISEX CLOTHING COLLECTION</Text>
+      <Text
+        variant={"h3"}
+        sx={{
+          textAlign: "center",
+        }}
+      >
+        UNISEX CLOTHING COLLECTION
+      </Text>
       <Text
         variant={"h6"}
         sx={{
           textAlign: "center",
           mt: 1,
           mb: 2,
-            width: {
-                xs: "90%", // For extra-small screens
-                sm: "70%", // For small screens
-                md: "50%", // For medium screens
-                lg: "40%", // For large screens
-            },
+          width: {
+            xs: "90%", // For extra-small screens
+            sm: "70%", // For small screens
+            md: "50%", // For medium screens
+            lg: "40%", // For large screens
+          },
           color: "#818181",
         }}
       >
