@@ -3,9 +3,9 @@
 import { useSearchParams, usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Box } from "@mui/material";
+import { Product } from "@/app/types";
 import ProductList from "./_components/ProductList";
-import FadeIn from '@/app/_components/FadeIn';
-import {Product} from "../../../../backend/models/Product";
+import FadeIn from "@/app/_components/FadeIn";
 const ProductFiltersPage = () => {
   const searchParams = useSearchParams();
   const pathname = usePathname();
@@ -22,9 +22,9 @@ const ProductFiltersPage = () => {
     const fetchFilteredProducts = async () => {
       setLoading(true);
       try {
-        const response = await fetch('http://localhost:5000/api/products');
+        const response = await fetch("api/products");
         if (!response.ok) {
-          throw new Error('Failed to fetch products');
+          throw new Error("Failed to fetch products");
         }
         let data: Product[] = await response.json();
 
@@ -34,7 +34,9 @@ const ProductFiltersPage = () => {
         if (minPrice && maxPrice) {
           const min = Number(minPrice);
           const max = Number(maxPrice);
-          data = data.filter((product) => product.price >= min && product.price <= max);
+          data = data.filter(
+            (product) => product.price >= min && product.price <= max,
+          );
         }
         if (sort === "price-asc") {
           data.sort((a, b) => a.price - b.price);
@@ -58,25 +60,35 @@ const ProductFiltersPage = () => {
   }, [category, minPrice, maxPrice, sort]);
 
   if (loading) {
-    return <Box sx={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        justifyContent: "center",
-        height: "20vh",
-        color:'black',
-        gap: 2,
-    }}>
-      Ładowanie produktów...
-    </Box>;
+    return (
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "center",
+          height: "20vh",
+          color: "black",
+          gap: 2,
+        }}
+      >
+        Ładowanie produktów...
+      </Box>
+    );
   }
 
   return (
-      <Box>
-        <FadeIn blur={true} duration={150} easing="ease-out" initialOpacity={0} key={`${pathname}-${category}`}>
-          <ProductList products={products} />
-        </FadeIn>
-      </Box>
+    <Box>
+      <FadeIn
+        blur={true}
+        duration={150}
+        easing="ease-out"
+        initialOpacity={0}
+        key={`${pathname}-${category}`}
+      >
+        <ProductList products={products} />
+      </FadeIn>
+    </Box>
   );
 };
 

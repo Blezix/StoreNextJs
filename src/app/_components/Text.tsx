@@ -81,20 +81,25 @@ const variantStyles = {
   },
 };
 
-const Text: React.FC<TextProps> = ({ variant = "body1", children, sx, ...props }) => {
+const Text: React.FC<TextProps> = ({
+  variant = "body1",
+  children,
+  sx,
+  ...props
+}) => {
   const validVariant = variantStyles[variant] ? variant : "body1";
 
   return (
-      <Typography
-          variant={validVariant}
-          sx={{
-            ...variantStyles[validVariant],
-            ...sx,
-          }}
-          {...props}
-      >
-        {children}
-      </Typography>
+    <Typography
+      variant={validVariant}
+      sx={{
+        ...variantStyles[validVariant],
+        ...sx,
+      }}
+      {...props}
+    >
+      {children}
+    </Typography>
   );
 };
 

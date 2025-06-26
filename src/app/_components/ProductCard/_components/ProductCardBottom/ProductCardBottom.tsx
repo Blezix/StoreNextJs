@@ -5,14 +5,9 @@ import ProductAttributes from "./_components/ProductAttributes/ProductAttributes
 interface Props {
   ProductName: string;
   ProductPrice: number;
-
 }
 
-const ProductCardBottom: React.FC<Props> = ({
-  ProductName,
-  ProductPrice
-}) => {
-
+const ProductCardBottom: React.FC<Props> = ({ ProductName, ProductPrice }) => {
   return (
     <Box
       sx={{
@@ -27,7 +22,6 @@ const ProductCardBottom: React.FC<Props> = ({
         ProductName={ProductName}
         ProductPrice={ProductPrice}
       />
-
     </Box>
   );
 };

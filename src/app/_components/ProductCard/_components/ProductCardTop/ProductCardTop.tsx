@@ -2,15 +2,14 @@ import React from "react";
 import { Box } from "@mui/material";
 interface Props {
   imgSrc: string;
-    slug: string;
-
+  slug: string;
 }
 
-const ProductCardTop: React.FC<Props> = ({ imgSrc,slug }) => {
+const ProductCardTop: React.FC<Props> = ({ imgSrc, slug }) => {
   return (
     <Box
-        component={"a"}
-        href={`/products/${slug}`}
+      component={"a"}
+      href={`/products/${slug}`}
       sx={{
         width: "200px",
         display: "flex",
@@ -28,10 +27,10 @@ const ProductCardTop: React.FC<Props> = ({ imgSrc,slug }) => {
       }}
     >
       <Box
-          component={'img'}
+        component={"img"}
         src={imgSrc}
         alt="product"
-        style={{ maxWidth:"80%", borderRadius: "10px" }}
+        style={{ maxWidth: "80%", borderRadius: "10px" }}
       />
     </Box>
   );

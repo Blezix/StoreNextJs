@@ -11,9 +11,10 @@ export default function HeroSectionButton() {
   };
 
   return (
-      <>
-          <UniversalButton variant={"white"} onClick={handleClick}>Shop Now</UniversalButton>
-      </>
-
+    <>
+      <UniversalButton variant={"white"} onClick={handleClick}>
+        Shop Now
+      </UniversalButton>
+    </>
   );
 }

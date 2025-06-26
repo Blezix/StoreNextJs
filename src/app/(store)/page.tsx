@@ -5,15 +5,15 @@ import NewArrivals from "@/app/(store)/home/_components/NewArrivals/NewArrivals"
 import FeaturedCollections from "@/app/(store)/home/_components/FeaturedCollections/FeaturedCollections";
 export default function Homepage() {
   return (
-      <Box
-          sx={{
-            width: "100%",
-            backgroundColor: "white",
-          }}
-      >
-        <HeroSection />
-        <NewArrivals />
-        <FeaturedCollections />
-      </Box>
+    <Box
+      sx={{
+        width: "100%",
+        backgroundColor: "white",
+      }}
+    >
+      <HeroSection />
+      <NewArrivals />
+      <FeaturedCollections />
+    </Box>
   );
 }

@@ -1,24 +1,26 @@
-'use client';
+"use client";
 
-import React, { useState, useEffect } from 'react';
-import Loading from '@/app/_components/Loading';
+import React, { useState, useEffect } from "react";
+import Loading from "@/app/_components/Loading";
 
-const LoadingWrapper: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-    const [isLoading, setIsLoading] = useState(true);
+const LoadingWrapper: React.FC<{ children: React.ReactNode }> = ({
+  children,
+}) => {
+  const [isLoading, setIsLoading] = useState(true);
 
-    useEffect(() => {
-        const timer = setTimeout(() => {
-            setIsLoading(false);
-        }, 2000);
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 2000);
 
-        return () => clearTimeout(timer);
-    }, []);
+    return () => clearTimeout(timer);
+  }, []);
 
-    if (isLoading) {
-        return <Loading />;
-    }
+  if (isLoading) {
+    return <Loading />;
+  }
 
-    return <>{children}</>;
+  return <>{children}</>;
 };
 
 export default LoadingWrapper;

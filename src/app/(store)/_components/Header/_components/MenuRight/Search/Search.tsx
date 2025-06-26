@@ -8,12 +8,11 @@ export default function Search() {
       sx={{
         display: "flex",
         gap: "6px",
-        alignItems: "center",          fontSize: "1.1rem",
-
+        alignItems: "center",
+        fontSize: "1.1rem",
       }}
     >
       <SearchIcon />
-      <Text variant={"body2"}>Search</Text>
     </Box>
   );
 }

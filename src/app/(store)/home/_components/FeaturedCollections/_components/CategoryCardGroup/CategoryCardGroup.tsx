@@ -33,15 +33,15 @@ const CategoryCardGroup: React.FC = () => {
       sx={{
         display: "flex",
         justifyContent: {
-            md:"start",
-            xl:"center"
+          md: "start",
+          xl: "center",
         },
-        alignItems:"center",
+        alignItems: "center",
         flexDirection: "row",
         flexWrap: "wrap",
         width: "90%",
         height: "80%",
-          overflow:"auto"
+        overflow: "auto",
       }}
     >
       {categories.map((category, index) => (
@@ -50,15 +50,14 @@ const CategoryCardGroup: React.FC = () => {
           sx={{
             display: "flex",
             flexBasis: {
-                xs: "100%",
-                sm: "50%",
-                md: "33.33%",
-                lg: "33%",
-                xl: "30%",
-                  },
+              xs: "100%",
+              sm: "50%",
+              md: "33.33%",
+              lg: "33%",
+              xl: "30%",
+            },
             flexDirection: "column",
             height: "100%",
-
           }}
         >
           {index === 1 ? (

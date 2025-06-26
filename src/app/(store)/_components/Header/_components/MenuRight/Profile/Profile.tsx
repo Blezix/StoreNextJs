@@ -9,13 +9,10 @@ export default function Profile() {
         display: "flex",
         gap: "6px",
         alignItems: "center",
-          fontSize: "1.1rem",
-
-
+        fontSize: "1.1rem",
       }}
     >
       <AccountCircleOutlinedIcon />
-      <Text variant={"body2"}>Login</Text>
     </Box>
   );
 }
