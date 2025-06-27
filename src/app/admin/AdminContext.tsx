@@ -10,7 +10,7 @@ interface AdminContextType {
   addUser: (user: any) => void;
   deleteUser: (id: number) => void;
   addProduct: (product: any) => void;
-  deleteProduct: (id: number) => void;
+  deleteProduct: (slug: string ) => void;
 }
 
 const AdminContext = createContext<AdminContextType | undefined>(undefined);
@@ -49,21 +49,21 @@ export const AdminProvider = ({ children }: { children: React.ReactNode }) => {
     }
   };
 
-  const deleteProduct = async (id: number) => {
+  const deleteProduct = async (slug: string) => {
     try {
       const response = await fetch("/api/products", {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ id }),
+        body: JSON.stringify({ slug }),
       });
 
       if (!response.ok) {
         throw new Error("Failed to delete product");
       }
 
-      setProducts((prev) => prev.filter((product) => product.id !== id));
+      setProducts((prev) => prev.filter((product) => product.slug !== slug));
     } catch (error) {
       console.error("Error deleting product:", error);
     }

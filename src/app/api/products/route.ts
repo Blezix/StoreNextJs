@@ -28,11 +28,11 @@ export async function POST(request: Request) {
 
 export async function DELETE(request: Request) {
   try {
-    const { id } = await request.json();
+    const { slug } = await request.json();
     const products = await readData("products.json");
 
     const updatedProducts = products.filter(
-      (product: { id: number }) => product.id !== id,
+      (product: { slug: string }) => product.slug !== slug,
     );
     await writeData("products.json", updatedProducts);
 

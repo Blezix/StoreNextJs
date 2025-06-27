@@ -63,25 +63,25 @@
         "slug": "fleece-pullover",
         "size": "S",
         "color": "Blue",
-        "quantity": 2
+        "quantity": 9
       },
       {
         "slug": "fleece-pullover",
         "size": "L",
         "color": "Blue",
-        "quantity": 1
+        "quantity": 4
       },
       {
         "slug": "fleece-pullover",
         "size": "XL",
         "color": "Blue",
-        "quantity": 1
+        "quantity": 4
       },
       {
         "slug": "fleece-pullover",
         "size": "M",
         "color": "Blue",
-        "quantity": 1
+        "quantity": 10
       }
     ]
   }
